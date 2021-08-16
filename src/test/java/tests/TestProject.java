@@ -2,7 +2,7 @@ package tests;
 
 import com.project.pom.AddProjectPage;
 import com.project.pom.InicioPage;
-import com.project.pom.ProjectManager;
+import com.project.pom.ProjectManagerPage;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class TestProject {
 
     InicioPage login=new InicioPage();
-    ProjectManager projectManager=new ProjectManager();
+    ProjectManagerPage projectManager=new ProjectManagerPage();
     AddProjectPage addProjectPage=new AddProjectPage();
 
     @BeforeAll

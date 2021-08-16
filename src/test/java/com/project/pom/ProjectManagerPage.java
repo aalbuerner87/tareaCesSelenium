@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 
-public class ProjectManager extends Base {
+public class ProjectManagerPage extends Base {
 
     InicioPage inicio = new InicioPage();
     private static WebDriverWait wait;
@@ -15,7 +15,7 @@ public class ProjectManager extends Base {
     By messageSave=By.id("ewg_message");
     By busqueda=By.className("et2_textbox");
 
-    public ProjectManager (){
+    public ProjectManagerPage (){
         super( driver );
     }
 
