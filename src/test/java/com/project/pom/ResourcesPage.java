@@ -13,7 +13,7 @@ public class ResourcesPage extends BasePage {
 
     public String abrirResources (){
 
-        scroll( resources );
+       // scroll( resources );
         click( add );
         String ventana= winHandles( 1 );
         switchToVentana(ventana);

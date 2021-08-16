@@ -95,13 +95,11 @@ public class BasePage {
 
     public void scroll ( By locator ){
 
-        WebElement waitUntil = wait.until( ExpectedConditions.visibilityOfElementLocated( locator ) );
-        
+        WebElement waitUntil = wait.until( ExpectedConditions.visibilityOfElementLocated(  locator  ) );
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        while(!waitUntil.isDisplayed()) {
-            System.out.println( "!waitUntil.isDisplayed() = " + !waitUntil.isDisplayed() );
-            js.executeScript( "arguments[0].scrollIntoView();" , waitUntil );
-        }
+        js.executeScript( "arguments[0].click();" , waitUntil );
+
+
     }
 
     public String winHandles ( int posicionVentana ){

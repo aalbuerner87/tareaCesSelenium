@@ -15,7 +15,7 @@ public class AddressBookPage extends BasePage {
 
     public String abrirAgenda (){
 
-        scroll( agenda );
+       // scroll( agenda );
         click( add );
         String ventana= winHandles( 1 );
         switchToVentana(ventana);

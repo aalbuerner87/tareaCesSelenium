@@ -8,7 +8,7 @@ public class ProjectManagerPage extends BasePage {
 
     InicioPage inicio = new InicioPage();
     private static WebDriverWait wait;
-    By project = By.cssSelector( "#projectmanager_sidebox_header" );
+    By project =By.cssSelector(  "#projectmanager_sidebox_header" );
     By add=By.id( "projectmanager-list_add" );
     By menu = By.cssSelector( "#calendar-et2_target > div:nth-child(1)" );
     By title=By.id( "projectmanager-edit_pm_title" );
@@ -25,7 +25,6 @@ public class ProjectManagerPage extends BasePage {
     public String abrirVentanaProyecto (){
 
         scroll( project );
-        click( project );
         click( add );
         String ventana= winHandles( 1 );
         switchToVentana(ventana);
