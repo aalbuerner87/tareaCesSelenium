@@ -10,7 +10,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.Set;
-import java.util.concurrent.TimeUnit;
+import org.openqa.selenium.Keys;
 
 /*revisar estos métodos métodos:
 
@@ -70,6 +70,7 @@ public class BasePage {
     }
 
 
+
     public void click ( By locator ){
 
         WebElement waitUntil = wait.until( ExpectedConditions.visibilityOfElementLocated( locator ) );
@@ -95,9 +96,11 @@ public class BasePage {
     public void scroll ( By locator ){
 
         WebElement waitUntil = wait.until( ExpectedConditions.visibilityOfElementLocated( locator ) );
+        
         JavascriptExecutor js = (JavascriptExecutor) driver;
         while(!waitUntil.isDisplayed()) {
-            js.executeScript( "arguments[0].scrollIntoViewIfNeeded();" , waitUntil );
+            System.out.println( "!waitUntil.isDisplayed() = " + !waitUntil.isDisplayed() );
+            js.executeScript( "arguments[0].scrollIntoView();" , waitUntil );
         }
     }
 
@@ -125,6 +128,11 @@ public class BasePage {
         return find( locator ).isDisplayed();
 
 
+    }
+
+    public void enter(By selector){
+
+        find(selector).sendKeys( Keys.ENTER );
     }
 
 

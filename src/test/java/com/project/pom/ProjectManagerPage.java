@@ -15,6 +15,7 @@ public class ProjectManagerPage extends BasePage {
     By messageSave=By.id("egw_message");
     By busqueda=By.cssSelector("#projectmanager-list_nm .et2_textbox");
     By cerrarProyecto=By.cssSelector( "#projectmanager-egw_fw_ui_tab_header > .egw_fw_ui_tab_close_button" );
+    By resultado=By.cssSelector( ".rowNoUndelete [class*='_td_col_0']" );
 
     public ProjectManagerPage (){
         super( driver );
@@ -23,7 +24,6 @@ public class ProjectManagerPage extends BasePage {
 
     public String abrirVentanaProyecto (){
 
-        scroll( project );
         scroll( project );
         click( project );
         click( add );
@@ -40,18 +40,7 @@ public class ProjectManagerPage extends BasePage {
         click( cerrarProyecto );
         }
 
-    public void buscarProyecto (String idByAddProyecto){
-
-        scroll( project );
-        scroll( project );
-        click( busqueda );
-        write(busqueda,idByAddProyecto);
-       // click(cerrarProyecto);
-
-    }
-
-
-    public boolean verificarMensaje(){
+     public boolean verificarMensaje(){
 
         return elementIsDisplayed(messageSave);
 
@@ -59,13 +48,12 @@ public class ProjectManagerPage extends BasePage {
 
     public void escribirProyectoCreado(String idByAddProyecto){
         String ventana= winHandles( 0 );
-        System.out.println( "ventana = " + ventana );
         switchToVentana(ventana);
-        click(cerrarProyecto);
-        scroll( project );
-        click( add );
-        click( busqueda );
+         click( busqueda );
         write(busqueda,idByAddProyecto);
+        enter( busqueda );
+       String e= getText( resultado );
+        System.out.println( "e = " + e );
 
 
     }

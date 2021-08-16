@@ -33,6 +33,8 @@ public class AddProjectPage extends BasePage {
     public void guardarCambios(){
 
     click( save );
+    String ventana= winHandles( 0 );
+    switchToVentana(ventana);
 
 
 

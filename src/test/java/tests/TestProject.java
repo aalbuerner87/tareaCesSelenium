@@ -35,6 +35,8 @@ public class TestProject {
         addProjectPage.guardarCambios();
         boolean mensajeSave=addProjectPage.verificarMensaje();
         assertTrue( mensajeSave );
+        projectManager.escribirProyectoCreado( id );
+
 
     }
 
