@@ -10,9 +10,20 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
+
+/*revisar estos métodos métodos:
+
+    driver.findElement()
+    isDisplayed()
+    getText()
+    click()
+    sendkeys()
+    get()
+*/
 
 
-public class Base {
+public class BasePage {
 
 
     protected static WebDriver driver;
@@ -23,12 +34,13 @@ public class Base {
         System.setProperty( "webdriver.chrome.driver" , "./src/test/resources/chromedriver.exe" );
         ChromeOptions chromeOptions = new ChromeOptions();
         driver = new ChromeDriver( chromeOptions );
-        wait = new WebDriverWait( driver , 10 );
+        wait = new WebDriverWait( driver , 20 );
+
     }
 
-    public Base ( WebDriver driver ){
-        Base.driver = driver;
-        wait = new WebDriverWait( driver , 10 );
+    public BasePage ( WebDriver driver ){
+        BasePage.driver = driver;
+        wait = new WebDriverWait( driver , 20 );
     }
 
     public static void navigateTo ( String url ){
@@ -84,10 +96,12 @@ public class Base {
 
         WebElement waitUntil = wait.until( ExpectedConditions.visibilityOfElementLocated( locator ) );
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript( "arguments[0].scrollIntoViewIfNeeded();" , waitUntil );
+        while(!waitUntil.isDisplayed()) {
+            js.executeScript( "arguments[0].scrollIntoViewIfNeeded();" , waitUntil );
+        }
     }
 
-    public String VentanasHandles ( int posicionVentana ){
+    public String winHandles ( int posicionVentana ){
 
         Set<String> ventanas = driver.getWindowHandles();
         return (String) ventanas.toArray()[ posicionVentana ];
@@ -112,4 +126,6 @@ public class Base {
 
 
     }
+
+
 }

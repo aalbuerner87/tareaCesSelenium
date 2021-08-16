@@ -1,17 +1,13 @@
 package com.project.pom;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.util.Random;
-
-public class AddProjectPage extends Base{
+public class AddProjectPage extends BasePage {
 
 
     By titulo=By.id( "projectmanager-edit_pm_title" );
     By num=By.id("projectmanager-edit_pm_number");
     By save=By.id("projectmanager-edit_save");
-    By messageSave=By.id("ewg_message");
+    By messageSave=By.id("egw_message");
     String id="";
 
     public AddProjectPage ( ){
@@ -39,9 +35,14 @@ public class AddProjectPage extends Base{
     click( save );
 
 
+
     }
 
+
+
   public boolean verificarMensaje(){
+
+      System.out.println( "elementIsDisplayed(messageSave) = " + elementIsDisplayed(messageSave) );
 
    return elementIsDisplayed(messageSave);
 

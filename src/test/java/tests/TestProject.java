@@ -6,8 +6,11 @@ import com.project.pom.ProjectManagerPage;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
+import java.util.concurrent.TimeUnit;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class TestProject {
@@ -25,17 +28,17 @@ public class TestProject {
     @Test
     public void testVerificarVentanaProyecto(){
 
-       String tituloPagina= projectManager.abrirVentanaProyecto();
+     String tituloPagina= projectManager.abrirVentanaProyecto();
         assertEquals( "EGroupware [Project Manager - Add project]" ,tituloPagina );
         String id=addProjectPage.generarIdProyecto();
         addProjectPage.escribirProyecto(id);
         addProjectPage.guardarCambios();
-       /* boolean mensajeSave=projectManager.verificarMensaje();
-        assertTrue( mensajeSave );*/
-       projectManager.escribirProyectoCreado(id );
-
+        boolean mensajeSave=addProjectPage.verificarMensaje();
+        assertTrue( mensajeSave );
 
     }
+
+
 
 
 
