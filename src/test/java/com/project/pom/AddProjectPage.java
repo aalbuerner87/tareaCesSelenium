@@ -49,6 +49,10 @@ public class AddProjectPage extends BasePage {
    return elementIsDisplayed(messageSave);
 
     }
+    public String getMensaje (){
+
+        return messageGetText();
+    }
 
 
 

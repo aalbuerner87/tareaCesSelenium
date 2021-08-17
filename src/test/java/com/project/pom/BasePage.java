@@ -29,13 +29,14 @@ public class BasePage {
     protected static WebDriver driver;
     private static WebDriverWait wait;
     private static Actions action;
+    private static By messageSave;
 
     static{
         System.setProperty( "webdriver.chrome.driver" , "./src/test/resources/chromedriver.exe" );
         ChromeOptions chromeOptions = new ChromeOptions();
         driver = new ChromeDriver( chromeOptions );
         wait = new WebDriverWait( driver , 20 );
-
+        messageSave = By.id( "egw_message" );
     }
 
     public BasePage ( WebDriver driver ){
@@ -93,7 +94,7 @@ public class BasePage {
     }
 
 
-    public void scroll ( By locator ){
+    public void clickJs ( By locator ){
 
         WebElement waitUntil = wait.until( ExpectedConditions.visibilityOfElementLocated(  locator  ) );
         JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -133,5 +134,21 @@ public class BasePage {
         find(selector).sendKeys( Keys.ENTER );
     }
 
+    //clic derecho = clic contextual
+    public void clicRigth ( By locator ){
+            action = action.contextClick( find( locator ) );
+    }
+
+    public boolean messageIsDisplayed(){
+
+        return find( messageSave ).isDisplayed();
+
+    }
+    public String messageGetText(){
+
+       return find( messageSave ).getText();
+
+
+    }
 
 }
