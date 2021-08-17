@@ -13,13 +13,11 @@ public class ProjectManagerPage extends BasePage {
     private static WebDriverWait wait;
     By project = By.cssSelector( "#projectmanager_sidebox_header" );
     By add = By.id( "projectmanager-list_add" );
-    By menu = By.cssSelector( "#calendar-et2_target > div:nth-child(1)" );
-    By title = By.id( "projectmanager-edit_pm_title" );
-    //By messageSave = By.id( "egw_message" );
     By busqueda = By.cssSelector( "#projectmanager-list_nm .et2_textbox" );
     By cerrarProyecto = By.cssSelector( "#projectmanager-egw_fw_ui_tab_header > .egw_fw_ui_tab_close_button" );
     By idProyectoCreado = By.cssSelector( ".rowNoUndelete [class*='_td_col_0']" );
     By nombreProyectoCreado = By.cssSelector( ".rowNoUndelete [class*='_td_col_12']" );
+    By zonaTabla=By.cssSelector( ".rowNoUndelete" );
     By delete = By.cssSelector( "#MONyvUQ47VrFdelete > .sub_item_text .sub_item_text" );
 
     public ProjectManagerPage (){
@@ -27,15 +25,18 @@ public class ProjectManagerPage extends BasePage {
     }
 
 
-    public String abrirVentanaProyecto (){
+    public void abrirVentanaProyecto (){
 
         clickJs( project );
         click( add );
         String ventana = winHandles( 1 );
         switchToVentana( ventana );
+    }
+
+    public String getNombreVentanaProyecto(){
+        abrirVentanaProyecto();
         String titulo = getTitulo();
         return titulo;
-
     }
 
     public void cerrarVentanaProyecto (){
@@ -71,11 +72,22 @@ public class ProjectManagerPage extends BasePage {
 
     }
 
+    public void getDetallesProyecto(){
 
-    public void eliminarProyecto ( String idByAddProyecto ){
+        String ventana = winHandles( 0 );
+        switchToVentana( ventana );
+        click(zonaTabla);
+        click(zonaTabla);
 
-        clicRigth( idProyectoCreado );
-        click( delete );
+
+    }
+
+
+    public void eliminarProyecto ( ){
+        String ventana = winHandles( 0 );
+        switchToVentana( ventana );
+        clicRigth( zonaTabla );
+       // click( delete );
 
 
     }

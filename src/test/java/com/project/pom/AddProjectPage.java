@@ -15,9 +15,9 @@ public class AddProjectPage extends BasePage {
     }
 
 
-    public void escribirProyecto(String idGenerado){
+    public void escribirProyecto(String idGenerado,String tituloProyecto){
 
-    write( titulo,"Proyecto de prueba");
+    write( titulo,tituloProyecto);
     write(num,idGenerado);
 
     }

@@ -6,6 +6,8 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class TestAddressBook {
@@ -21,8 +23,19 @@ public class TestAddressBook {
 
     @Test
     public void test(){
-     addressBookPage.abrirAgenda();
-     addressBookPage.crearContacto();
+     String tituloPagina= addressBookPage.getNombreVentanaAgenda();
+     assertEquals( "EGroupware [Address Book]" ,tituloPagina );
+     String nombre="Ariagna3";
+     String movil="091961938";
+     String mail="a@gmail.com";
+     String prefix="prefix05";
+     addressBookPage.crearContacto(nombre,mail,prefix,movil);
+     String mensajeSave=addressBookPage.getMensaje();
+     assertEquals( "Contact saved",mensajeSave );
+     addressBookPage.guardarAgenda();
+     addressBookPage.busquedaContactoCreado( nombre );
+
+     //addressBookPage.busquedaContactoCreado( "ariagna" );
 
 
     }

@@ -20,20 +20,25 @@ public class TestProject {
     InicioPage login=new InicioPage();
     ProjectManagerPage projectManager=new ProjectManagerPage();
     AddProjectPage addProjectPage=new AddProjectPage();
+    String id;
+    String tituloProyecto;
+    String tituloProyectoConsulta;
 
     @BeforeAll
     public void entrar (){
 
         login.IniciarSesion();
+        tituloProyecto="Proyecto de prueba";
+        tituloProyectoConsulta="Proyecto de prueba consulta";
     }
 
     @Test
     public void testVerificarVentanaProyecto(){
 
-        String tituloPagina= projectManager.abrirVentanaProyecto();
+        String tituloPagina= projectManager.getNombreVentanaProyecto();
         assertEquals( "EGroupware [Project Manager - Add project]" ,tituloPagina );
-        String id=addProjectPage.generarIdProyecto();
-        addProjectPage.escribirProyecto(id);
+        id=addProjectPage.generarIdProyecto();
+        addProjectPage.escribirProyecto(id,tituloProyecto);
         addProjectPage.guardarCambios();
         String mensajeSave=projectManager.getMensaje();
         assertEquals( "Project saved.",mensajeSave );
@@ -41,14 +46,25 @@ public class TestProject {
         List<String> proyecto=new ArrayList<String>(  );
         proyecto=projectManager.getDatosProyecto();
         assertEquals(id,proyecto.get( 0 )  );
-        assertEquals( "Proyecto de prueba",proyecto.get( 1 ) );
-        //projectManager.eliminarProyecto( id );
+        assertEquals( tituloProyecto,proyecto.get( 1 ) );
+        projectManager.cerrarVentanaProyecto();
+        //projectManager.eliminarProyecto();
 
 
     }
 
+    @Test
 
+    public void consultarProyecto(){
 
+        projectManager.abrirVentanaProyecto();
+        id=addProjectPage.generarIdProyecto();
+        addProjectPage.escribirProyecto(id,tituloProyectoConsulta);
+        addProjectPage.guardarCambios();
+        projectManager.busquedaProyectoCreado( id );
+        projectManager.eliminarProyecto();
+
+    }
 
 
 

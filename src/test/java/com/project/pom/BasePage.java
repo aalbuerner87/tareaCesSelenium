@@ -148,7 +148,6 @@ public class BasePage {
 
        return find( messageSave ).getText();
 
-
     }
 
 }
