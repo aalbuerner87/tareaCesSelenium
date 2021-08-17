@@ -1,10 +1,6 @@
 package com.project.pom;
 
 import org.openqa.selenium.By;
-
-import java.util.ArrayList;
-import java.util.List;
-
 public class AddressBookPage extends BasePage {
 
     By agenda = By.cssSelector( "#addressbook_sidebox_header" );
@@ -26,17 +22,6 @@ public class AddressBookPage extends BasePage {
     public AddressBookPage ( ){
         super( driver );
     }
-
-/**
- * id bu phone: addressbook-edit_tel_work
- * movil: addressbook-edit_tel_cell
- * mail: addressbook-edit_email
- * job title: addressbook-edit_title
- * id de bot save: addressbook-edit_button[save]
- *
- *
- *
-         */
 
 
         public void abrirVentanaAgenda (){
@@ -92,19 +77,6 @@ public class AddressBookPage extends BasePage {
         enter( busqueda );
 
     }
-/*
-    public List<String> getDatosProyecto (){
 
-        List<String> datosProyecto = new ArrayList<String>( );
-        String idProyecto = getText( idProyectoCreado );
-        String nombreProyecto = getText( nombreProyectoCreado );
-        datosProyecto.add( idProyecto );
-        datosProyecto.add( nombreProyecto );
-        System.out.println( "nombreProyecto = " + nombreProyecto );
-        System.out.println( "e = " + idProyecto );
-        return datosProyecto;
-
-
-    }*/
 
 }
