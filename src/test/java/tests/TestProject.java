@@ -30,9 +30,12 @@ public class TestProject {
     public void entrar (){
 
         login.IniciarSesion();
+       /* tituloProyecto="Proyecto de prueba";
+        tituloProyectoConsulta="Proyecto de prueba consulta";
+        recursoAgregado="ALBUERNE, ARIAGNA";*/
         tituloProyecto="Proyecto de prueba";
         tituloProyectoConsulta="Proyecto de prueba consulta";
-        recursoAgregado="ALBUERNE, ARIAGNA";
+        recursoAgregado=login.leerProperties().get(13 ).replace( "recursoAgregado=","" );
     }
 
     @Test
@@ -96,9 +99,8 @@ public class TestProject {
         addProjectPage.guardarCambios();
         projectManager.busquedaProyectoCreado( id );
         projectManager.abrirProyecto();
-        String  value="29";
-        String valueM="7";
-        addProjectPage.agregarRecursoMiembro(value,valueM);
+        // addProjectPage.agregarRecursoMiembro(value,valueM);
+        addProjectPage.agregarRecursoMiembro(recursoAgregado);
         addProjectPage.guardarCambios();
         String recursoAgregadoM= projectManager.comprobarRecursos();
         assertEquals(recursoAgregado,recursoAgregadoM);

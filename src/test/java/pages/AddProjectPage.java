@@ -47,20 +47,22 @@ public class AddProjectPage extends BasePage {
     }
 
 
-    public void agregarRecursoMiembro (String valueCategoria,String valueMiembro){
+    public void agregarRecursoMiembro (String Miembro){
+
 
         String ventana = winHandles( 1 );
         switchToVentana( ventana );
         click( category );
-        selectOption( category,valueCategoria );
+        String video="29";
+        selectOption( category,video );;
         enter( category );
         click( members );
         click( membersSelect );
-        selectOption(membersSelect,valueMiembro );
+        selectOptionByText(membersSelect,Miembro );
         enter( membersSelect );
         click(addMemBoton);
 
-       }
+    }
 
 
 }

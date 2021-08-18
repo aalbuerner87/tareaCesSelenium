@@ -151,4 +151,11 @@ public class BasePage {
 
     }
 
+    public void selectOptionByText ( By locator , String value ){
+
+        Select lista = new Select( find( locator ) );
+        lista.selectByVisibleText( value );
+
+    }
+
 }
