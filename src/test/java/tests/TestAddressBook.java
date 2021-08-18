@@ -1,7 +1,7 @@
 package tests;
 
-import com.project.pom.AddressBookPage;
-import com.project.pom.InicioPage;
+import pages.AddressBookPage;
+import pages.InicioPage;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
@@ -29,7 +29,10 @@ public class TestAddressBook {
      String movil="091961938";
      String mail="a@gmail.com";
      String prefix="prefix05";
-     addressBookPage.crearContacto(nombre,mail,prefix,movil);
+     String bussPhones="091961938";
+     String job="Ingeniero";
+     String organizations="CES";
+     addressBookPage.crearContacto(organizations,nombre,mail,prefix,movil,bussPhones,job);
      String mensajeSave=addressBookPage.getMensaje();
      assertEquals( "Contact saved",mensajeSave );
      addressBookPage.guardarAgenda();

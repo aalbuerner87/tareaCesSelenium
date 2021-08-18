@@ -1,4 +1,4 @@
-package com.project.pom;
+package pages;
 
 import org.openqa.selenium.By;
 public class AddressBookPage extends BasePage {
@@ -16,8 +16,10 @@ public class AddressBookPage extends BasePage {
     By movil=By.id( "addressbook-edit_tel_cell" );
     By mail=By.id("addressbook-edit_email");
     By jobTitle=By.id( "addressbook-edit_title" );
-    By busqueda=By.cssSelector( "##addressbook-index_nm .et2_textbox" );
+    By busqueda=By.cssSelector( "#addressbook-index_nm .et2_textbox" );
     By applyBoton=By.id("addressbook-edit_button[apply]");
+
+    //option[contains(text*(),"Nombre"]
 
     public AddressBookPage ( ){
         super( driver );
@@ -39,17 +41,17 @@ public class AddressBookPage extends BasePage {
         }
 
 
-    public void crearContacto(String nombre,String mails,String prefixs,String movils){
+    public void crearContacto(String organizations,String nombre,String mails,String prefixs,String movils,String bussPhones,String job){
 
-        write( organization,"CES organizacion de prueba" );
+        write( organization,organizations );
         click( name );
         write( prefix,prefixs );
         write(firstName,nombre);
         click(okBoton);
-        write(bussPhone,"091961938");
+        write(bussPhone,bussPhones);
         write(movil,movils);
         write(mail,mails);
-        write( jobTitle,"ingeniero" );
+        write( jobTitle,job );
         click( applyBoton );
 
     }

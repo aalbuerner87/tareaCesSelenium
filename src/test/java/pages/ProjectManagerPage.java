@@ -1,4 +1,4 @@
-package com.project.pom;
+package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -18,7 +18,11 @@ public class ProjectManagerPage extends BasePage {
     By idProyectoCreado = By.cssSelector( ".rowNoUndelete [class*='_td_col_0']" );
     By nombreProyectoCreado = By.cssSelector( ".rowNoUndelete [class*='_td_col_12']" );
     By zonaTabla=By.cssSelector( ".rowNoUndelete" );
-    By delete = By.cssSelector( "#MONyvUQ47VrFdelete > .sub_item_text .sub_item_text" );
+    By delete = By.xpath( "//*[@class='sub_item'][contains(@id,'delete')]" );
+    By dialog=By.cssSelector( " .ui-dialog.ui-widget" );
+    By texto = By.cssSelector( ".ui-dialog.ui-widget .ui-dialog-content" );
+    By yesBoton=By.id("dialog[yes]");
+    By noElementosBusqueda=By.xpath( "//*[@id=\"projectmanager-list_nm\"]/div[2]/table/tbody/tr/td/div/table/tbody/tr/td" );
 
     public ProjectManagerPage (){
         super( driver );
@@ -37,6 +41,19 @@ public class ProjectManagerPage extends BasePage {
         abrirVentanaProyecto();
         String titulo = getTitulo();
         return titulo;
+    }
+
+    public String getTextoVentanaConfirmacion(){
+
+       return getText( texto );
+
+    }
+
+    public void confirmarDelete(){
+
+        click( yesBoton );
+
+
     }
 
     public void cerrarVentanaProyecto (){
@@ -86,10 +103,15 @@ public class ProjectManagerPage extends BasePage {
     public void eliminarProyecto ( ){
         String ventana = winHandles( 0 );
         switchToVentana( ventana );
-        clicRigth( zonaTabla );
-       // click( delete );
+        clicRigthandMove( idProyectoCreado,delete );
 
 
+
+    }
+
+    public boolean busquedaSinElementos(){
+
+        return elementIsDisplayed( noElementosBusqueda );
     }
 
 

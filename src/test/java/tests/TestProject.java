@@ -1,8 +1,8 @@
 package tests;
 
-import com.project.pom.AddProjectPage;
-import com.project.pom.InicioPage;
-import com.project.pom.ProjectManagerPage;
+import pages.AddProjectPage;
+import pages.InicioPage;
+import pages.ProjectManagerPage;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
@@ -33,22 +33,30 @@ public class TestProject {
     }
 
     @Test
-    public void testVerificarVentanaProyecto(){
+    public void testVerificarVentanaProyecto (){
 
-        String tituloPagina= projectManager.getNombreVentanaProyecto();
-        assertEquals( "EGroupware [Project Manager - Add project]" ,tituloPagina );
-        id=addProjectPage.generarIdProyecto();
-        addProjectPage.escribirProyecto(id,tituloProyecto);
+        String tituloPagina = projectManager.getNombreVentanaProyecto();
+        assertEquals( "EGroupware [Project Manager - Add project]" , tituloPagina );
+        id = addProjectPage.generarIdProyecto();
+        addProjectPage.escribirProyecto( id , tituloProyecto );
         addProjectPage.guardarCambios();
-        String mensajeSave=projectManager.getMensaje();
-        assertEquals( "Project saved.",mensajeSave );
+        String mensajeSave = projectManager.getMensaje();
+        assertEquals( "Project saved." , mensajeSave );
         projectManager.busquedaProyectoCreado( id );
-        List<String> proyecto=new ArrayList<String>(  );
-        proyecto=projectManager.getDatosProyecto();
-        assertEquals(id,proyecto.get( 0 )  );
-        assertEquals( tituloProyecto,proyecto.get( 1 ) );
+        List<String> proyecto = new ArrayList<String>();
+        proyecto = projectManager.getDatosProyecto();
+        assertEquals( id , proyecto.get( 0 ) );
+        assertEquals( tituloProyecto , proyecto.get( 1 ) );
+        projectManager.eliminarProyecto();
+        String texto = projectManager.getTextoVentanaConfirmacion();
+        assertEquals( "Delete this project?" , texto );
+        projectManager.confirmarDelete();
+        String mensajedelete = projectManager.getMensaje();
+        assertEquals( "1 project(s) Deleted" , mensajedelete );
+        projectManager.busquedaProyectoCreado( id );
+        boolean sinProyectos=projectManager.busquedaSinElementos();
+        assertTrue(sinProyectos );
         projectManager.cerrarVentanaProyecto();
-        //projectManager.eliminarProyecto();
 
 
     }

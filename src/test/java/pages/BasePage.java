@@ -1,4 +1,4 @@
-package com.project.pom;
+package pages;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -28,7 +28,6 @@ public class BasePage {
 
     protected static WebDriver driver;
     private static WebDriverWait wait;
-    private static Actions action;
     private static By messageSave;
 
     static{
@@ -82,8 +81,8 @@ public class BasePage {
 
     public String getText ( By locator ){
 
-        WebElement waitUntil = wait.until( ExpectedConditions.visibilityOfElementLocated( locator ) );
-        return waitUntil.getText();
+
+        return find( locator ).getText();
 
     }
 
@@ -136,7 +135,20 @@ public class BasePage {
 
     //clic derecho = clic contextual
     public void clicRigth ( By locator ){
-            action = action.contextClick( find( locator ) );
+
+        WebElement b=find( locator );
+        Actions action= new Actions(driver);
+        action.contextClick( b ).build().perform();
+    }
+
+    public void clicRigthandMove ( By locator,By locatorMove ){
+
+        WebElement b=find( locator );
+        Actions action= new Actions(driver);
+        action.contextClick(b).build().perform();
+        WebElement move=find(locatorMove);
+        action.moveToElement( move);
+        move.click();
     }
 
     public boolean messageIsDisplayed(){
@@ -146,7 +158,9 @@ public class BasePage {
     }
     public String messageGetText(){
 
-       return find( messageSave ).getText();
+        String mensaje=find( messageSave ).getText();
+        click( messageSave );
+       return mensaje;
 
     }
 

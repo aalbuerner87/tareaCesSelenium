@@ -1,4 +1,4 @@
-package com.project.pom;
+package pages;
 import org.openqa.selenium.By;
 
 public class AddProjectPage extends BasePage {

@@ -1,18 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/test/java/com/project/pom/AddressBookPage.java" line="14" mnemonic="3" />
+    <bookmark url="file://$PROJECT_DIR$/src/test/java/pages/AddressBookPage.java" line="10" mnemonic="3" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="46c6c4c7-921e-40ee-b266-6e25bab484f0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/project/pom/AddProjectPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/project/pom/AddProjectPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/project/pom/AddressBookPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/project/pom/AddressBookPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/project/pom/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/project/pom/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/project/pom/ProjectManagerPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/project/pom/ProjectManagerPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/project/pom/AddProjectPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/AddProjectPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/project/pom/AddressBookPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/AddressBookPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/project/pom/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/project/pom/InicioPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/InicioPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/project/pom/ProjectManagerPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/ProjectManagerPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/project/pom/ResourcesPage.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/TestAddressBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/TestAddressBook.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/TestProject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/TestProject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/TestResources.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/project/pom/AddProjectPage.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/project/pom/AddressBookPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/TestAddressBook.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/project/pom/BasePage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/project/pom/InicioPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/project/pom/ProjectManagerPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/project/pom/ResourcesPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/TestProject.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/TestProject.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/tests/TestResources.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -29,27 +38,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/project/pom/BasePage.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/pages/AddressBookPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="150" column="5" lean-forward="true" selection-start-line="150" selection-start-column="5" selection-end-line="150" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#3069#3070#0" expanded="true" />
-                <element signature="e#3140#3141#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/project/pom/AddressBookPage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="71" column="32" lean-forward="true" selection-start-line="71" selection-start-column="32" selection-end-line="71" selection-end-column="32" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="238">
+              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
             </state>
           </provider>
         </entry>
@@ -57,8 +49,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/tests/TestAddressBook.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="34" column="37" lean-forward="true" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
+            <state relative-caret-position="306">
+              <caret line="18" column="26" lean-forward="true" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -67,26 +59,34 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/project/pom/ProjectManagerPage.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/pages/ProjectManagerPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-32">
-              <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
+            <state relative-caret-position="153">
+              <caret line="24" column="38" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1853#1861#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/tests/TestResources.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/pages/BasePage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="225">
+              <caret line="162" column="6" selection-start-line="162" selection-start-column="6" selection-end-line="162" selection-end-column="6" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/pages/InicioPage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
             </state>
           </provider>
         </entry>
@@ -94,21 +94,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/tests/TestProject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="41" column="40" lean-forward="true" selection-start-line="41" selection-start-column="40" selection-end-line="41" selection-end-column="40" />
+            <state relative-caret-position="288">
+              <caret line="57" column="67" lean-forward="true" selection-start-line="57" selection-start-column="67" selection-end-line="57" selection-end-column="67" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1289#1297#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/project/pom/AddProjectPage.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/pages/AddProjectPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="24" column="38" lean-forward="true" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
+            <state relative-caret-position="-183">
+              <caret line="32" column="33" lean-forward="true" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -138,17 +137,20 @@
         <option value="$PROJECT_DIR$/src/test/java/com/project/pom/InicioPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/project/pom/ResourcesPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/project/pom/AddProjectPage.java" />
-        <option value="$PROJECT_DIR$/src/test/java/tests/TestProject.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/project/pom/AddressBookPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/project/pom/BasePage.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/project/pom/ProjectManagerPage.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/project/pom/AddressBookPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/tests/TestAddressBook.java" />
+        <option value="$PROJECT_DIR$/src/test/java/pages/BasePage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/tests/TestProject.java" />
+        <option value="$PROJECT_DIR$/src/test/java/pages/AddressBookPage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/pages/ProjectManagerPage.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1611" />
-    <option name="y" value="16" />
+    <option name="x" value="1621" />
+    <option name="y" value="-12" />
     <option name="width" value="1440" />
     <option name="height" value="710" />
   </component>
@@ -191,7 +193,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="pom" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CesAutomation" type="b2602c69:ProjectViewProjectNode" />
@@ -199,7 +201,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CesAutomation" type="b2602c69:ProjectViewProjectNode" />
@@ -239,7 +241,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TestAddressBook.test">
+  <component name="RunManager" selected="JUnit.TestProject.testVerificarVentanaProyecto">
     <configuration name="TestAddressBook.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CesAutomation" />
       <extension name="coverage">
@@ -321,9 +323,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestProject.testVerificarVentanaProyecto" />
         <item itemvalue="JUnit.TestAddressBook.test" />
         <item itemvalue="JUnit.TestProject.consultarProyecto" />
-        <item itemvalue="JUnit.TestProject.testVerificarVentanaProyecto" />
         <item itemvalue="JUnit.TestProject" />
         <item itemvalue="JUnit.TestResources.test" />
       </list>
@@ -343,43 +345,43 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestAddressBook_test - 2021.08.17 at 00h 41m 17s.xml">
+    <history-entry file="TestAddressBook_test - 2021.08.17 at 18h 56m 17s.xml">
       <configuration name="TestAddressBook.test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestAddressBook_test - 2021.08.17 at 00h 42m 51s.xml">
-      <configuration name="TestAddressBook.test" configurationId="JUnit" />
+    <history-entry file="TestProject_testVerificarVentanaProyecto - 2021.08.17 at 20h 48m 31s.xml">
+      <configuration name="TestProject.testVerificarVentanaProyecto" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestAddressBook_test - 2021.08.17 at 01h 06m 50s.xml">
-      <configuration name="TestAddressBook.test" configurationId="JUnit" />
+    <history-entry file="TestProject_testVerificarVentanaProyecto - 2021.08.17 at 20h 57m 27s.xml">
+      <configuration name="TestProject.testVerificarVentanaProyecto" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestAddressBook_test - 2021.08.17 at 01h 08m 52s.xml">
-      <configuration name="TestAddressBook.test" configurationId="JUnit" />
+    <history-entry file="TestProject_testVerificarVentanaProyecto - 2021.08.17 at 20h 59m 45s.xml">
+      <configuration name="TestProject.testVerificarVentanaProyecto" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestAddressBook_test - 2021.08.17 at 01h 10m 22s.xml">
-      <configuration name="TestAddressBook.test" configurationId="JUnit" />
+    <history-entry file="TestProject_testVerificarVentanaProyecto - 2021.08.17 at 21h 01m 31s.xml">
+      <configuration name="TestProject.testVerificarVentanaProyecto" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestAddressBook_test - 2021.08.17 at 01h 13m 21s.xml">
-      <configuration name="TestAddressBook.test" configurationId="JUnit" />
+    <history-entry file="TestProject_testVerificarVentanaProyecto - 2021.08.17 at 21h 03m 36s.xml">
+      <configuration name="TestProject.testVerificarVentanaProyecto" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestAddressBook_test - 2021.08.17 at 01h 17m 49s.xml">
-      <configuration name="TestAddressBook.test" configurationId="JUnit" />
+    <history-entry file="TestProject_testVerificarVentanaProyecto - 2021.08.17 at 21h 06m 33s.xml">
+      <configuration name="TestProject.testVerificarVentanaProyecto" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestAddressBook_test - 2021.08.17 at 01h 19m 44s.xml">
-      <configuration name="TestAddressBook.test" configurationId="JUnit" />
+    <history-entry file="TestProject_testVerificarVentanaProyecto - 2021.08.17 at 21h 10m 39s.xml">
+      <configuration name="TestProject.testVerificarVentanaProyecto" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestAddressBook_test - 2021.08.17 at 01h 21m 17s.xml">
-      <configuration name="TestAddressBook.test" configurationId="JUnit" />
+    <history-entry file="TestProject_testVerificarVentanaProyecto - 2021.08.17 at 21h 13m 17s.xml">
+      <configuration name="TestProject.testVerificarVentanaProyecto" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestAddressBook_test - 2021.08.17 at 01h 22m 31s.xml">
-      <configuration name="TestAddressBook.test" configurationId="JUnit" />
+    <history-entry file="TestProject_testVerificarVentanaProyecto - 2021.08.17 at 21h 24m 18s.xml">
+      <configuration name="TestProject.testVerificarVentanaProyecto" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="1592" y="-8" width="1616" height="916" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.697446" visible="true" weight="0.2840617" />
-      <window_info id="Structure" order="1" sideWeight="0.30255404" side_tool="true" visible="true" weight="0.2840617" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6975169" visible="true" weight="0.23200513" />
+      <window_info id="Structure" order="1" sideWeight="0.30248308" side_tool="true" visible="true" weight="0.23200513" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
@@ -388,7 +390,7 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32881773" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3731527" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4544335" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.37807882" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -440,9 +442,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/test/java/com/project/pom/InicioPage.java</url>
+          <url>file://$PROJECT_DIR$/src/test/java/pages/InicioPage.java</url>
           <line>19</line>
-          <properties class="com.project.pom.InicioPage" method="IniciarSesion">
+          <properties class="pages.InicioPage" method="IniciarSesion">
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="2" />
@@ -460,10 +462,10 @@
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/tests/TestResources.java</url>
-          <line>20</line>
+          <url>file://$PROJECT_DIR$/src/test/java/tests/TestAddressBook.java</url>
+          <line>23</line>
           <properties />
-          <option name="timeStamp" value="15" />
+          <option name="timeStamp" value="16" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -471,16 +473,6 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/test/resources/credenciales.txt">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/util/LeeFichero.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-commons/1.8.0-M1/junit-platform-commons-1.8.0-M1.jar!/org/junit/platform/commons/util/ReflectionUtils.class">
       <provider selected="true" editor-type-id="text-editor">
@@ -632,32 +624,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/project/pom/InicioPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-14">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/project/pom/AddProjectPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="24" column="38" lean-forward="true" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/project/pom/BasePage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="150" column="5" lean-forward="true" selection-start-line="150" selection-start-column="5" selection-end-line="150" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3069#3070#0" expanded="true" />
-            <element signature="e#3140#3141#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/tests/TestResources.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -668,21 +634,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/tests/TestProject.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-api/3.141.59/selenium-api-3.141.59.jar!/org/openqa/selenium/WebElement.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="41" column="40" lean-forward="true" selection-start-line="41" selection-start-column="40" selection-end-line="41" selection-end-column="40" />
+        <state relative-caret-position="102">
+          <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/util/LeeFichero.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-17">
+          <caret line="11" column="28" lean-forward="true" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1289#1297#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/project/pom/AddressBookPage.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/pages/InicioPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="71" column="32" lean-forward="true" selection-start-line="71" selection-start-column="32" selection-end-line="71" selection-end-column="32" />
+        <state relative-caret-position="289">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pages/AddProjectPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-183">
+          <caret line="32" column="33" lean-forward="true" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pages/BasePage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="162" column="6" selection-start-line="162" selection-start-column="6" selection-end-line="162" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/tests/TestProject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="57" column="67" lean-forward="true" selection-start-line="57" selection-start-column="67" selection-end-line="57" selection-end-column="67" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -691,21 +687,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/tests/TestAddressBook.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="37" lean-forward="true" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
+        <state relative-caret-position="306">
+          <caret line="18" column="26" lean-forward="true" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/project/pom/ProjectManagerPage.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/pages/AddressBookPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-32">
-          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
+        <state relative-caret-position="238">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pages/ProjectManagerPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="24" column="38" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1853#1861#0" expanded="true" />
           </folding>
         </state>
       </provider>
