@@ -97,16 +97,6 @@ public class ProjectManagerPage extends BasePage {
 
     }
 
-    public void getDetallesProyecto(){
-
-        String ventana = winHandles( 0 );
-        switchToVentana( ventana );
-        click(zonaTabla);
-        click(zonaTabla);
-
-
-    }
-
 
     public void eliminarProyecto ( ){
         String ventana = winHandles( 0 );

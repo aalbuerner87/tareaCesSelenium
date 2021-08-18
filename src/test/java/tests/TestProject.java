@@ -66,8 +66,8 @@ public class TestProject {
     public void consultarProyecto(){
 
         projectManager.abrirVentanaProyecto();
-        id=addProjectPage.generarIdProyecto();
-        addProjectPage.escribirProyecto( id,tituloProyectoConsulta );
+        id = addProjectPage.generarIdProyecto();
+        addProjectPage.escribirProyecto( id , tituloProyectoConsulta );
         addProjectPage.guardarCambios();
         projectManager.busquedaProyectoCreado( id );
         List<String> proyecto = new ArrayList<String>();
@@ -80,13 +80,7 @@ public class TestProject {
         addProjectPage.guardarCambios();
         projectManager.eliminarProyecto();
         projectManager.confirmarDelete();
-        projectManager.busquedaProyectoCreado( id );
-        boolean sinProyectos=projectManager.busquedaSinElementos();
-        assertTrue(sinProyectos );
-        projectManager.cerrarVentanaProyecto();
-
     }
-
 
 
 }

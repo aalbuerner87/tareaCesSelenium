@@ -9,7 +9,9 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 import java.util.Set;
+
 import org.openqa.selenium.Keys;
 
 /*revisar estos métodos métodos:
@@ -70,7 +72,6 @@ public class BasePage {
     }
 
 
-
     public void click ( By locator ){
 
         WebElement waitUntil = wait.until( ExpectedConditions.visibilityOfElementLocated( locator ) );
@@ -95,7 +96,7 @@ public class BasePage {
 
     public void clickJs ( By locator ){
 
-        WebElement waitUntil = wait.until( ExpectedConditions.visibilityOfElementLocated(  locator  ) );
+        WebElement waitUntil = wait.until( ExpectedConditions.visibilityOfElementLocated( locator ) );
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript( "arguments[0].click();" , waitUntil );
 
@@ -128,49 +129,50 @@ public class BasePage {
 
     }
 
-    public void enter(By selector){
+    public void enter ( By selector ){
 
-        find(selector).sendKeys( Keys.ENTER );
+        find( selector ).sendKeys( Keys.ENTER );
     }
 
 
     //clic derecho = clic contextual
     public void clicRigth ( By locator ){
 
-        WebElement b=find( locator );
-        Actions action= new Actions(driver);
+        WebElement b = find( locator );
+        Actions action = new Actions( driver );
         action.contextClick( b ).build().perform();
 
     }
 
-    public void clicRigthandMove ( By locator,By locatorMove ){
+    public void clicRigthandMove ( By locator , By locatorMove ){
 
-        WebElement b=find( locator );
-        Actions action= new Actions(driver);
-        action.contextClick(b).build().perform();
-        WebElement move=find(locatorMove);
-        action.moveToElement( move);
+        WebElement b = find( locator );
+        Actions action = new Actions( driver );
+        action.contextClick( b ).build().perform();
+        WebElement move = find( locatorMove );
+        action.moveToElement( move );
         move.click();
     }
 
-    public boolean messageIsDisplayed(){
+    public boolean messageIsDisplayed (){
 
         return find( messageSave ).isDisplayed();
 
     }
-    public String messageGetText(){
 
-        String mensaje=find( messageSave ).getText();
+    public String messageGetText (){
+
+        String mensaje = find( messageSave ).getText();
         click( messageSave );
-       return mensaje;
+        return mensaje;
 
     }
 
-    public void moveToElement(By locator){
+    public void dobleClick ( By locator ){
 
-        Actions action= new Actions(driver);
-        WebElement move=find( locator );
-        action.moveToElement( move );
+        Actions action = new Actions( driver );
+        WebElement doblec = find( locator );
+        action.doubleClick( doblec ).build().perform();
 
     }
 
