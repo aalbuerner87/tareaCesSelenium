@@ -1,6 +1,4 @@
 
-- Eliminar el proyecto después que se crea-- trancada pq el selector no me sale
-- Crear un proyecto especifico para la busqueda buscarlo y validar los elementos de la tabla.--- validar los datos- este no estoy tranacada
-- Buscar el contatco creado- trancada no me esta tomando el selector de la busqueda
-- eliminar el contacto
-- Agregar método para agregar un miembro al proyecto
+- eliminar el contacto--trancada problema con el selector dinamico de delete
+
+- Agregar método para agregar un miembro al proyecto (tengo algo adelantado, da un error cuando seleccionas)
