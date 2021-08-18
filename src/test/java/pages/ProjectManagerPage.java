@@ -2,7 +2,6 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,13 +16,13 @@ public class ProjectManagerPage extends BasePage {
     By cerrarProyecto = By.cssSelector( "#projectmanager-egw_fw_ui_tab_header > .egw_fw_ui_tab_close_button" );
     By idProyectoCreado = By.cssSelector( ".rowNoUndelete [class*='_td_col_0']" );
     By nombreProyectoCreado = By.cssSelector( ".rowNoUndelete [class*='_td_col_12']" );
-    By zonaTabla=By.cssSelector( ".rowNoUndelete" );
     By delete = By.xpath( "//*[@class='sub_item'][contains(@id,'delete')]" );
     By open= By.xpath( "//*[@class='sub_item'][contains(@id,'open')]" );
     By dialog=By.cssSelector( " .ui-dialog.ui-widget" );
     By texto = By.cssSelector( ".ui-dialog.ui-widget .ui-dialog-content" );
     By yesBoton=By.id("dialog[yes]");
     By noElementosBusqueda=By.xpath( "//*[@id=\"projectmanager-list_nm\"]/div[2]/table/tbody/tr/td/div/table/tbody/tr/td" );
+    By titleTabla=By.cssSelector( ".th.rowNoDelete.row_category.row.ui-droppable [class*='_td_col_4']" );
 
     public ProjectManagerPage (){
         super( driver );
@@ -119,6 +118,15 @@ public class ProjectManagerPage extends BasePage {
     public boolean busquedaSinElementos(){
 
         return elementIsDisplayed( noElementosBusqueda );
+    }
+
+    public String comprobarRecursos(){
+
+    dobleClick( nombreProyectoCreado );
+    String miembro = getText( titleTabla );
+    System.out.println( "titulo = " + miembro );
+    return miembro;
+
     }
 
 

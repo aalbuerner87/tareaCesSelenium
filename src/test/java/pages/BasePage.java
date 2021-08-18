@@ -9,6 +9,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.Select;
 
 import java.util.Set;
 
@@ -130,8 +131,13 @@ public class BasePage {
     }
 
     public void enter ( By selector ){
-
+        new WebDriverWait(driver, 20).until(ExpectedConditions.elementToBeClickable(selector)).click();
         find( selector ).sendKeys( Keys.ENTER );
+    }
+
+    public void moveToElement ( By selector ){
+
+        find( selector ).sendKeys( Keys.ARROW_DOWN );
     }
 
 
@@ -173,6 +179,13 @@ public class BasePage {
         Actions action = new Actions( driver );
         WebElement doblec = find( locator );
         action.doubleClick( doblec ).build().perform();
+
+    }
+
+    public void selectOption(By locator,String value){
+
+        Select lista = new Select (find( locator ));
+        lista.selectByValue(value  );
 
     }
 

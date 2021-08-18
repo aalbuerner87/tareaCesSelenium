@@ -25,8 +25,9 @@ public class AddressBookPage extends BasePage {
     By paisTabla = By.cssSelector( ".contact_contact [class*='_td_col_3']" ); //pais
     By celularTabla = By.cssSelector( ".contact_contact [class*='_td_col_5']" );
     By correoTabla = By.cssSelector( ".contact_contact [class*='_td_col_7']" );
-    By delete = By.cssSelector( ".et2_button et2_button_icon et2_clickable et2_button_delete" );
+    By delete = By.className( "et2_button et2_button_icon et2_clickable et2_button_delete" );
     By area=By.cssSelector( ".et2_grid addressbook_view" );
+    By pestana=By.cssSelector( ".egw_fw_ui_tab_header ui-droppable egw_fw_ui_tab_header_active" );
 
     //option[contains(text*(),"Nombre"]
 
@@ -112,7 +113,9 @@ public class AddressBookPage extends BasePage {
         String ventana = winHandles( 0 );
         switchToVentana( ventana );
         dobleClick( nombreTabla );
-        clickJs( delete );
+        String info = winHandles( 0 );
+        switchToVentana( info );
+         clickJs( delete );
 
 
 
