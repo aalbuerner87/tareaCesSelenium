@@ -30,15 +30,15 @@ public class TestAddressBook {
     @BeforeAll
     public void entrar (){
 
-        login.IniciarSesion();
-         nombre="Ariagna3";
-         movil="091961938";
-         mail="a@gmail.com";
-         prefix="prefix05";
-         bussPhones="091961938";
-         job="Ingeniero";
-         organizations="CES";
-         pais="GERMANY";
+         login.IniciarSesion();
+         nombre=login.leerProperties().get( 3 ).replace( "nombre=","" );
+         movil=login.leerProperties().get( 4 ).replace( "movil=","" );
+         mail=login.leerProperties().get( 5 ).replace( "mail=","" );
+         prefix=login.leerProperties().get( 6 ).replace( "prefix=","" );
+         bussPhones=login.leerProperties().get( 7 ).replace( "bussPhones=","" );
+         job=login.leerProperties().get( 8 ).replace( "job=","" );
+         organizations=login.leerProperties().get( 9 ).replace( "organizations=","" );
+         pais=login.leerProperties().get( 10 ).replace( "pais=","" );
     }
 
     @Test

@@ -24,7 +24,7 @@ public class InicioPage extends BasePage {
     public void IniciarSesion (){
 
         driver.manage().window().maximize();
-        List<String> credenciales=leerCredenciales();
+        List<String> credenciales= leerProperties();
         user=credenciales.get( 0 ).replace( "user=","" );
         pass=credenciales.get( 1 ).replace(  "pass=","" );
         url=credenciales.get(2).replace( "url=","" );
@@ -35,7 +35,7 @@ public class InicioPage extends BasePage {
 
     }
 
-    public List<String> leerCredenciales (){
+    public List<String> leerProperties (){
         LeeFichero credencial = new LeeFichero();
         List<String> credenciales = new ArrayList<String>();
         credenciales = credencial.leerFichero();

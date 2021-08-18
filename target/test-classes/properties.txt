@@ -1,3 +1,11 @@
 user=aalbuerne
 pass=aalbuerne
 url=http://egroupware.cursos.ces.com.uy/egroupware/login.php
+nombre=Ariagna3
+movil=091961938
+mail=a@gmail.com
+prefix=prefix05
+bussPhones=091961938
+job=Ingeniero
+organizations=CES
+pais=GERMANY
