@@ -17,7 +17,7 @@ public class LeeFichero {
         try {
             // Apertura del fichero y creacion de BufferedReader para poder
             // hacer una lectura comoda (disponer del metodo readLine()).
-            archivo = new File( "src/test/resources/credenciales.txt" );
+            archivo = new File( "src/test/resources/properties.txt" );
             fr = new FileReader( archivo );
             br = new BufferedReader( fr );
 

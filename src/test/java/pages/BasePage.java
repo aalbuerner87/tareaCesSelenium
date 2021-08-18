@@ -10,20 +10,8 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.support.ui.Select;
-
 import java.util.Set;
-
 import org.openqa.selenium.Keys;
-
-/*revisar estos métodos métodos:
-
-    driver.findElement()
-    isDisplayed()
-    getText()
-    click()
-    sendkeys()
-    get()
-*/
 
 
 public class BasePage {
@@ -59,8 +47,8 @@ public class BasePage {
 
     private WebElement find ( By locator ){
 
-        WebElement waitUntil = wait.until( ExpectedConditions.visibilityOfElementLocated( locator ) );
-        return waitUntil;
+        WebElement elementWithWait = wait.until( ExpectedConditions.visibilityOfElementLocated( locator ) );
+        return elementWithWait;
 
 
     }
@@ -75,8 +63,8 @@ public class BasePage {
 
     public void click ( By locator ){
 
-        WebElement waitUntil = wait.until( ExpectedConditions.visibilityOfElementLocated( locator ) );
-        waitUntil.click();
+       find(locator).click();
+
 
     }
 
@@ -88,13 +76,6 @@ public class BasePage {
 
     }
 
-    public String getTextByLocator ( By locator ){
-
-        return find( locator ).getText();
-
-    }
-
-
     public void clickJs ( By locator ){
 
         WebElement waitUntil = wait.until( ExpectedConditions.visibilityOfElementLocated( locator ) );
@@ -104,14 +85,14 @@ public class BasePage {
 
     }
 
-    public String winHandles ( int posicionVentana ){
+    public String winHandles ( int positionWindow ){
 
-        Set<String> ventanas = driver.getWindowHandles();
-        return (String) ventanas.toArray()[ posicionVentana ];
+        Set<String> windows = driver.getWindowHandles();
+        return (String) windows.toArray()[ positionWindow ];
 
     }
 
-    public String getTitulo (){
+    public String getTitle (){
 
         return driver.getTitle();
     }
@@ -131,24 +112,10 @@ public class BasePage {
     }
 
     public void enter ( By selector ){
-        new WebDriverWait(driver, 20).until(ExpectedConditions.elementToBeClickable(selector)).click();
+        new WebDriverWait( driver , 20 ).until( ExpectedConditions.elementToBeClickable( selector ) ).click();
         find( selector ).sendKeys( Keys.ENTER );
     }
 
-    public void moveToElement ( By selector ){
-
-        find( selector ).sendKeys( Keys.ARROW_DOWN );
-    }
-
-
-    //clic derecho = clic contextual
-    public void clicRigth ( By locator ){
-
-        WebElement b = find( locator );
-        Actions action = new Actions( driver );
-        action.contextClick( b ).build().perform();
-
-    }
 
     public void clicRigthandMove ( By locator , By locatorMove ){
 
@@ -160,11 +127,6 @@ public class BasePage {
         move.click();
     }
 
-    public boolean messageIsDisplayed (){
-
-        return find( messageSave ).isDisplayed();
-
-    }
 
     public String messageGetText (){
 
@@ -182,10 +144,10 @@ public class BasePage {
 
     }
 
-    public void selectOption(By locator,String value){
+    public void selectOption ( By locator , String value ){
 
-        Select lista = new Select (find( locator ));
-        lista.selectByValue(value  );
+        Select lista = new Select( find( locator ) );
+        lista.selectByValue( value );
 
     }
 

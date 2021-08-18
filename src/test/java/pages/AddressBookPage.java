@@ -46,7 +46,7 @@ public class AddressBookPage extends BasePage {
 
         public String getNombreVentanaAgenda(){
             abrirVentanaAgenda();
-            String titulo = getTitulo();
+            String titulo = getTitle();
             return titulo;
         }
 
@@ -118,6 +118,12 @@ public class AddressBookPage extends BasePage {
          clickJs( delete );
 
 
+
+    }
+
+    public void cerrarNavegador(){
+
+        closedBrowser();
 
     }
 

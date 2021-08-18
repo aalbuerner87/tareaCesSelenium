@@ -1,5 +1,6 @@
 package tests;
 
+import org.junit.jupiter.api.AfterAll;
 import pages.AddProjectPage;
 import pages.InicioPage;
 import pages.ProjectManagerPage;
@@ -108,9 +109,12 @@ public class TestProject {
         projectManager.cerrarVentanaProyecto();
 
 
+    }
 
+  @AfterAll
+    public void cerrarNavegador(){
 
-
+        projectManager.cerrarNavegador();
 
     }
 

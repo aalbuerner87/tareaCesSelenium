@@ -1,5 +1,6 @@
 package tests;
 
+import org.junit.jupiter.api.AfterAll;
 import pages.AddressBookPage;
 import pages.InicioPage;
 import org.junit.jupiter.api.BeforeAll;
@@ -63,7 +64,11 @@ public class TestAddressBook {
 
     }
 
+    @AfterAll
+    public void cerrarNavegador(){
 
+        addressBookPage.cerrarNavegador();
+    }
 
 
 

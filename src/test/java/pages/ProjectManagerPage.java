@@ -39,14 +39,14 @@ public class ProjectManagerPage extends BasePage {
 
     public String getNombreVentanaProyecto(){
         abrirVentanaProyecto();
-        String titulo = getTitulo();
+        String titulo = getTitle();
         return titulo;
     }
 
     public String getNombreVentanaEditarProyecto(){
         String ventana = winHandles( 1 );
         switchToVentana( ventana );
-       String titulo = getTitulo();
+        String titulo = getTitle();
         return titulo;
     }
 
@@ -126,6 +126,12 @@ public class ProjectManagerPage extends BasePage {
     String miembro = getText( titleTabla );
     System.out.println( "titulo = " + miembro );
     return miembro;
+
+    }
+
+    public void cerrarNavegador(){
+
+        closedBrowser();
 
     }
 
