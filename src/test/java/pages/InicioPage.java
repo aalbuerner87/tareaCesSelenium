@@ -11,7 +11,7 @@ public class InicioPage extends BasePage {
     By login = By.xpath( "//input[@name='login']" );
     By clave = By.xpath( "//input[@name='passwd']" );
     By boton = By.cssSelector( "tr:nth-child(8) input" );
-    String url = "http://egroupware.cursos.ces.com.uy/egroupware/login.php";
+    String url ;
     String user  ;
     String pass  ;
 
@@ -24,10 +24,11 @@ public class InicioPage extends BasePage {
     public void IniciarSesion (){
 
         driver.manage().window().maximize();
-        navigateTo( url );
         List<String> credenciales=leerCredenciales();
         user=credenciales.get( 0 ).replace( "user=","" );
         pass=credenciales.get( 1 ).replace(  "pass=","" );
+        url=credenciales.get(2).replace( "url=","" );
+        navigateTo( url );
         write( login , user );
         write( clave , pass );
         click( boton );

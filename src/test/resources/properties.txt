@@ -1,2 +1,3 @@
 user=aalbuerne
 pass=aalbuerne
+url=http://egroupware.cursos.ces.com.uy/egroupware/login.php
