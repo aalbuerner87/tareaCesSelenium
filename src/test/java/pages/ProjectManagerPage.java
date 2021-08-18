@@ -19,6 +19,7 @@ public class ProjectManagerPage extends BasePage {
     By nombreProyectoCreado = By.cssSelector( ".rowNoUndelete [class*='_td_col_12']" );
     By zonaTabla=By.cssSelector( ".rowNoUndelete" );
     By delete = By.xpath( "//*[@class='sub_item'][contains(@id,'delete')]" );
+    By open= By.xpath( "//*[@class='sub_item'][contains(@id,'open')]" );
     By dialog=By.cssSelector( " .ui-dialog.ui-widget" );
     By texto = By.cssSelector( ".ui-dialog.ui-widget .ui-dialog-content" );
     By yesBoton=By.id("dialog[yes]");
@@ -40,6 +41,13 @@ public class ProjectManagerPage extends BasePage {
     public String getNombreVentanaProyecto(){
         abrirVentanaProyecto();
         String titulo = getTitulo();
+        return titulo;
+    }
+
+    public String getNombreVentanaEditarProyecto(){
+        String ventana = winHandles( 1 );
+        switchToVentana( ventana );
+       String titulo = getTitulo();
         return titulo;
     }
 
@@ -104,6 +112,15 @@ public class ProjectManagerPage extends BasePage {
         String ventana = winHandles( 0 );
         switchToVentana( ventana );
         clicRigthandMove( idProyectoCreado,delete );
+
+
+
+    }
+
+    public void abrirProyecto ( ){
+        String ventana = winHandles( 0 );
+        switchToVentana( ventana );
+        clicRigthandMove( idProyectoCreado,open );
 
 
 

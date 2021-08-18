@@ -133,12 +133,14 @@ public class BasePage {
         find(selector).sendKeys( Keys.ENTER );
     }
 
+
     //clic derecho = clic contextual
     public void clicRigth ( By locator ){
 
         WebElement b=find( locator );
         Actions action= new Actions(driver);
         action.contextClick( b ).build().perform();
+
     }
 
     public void clicRigthandMove ( By locator,By locatorMove ){
@@ -161,6 +163,14 @@ public class BasePage {
         String mensaje=find( messageSave ).getText();
         click( messageSave );
        return mensaje;
+
+    }
+
+    public void moveToElement(By locator){
+
+        Actions action= new Actions(driver);
+        WebElement move=find( locator );
+        action.moveToElement( move );
 
     }
 

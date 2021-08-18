@@ -33,7 +33,7 @@ public class TestProject {
     }
 
     @Test
-    public void testVerificarVentanaProyecto (){
+    public void testCrearProyecto (){
 
         String tituloPagina = projectManager.getNombreVentanaProyecto();
         assertEquals( "EGroupware [Project Manager - Add project]" , tituloPagina );
@@ -67,10 +67,23 @@ public class TestProject {
 
         projectManager.abrirVentanaProyecto();
         id=addProjectPage.generarIdProyecto();
-        addProjectPage.escribirProyecto(id,tituloProyectoConsulta);
+        addProjectPage.escribirProyecto( id,tituloProyectoConsulta );
         addProjectPage.guardarCambios();
         projectManager.busquedaProyectoCreado( id );
+        List<String> proyecto = new ArrayList<String>();
+        proyecto = projectManager.getDatosProyecto();
+        assertEquals( id , proyecto.get( 0 ) );
+        assertEquals( tituloProyectoConsulta , proyecto.get( 1 ) );
+        projectManager.abrirProyecto();
+        String tituloPagina = projectManager.getNombreVentanaEditarProyecto();
+        assertEquals( "EGroupware [Project Manager - Edit project]" , tituloPagina );
+        addProjectPage.guardarCambios();
         projectManager.eliminarProyecto();
+        projectManager.confirmarDelete();
+        projectManager.busquedaProyectoCreado( id );
+        boolean sinProyectos=projectManager.busquedaSinElementos();
+        assertTrue(sinProyectos );
+        projectManager.cerrarVentanaProyecto();
 
     }
 

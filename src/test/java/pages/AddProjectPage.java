@@ -9,6 +9,13 @@ public class AddProjectPage extends BasePage {
     By save=By.id("projectmanager-edit_save");
     By messageSave=By.id("egw_message");
     String id="";
+    By category=By.id("projectmanager-edit_cat_id");
+    By optionCategory=By.xpath( "//*[@id=\"projectmanager-edit_cat_id\"]/option[2]" );
+    By members=By.xpath( "//*[@id=\"projectmanager-edit_tabs\"]/div[1]/span[3]" );
+    By membersSelect=By.id("projectmanager-edit_member[1]");
+    By memOtion=By.xpath( "//*[@id=\"projectmanager-edit_member[1]\"]/option[3]" );
+    By addMemBoton=By.cssSelector("#projectmanager-edit_add");
+
 
     public AddProjectPage ( ){
         super( driver );
@@ -41,18 +48,22 @@ public class AddProjectPage extends BasePage {
     }
 
 
+/*public void generarProyectoParaConsulta(String idGenerado,String tituloProyecto){
 
-  public boolean verificarMensaje(){
+        escribirProyecto( idGenerado,tituloProyecto );
+        click(category);
+        click(optionCategory );
+        enter( optionCategory );
+        /*click( members );
+        click(membersSelect);
+        moveToElement(memOtion);
+        click( memOtion );
+        enter( memOtion );
 
-      System.out.println( "elementIsDisplayed(messageSave) = " + elementIsDisplayed(messageSave) );
+}*/
 
-   return elementIsDisplayed(messageSave);
 
-    }
-    public String getMensaje (){
 
-        return messageGetText();
-    }
 
 
 
