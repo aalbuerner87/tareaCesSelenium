@@ -5,11 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="46c6c4c7-921e-40ee-b266-6e25bab484f0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/AddProjectPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/AddProjectPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/AddressBookPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/AddressBookPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/ProjectManagerPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/ProjectManagerPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/TestProject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/TestProject.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -52,8 +47,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/tests/TestProject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="104" lean-forward="true" selection-start-line="104" selection-end-line="104" />
+            <state relative-caret-position="352">
+              <caret line="110" lean-forward="true" selection-start-line="110" selection-end-line="110" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -334,15 +329,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestProject_testAgregarRecursoMiembro - 2021.08.18 at 13h 21m 53s.xml">
-      <configuration name="TestProject.testAgregarRecursoMiembro" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestProject_testAgregarRecursoMiembro - 2021.08.18 at 13h 24m 01s.xml">
-      <configuration name="TestProject.testAgregarRecursoMiembro" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestProject_testAgregarRecursoMiembro - 2021.08.18 at 16h 02m 34s.xml">
-      <configuration name="TestProject.testAgregarRecursoMiembro" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="TestProject_testAgregarRecursoMiembro - 2021.08.18 at 16h 06m 40s.xml">
       <configuration name="TestProject.testAgregarRecursoMiembro" configurationId="JUnit" />
     </history-entry>
@@ -362,6 +348,15 @@
       <configuration name="TestProject.testAgregarRecursoMiembro" configurationId="JUnit" />
     </history-entry>
     <history-entry file="TestProject_testAgregarRecursoMiembro - 2021.08.18 at 16h 39m 29s.xml">
+      <configuration name="TestProject.testAgregarRecursoMiembro" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestProject_testAgregarRecursoMiembro - 2021.08.18 at 16h 44m 39s.xml">
+      <configuration name="TestProject.testAgregarRecursoMiembro" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestProject_testAgregarRecursoMiembro - 2021.08.18 at 16h 49m 22s.xml">
+      <configuration name="TestProject.testAgregarRecursoMiembro" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestProject_testAgregarRecursoMiembro - 2021.08.18 at 16h 52m 27s.xml">
       <configuration name="TestProject.testAgregarRecursoMiembro" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -448,7 +443,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/tests/TestProject.java</url>
-          <line>89</line>
+          <line>90</line>
           <properties class="tests.TestProject" method="testAgregarRecursoMiembro">
             <option name="EMULATED" value="true" />
           </properties>
@@ -674,8 +669,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/tests/TestProject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="104" lean-forward="true" selection-start-line="104" selection-end-line="104" />
+        <state relative-caret-position="352">
+          <caret line="110" lean-forward="true" selection-start-line="110" selection-end-line="110" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

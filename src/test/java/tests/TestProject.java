@@ -82,6 +82,7 @@ public class TestProject {
         addProjectPage.guardarCambios();
         projectManager.eliminarProyecto();
         projectManager.confirmarDelete();
+        projectManager.cerrarVentanaProyecto();
     }
 
 
@@ -100,8 +101,11 @@ public class TestProject {
         addProjectPage.guardarCambios();
         String recursoAgregadoM= projectManager.comprobarRecursos();
         assertEquals(recursoAgregado,recursoAgregadoM);
-
-
+        projectManager.cerrarVentanaProyecto();
+        projectManager.abrirVentanaProyecto();
+        projectManager.eliminarProyecto();
+        projectManager.confirmarDelete();
+        projectManager.cerrarVentanaProyecto();
 
 
 
