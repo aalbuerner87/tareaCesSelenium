@@ -41,7 +41,7 @@ public class TestAddressBook {
     }
 
     @Test
-    public void test (){
+    public void testCrearContacto (){
         String tituloPagina = addressBookPage.getNombreVentanaAgenda();
         assertEquals( "EGroupware [Address Book]" , tituloPagina );
         addressBookPage.crearContacto( organizations , nombre , mail , prefix , movil , bussPhones , job );
@@ -56,7 +56,7 @@ public class TestAddressBook {
         assertEquals( telefonos , contacto.get( 2 ) );
         assertEquals( mail , contacto.get( 3 ) );
         addressBookPage.eliminarContacto();
-         
+
 
 
 
