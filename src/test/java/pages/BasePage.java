@@ -36,13 +36,14 @@ public class BasePage {
 
     public static void navigateTo ( String url ){
 
+        driver.manage().window().maximize();
         driver.get( url );
 
     }
 
     public static void closedBrowser (){
 
-        driver.quit();
+        driver.close();
     }
 
     private WebElement find ( By locator ){

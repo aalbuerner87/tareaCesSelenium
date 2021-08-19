@@ -1,12 +1,9 @@
 package tests;
 
-import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.*;
 import pages.AddProjectPage;
 import pages.InicioPage;
 import pages.ProjectManagerPage;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestInstance;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,24 +15,29 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class TestProject {
 
-    InicioPage login=new InicioPage();
-    ProjectManagerPage projectManager=new ProjectManagerPage();
-    AddProjectPage addProjectPage=new AddProjectPage();
+    InicioPage login = new InicioPage();
+    ProjectManagerPage projectManager = new ProjectManagerPage();
+    AddProjectPage addProjectPage = new AddProjectPage();
     String id;
     String tituloProyecto;
     String tituloProyectoConsulta;
     String recursoAgregado;
 
+
     @BeforeAll
+    public void datos (){
+        // login.IniciarSesion();
+        tituloProyecto = login.leerProperties().get( 11 ).replace( "tituloProyecto=" , "" );
+        tituloProyectoConsulta = login.leerProperties().get( 12 ).replace( "tituloProyectoConsulta=" , "" );
+        recursoAgregado = login.leerProperties().get( 13 ).replace( "recursoAgregado=" , "" );
+
+    }
+
+    @BeforeEach
     public void entrar (){
 
         login.IniciarSesion();
-       /* tituloProyecto="Proyecto de prueba";
-        tituloProyectoConsulta="Proyecto de prueba consulta";
-        recursoAgregado="ALBUERNE, ARIAGNA";*/
-        tituloProyecto="Proyecto de prueba";
-        tituloProyectoConsulta="Proyecto de prueba consulta";
-        recursoAgregado=login.leerProperties().get(13 ).replace( "recursoAgregado=","" );
+
     }
 
     @Test
@@ -60,8 +62,8 @@ public class TestProject {
         String mensajedelete = projectManager.getMensaje();
         assertEquals( "1 project(s) Deleted" , mensajedelete );
         projectManager.busquedaProyectoCreado( id );
-        boolean sinProyectos=projectManager.busquedaSinElementos();
-        assertTrue(sinProyectos );
+        boolean sinProyectos = projectManager.busquedaSinElementos();
+        assertTrue( sinProyectos );
         projectManager.cerrarVentanaProyecto();
 
 
@@ -69,7 +71,7 @@ public class TestProject {
 
     @Test
 
-    public void testConsultarProyecto(){
+    public void testConsultarProyecto (){
 
         projectManager.abrirVentanaProyecto();
         id = addProjectPage.generarIdProyecto();
@@ -90,22 +92,20 @@ public class TestProject {
     }
 
 
-
     @Test
-    public void testAgregarRecursoMiembro(){
+    public void testAgregarRecursoMiembro (){
         projectManager.abrirVentanaProyecto();
         id = addProjectPage.generarIdProyecto();
         addProjectPage.escribirProyecto( id , tituloProyecto );
         addProjectPage.guardarCambios();
         projectManager.busquedaProyectoCreado( id );
         projectManager.abrirProyecto();
-        // addProjectPage.agregarRecursoMiembro(value,valueM);
-        addProjectPage.agregarRecursoMiembro(recursoAgregado);
+        addProjectPage.agregarRecursoMiembro( recursoAgregado );
         addProjectPage.guardarCambios();
-        String recursoAgregadoM= projectManager.comprobarRecursos();
-        assertEquals(recursoAgregado,recursoAgregadoM);
+        String recursoAgregadoM = projectManager.comprobarRecursos();
+        assertEquals( recursoAgregado , recursoAgregadoM );
         projectManager.cerrarVentanaProyecto();
-        projectManager.abrirVentanaProyecto();
+        projectManager.clickjs();
         projectManager.eliminarProyecto();
         projectManager.confirmarDelete();
         projectManager.cerrarVentanaProyecto();
@@ -113,8 +113,8 @@ public class TestProject {
 
     }
 
-  @AfterAll
-    public void cerrarNavegador(){
+    @AfterAll
+    public void cerrarNavegador (){
 
         projectManager.cerrarNavegador();
 

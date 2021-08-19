@@ -18,7 +18,6 @@ public class ProjectManagerPage extends BasePage {
     By nombreProyectoCreado = By.cssSelector( ".rowNoUndelete [class*='_td_col_12']" );
     By delete = By.xpath( "//*[@class='sub_item'][contains(@id,'delete')]" );
     By open= By.xpath( "//*[@class='sub_item'][contains(@id,'open')]" );
-    By dialog=By.cssSelector( " .ui-dialog.ui-widget" );
     By texto = By.cssSelector( ".ui-dialog.ui-widget .ui-dialog-content" );
     By yesBoton=By.id("dialog[yes]");
     By noElementosBusqueda=By.xpath( "//*[@id=\"projectmanager-list_nm\"]/div[2]/table/tbody/tr/td/div/table/tbody/tr/td" );
@@ -35,6 +34,12 @@ public class ProjectManagerPage extends BasePage {
         click( add );
         String ventana = winHandles( 1 );
         switchToVentana( ventana );
+    }
+
+    public void clickjs(){
+
+        clickJs( project );
+
     }
 
     public String getNombreVentanaProyecto(){
@@ -124,7 +129,7 @@ public class ProjectManagerPage extends BasePage {
 
     dobleClick( nombreProyectoCreado );
     String miembro = getText( titleTabla );
-    System.out.println( "titulo = " + miembro );
+    System.out.println( "miembro = " + miembro );
     return miembro;
 
     }

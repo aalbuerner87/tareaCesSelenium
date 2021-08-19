@@ -23,7 +23,7 @@ public class InicioPage extends BasePage {
 
     public void IniciarSesion (){
 
-        driver.manage().window().maximize();
+
         List<String> credenciales= leerProperties();
         user=credenciales.get( 0 ).replace( "user=","" );
         pass=credenciales.get( 1 ).replace(  "pass=","" );

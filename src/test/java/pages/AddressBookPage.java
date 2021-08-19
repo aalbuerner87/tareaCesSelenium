@@ -8,7 +8,7 @@ public class AddressBookPage extends BasePage {
 
     By agenda = By.cssSelector( "#addressbook_sidebox_header" );
     By add=By.id( "addressbook-index_add" );
-    By cerrarAgenda=By.id("tengo que buscarlo");
+    By cerrarAgenda=By.id(".egw_fw_ui_tab_close_button");
     By organization=By.id( "addressbook-edit_org_name" );
     By name=By.cssSelector( "#addressbook-edit_n_fn" );
     By prefix=By.cssSelector( "#addressbook-edit_n_prefix" );
@@ -25,11 +25,10 @@ public class AddressBookPage extends BasePage {
     By paisTabla = By.cssSelector( ".contact_contact [class*='_td_col_3']" ); //pais
     By celularTabla = By.cssSelector( ".contact_contact [class*='_td_col_5']" );
     By correoTabla = By.cssSelector( ".contact_contact [class*='_td_col_7']" );
-    By delete = By.className( "et2_button et2_button_icon et2_clickable et2_button_delete" );
-    By area=By.cssSelector( ".et2_grid addressbook_view" );
+    By delete = By.xpath( "//*[contains(@id,'WebMenuTopId')][not(contains(@style,'display: none'))]/descendant::*[@class='sub_item'][contains(@id,'delete')]" );
+    By area=By.cssSelector( ".contact_contact" );
     By pestana=By.cssSelector( ".egw_fw_ui_tab_header ui-droppable egw_fw_ui_tab_header_active" );
-
-    //option[contains(text*(),"Nombre"]
+    By yesBoton=By.id("dialog[yes]");
 
     public AddressBookPage ( ){
         super( driver );
@@ -78,7 +77,7 @@ public class AddressBookPage extends BasePage {
         return messageGetText();
     }
 
-    public void cerrarVentanaProyecto(){
+    public void cerrarVentanaAgenda(){
 
         click( cerrarAgenda);
     }
@@ -110,13 +109,19 @@ public class AddressBookPage extends BasePage {
 
 
     public void eliminarContacto ( ){
+        //dobleClick( nombreTabla );
+       // String info = winHandles( 0 );
+       // switchToVentana( info );
         String ventana = winHandles( 0 );
         switchToVentana( ventana );
-        dobleClick( nombreTabla );
-        String info = winHandles( 0 );
-        switchToVentana( info );
-         clickJs( delete );
+        clicRigthandMove( area,delete );
 
+
+
+    }
+    public void confirmarDelete(){
+
+        click( yesBoton );
 
 
     }

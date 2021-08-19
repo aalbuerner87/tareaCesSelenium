@@ -1,15 +1,10 @@
 package tests;
 
-import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.*;
 import pages.AddressBookPage;
 import pages.InicioPage;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestInstance;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
@@ -28,9 +23,8 @@ public class TestAddressBook {
     String pais;
 
     @BeforeAll
-    public void entrar (){
+    public void datos (){
 
-         login.IniciarSesion();
          nombre=login.leerProperties().get( 3 ).replace( "nombre=","" );
          movil=login.leerProperties().get( 4 ).replace( "movil=","" );
          mail=login.leerProperties().get( 5 ).replace( "mail=","" );
@@ -39,6 +33,13 @@ public class TestAddressBook {
          job=login.leerProperties().get( 8 ).replace( "job=","" );
          organizations=login.leerProperties().get( 9 ).replace( "organizations=","" );
          pais=login.leerProperties().get( 10 ).replace( "pais=","" );
+    }
+
+    @BeforeEach
+    public void entrar (){
+
+        login.IniciarSesion();
+
     }
 
     @Test
@@ -57,10 +58,8 @@ public class TestAddressBook {
         assertEquals( telefonos , contacto.get( 2 ) );
         assertEquals( mail , contacto.get( 3 ) );
         addressBookPage.eliminarContacto();
-
-
-
-
+        addressBookPage.confirmarDelete();
+       addressBookPage.cerrarVentanaAgenda();
 
     }
 
