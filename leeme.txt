@@ -1,15 +1,32 @@
-En el archivo credenciales.txt que se encuentra en src/test/resources/credenciales.txt
-sustituir la palabra username por el usuario y la palabra clave por la contraseña
+En el archivo credenciales.txt que se encuentra en src/test/resources/properties.txt
+sustituir la palabra nombre_usuario por el usuario y la palabra clave_usuario por la contraseña
 se encuentra de esta manera
 
-username
-clave
+user=nombre_usuario
+pass=clave_usuario
 
-Ejemplo si su usuario es pepe y la clave 123
 
-debe quedar de esta manera
+Los demás datos de prueba también se pueden cambiar, no alterar el orden porque la solución "rápida" de esta versión es por posiciones y cambiar el orden alteraría la prueba
+en la proxima vesrsión se va a validar la clave y recorrer la lista , o una solución con menos riesgos.
 
-pepe
-123
+Orden de las líneas:
+
+línea 1: user=nombre_usuario
+línea 2: pass=clave_usuario
+línea 3: url=http://egroupware.cursos.ces.com.uy/egroupware/login.php
+línea 4: nombre=Ariagna3
+línea 5: movil=091961938
+línea 6: mail=a@gmail.com
+línea 7: prefix=prefix05
+línea 8: bussPhones=091961938
+línea 9: job=Ingeniero
+línea 10:organizations=CES
+línea 11:pais=GERMANY
+línea 12:tituloProyecto=Proyecto de prueba
+línea 13:tituloProyectoConsulta=Proyecto de prueba consulta
+línea 14:recursoAgregado=ALBUERNE, ARIAGNA
+
+
+
 
 luego guardar cambios

@@ -270,8 +270,8 @@
   <component name="ToolWindowManager">
     <frame x="1592" y="-8" width="1616" height="916" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8321678" visible="true" weight="0.24935733" />
-      <window_info id="Structure" order="1" sideWeight="0.16783217" side_tool="true" visible="true" weight="0.24935733" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8337439" visible="true" weight="0.24935733" />
+      <window_info id="Structure" order="1" sideWeight="0.16625616" side_tool="true" visible="true" weight="0.24935733" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
@@ -280,7 +280,7 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32881773" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2955665" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2955665" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.37807882" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
