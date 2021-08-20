@@ -1,4 +1,0 @@
-
-- eliminar el contacto--trancada problema con el selector dinamico de delete
-
-- Agregar método para agregar un miembro al proyecto (tengo algo adelantado, da un error cuando seleccionas)
