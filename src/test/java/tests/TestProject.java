@@ -4,9 +4,11 @@ import org.junit.jupiter.api.*;
 import pages.AddProjectPage;
 import pages.InicioPage;
 import pages.ProjectManagerPage;
+import util.LeerProperties;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Properties;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -26,10 +28,11 @@ public class TestProject {
 
     @BeforeAll
     public void datos (){
-        // login.IniciarSesion();
-        tituloProyecto = login.leerProperties().get( 11 ).replace( "tituloProyecto=" , "" );
-        tituloProyectoConsulta = login.leerProperties().get( 12 ).replace( "tituloProyectoConsulta=" , "" );
-        recursoAgregado = login.leerProperties().get( 13 ).replace( "recursoAgregado=" , "" );
+        LeerProperties datos= new LeerProperties();
+        Properties datosProyecto=datos.leerProperties();
+        tituloProyecto = datosProyecto.getProperty(" tituloProyecto");
+        tituloProyectoConsulta = datosProyecto.getProperty( "tituloProyectoConsulta" );
+        recursoAgregado = datosProyecto.getProperty( "recursoAgregado" );
 
     }
 

@@ -1,10 +1,8 @@
 package pages;
 
 import org.openqa.selenium.By;
-import util.LeeFichero;
-
-import java.util.ArrayList;
-import java.util.List;
+import util.LeerProperties;
+import java.util.Properties;
 
 public class InicioPage extends BasePage {
 
@@ -24,25 +22,21 @@ public class InicioPage extends BasePage {
     public void IniciarSesion (){
 
 
-        List<String> credenciales= leerProperties();
-        user=credenciales.get( 0 ).replace( "user=","" );
-        pass=credenciales.get( 1 ).replace(  "pass=","" );
-        url=credenciales.get(2).replace( "url=","" );
+        LeerProperties datos= new LeerProperties();
+        Properties credenciales=datos.leerProperties();
+        user=credenciales.getProperty( "user" );
+        pass=credenciales.getProperty( "pass" );
+        url=credenciales.getProperty( "url" );
         navigateTo( url );
         write( login , user );
         write( clave , pass );
         click( boton );
 
-    }
 
-    public List<String> leerProperties (){
-        LeeFichero credencial = new LeeFichero();
-        List<String> credenciales = new ArrayList<String>();
-        credenciales = credencial.leerFichero();
-        return credenciales;
+    }
 
 
     }
 
 
-}
+

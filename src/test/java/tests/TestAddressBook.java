@@ -3,8 +3,12 @@ package tests;
 import org.junit.jupiter.api.*;
 import pages.AddressBookPage;
 import pages.InicioPage;
+import util.LeerProperties;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Properties;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
@@ -25,14 +29,16 @@ public class TestAddressBook {
     @BeforeAll
     public void datos (){
 
-         nombre=login.leerProperties().get( 3 ).replace( "nombre=","" );
-         movil=login.leerProperties().get( 4 ).replace( "movil=","" );
-         mail=login.leerProperties().get( 5 ).replace( "mail=","" );
-         prefix=login.leerProperties().get( 6 ).replace( "prefix=","" );
-         bussPhones=login.leerProperties().get( 7 ).replace( "bussPhones=","" );
-         job=login.leerProperties().get( 8 ).replace( "job=","" );
-         organizations=login.leerProperties().get( 9 ).replace( "organizations=","" );
-         pais=login.leerProperties().get( 10 ).replace( "pais=","" );
+        LeerProperties datos= new LeerProperties();
+        Properties contacto=datos.leerProperties();
+         nombre=contacto.getProperty( "nombre" );
+         movil=contacto.getProperty( "movil" );
+         mail=contacto.getProperty( "mail" );
+         prefix=contacto.getProperty( "prefix" );
+         bussPhones=contacto.getProperty( "bussPhones" );
+         job=contacto.getProperty( "job" );
+         organizations=contacto.getProperty( "organizations" );
+         pais=contacto.getProperty( "pais" );
     }
 
     @BeforeEach
