@@ -30,7 +30,7 @@ public class TestProject {
     public void datos (){
         LeerProperties datos= new LeerProperties();
         Properties datosProyecto=datos.leerProperties();
-        tituloProyecto = datosProyecto.getProperty(" tituloProyecto");
+        tituloProyecto = datosProyecto.getProperty("tituloProyecto");
         tituloProyectoConsulta = datosProyecto.getProperty( "tituloProyectoConsulta" );
         recursoAgregado = datosProyecto.getProperty( "recursoAgregado" );
 
