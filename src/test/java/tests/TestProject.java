@@ -125,6 +125,8 @@ public class TestProject {
         projectManager.abrirTabProyecto();
         projectManager.eliminarProyecto();
         projectManager.confirmarDelete();
+        String mensajedelete = projectManager.getMensaje();
+        assertEquals( "1 project(s) Deleted" , mensajedelete );
         projectManager.cerrarVentanaProyecto();
 
 
