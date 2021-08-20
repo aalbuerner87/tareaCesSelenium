@@ -17,7 +17,6 @@ public class ProjectManagerPage extends BasePage {
     By idProyectoCreado = By.cssSelector( ".rowNoUndelete [class*='_td_col_0']" );
     By nombreProyectoCreado = By.cssSelector( ".rowNoUndelete [class*='_td_col_12']" );
     By priorityCreado=By.cssSelector( ".rowNoUndelete [class*='_td_col_1']" );
-    By ownerCreado=By.cssSelector( ".rowNoUndelete [class*='_td_col_2']" );
     By startDateCreado=By.cssSelector( ".rowNoUndelete [class*='_td_col_4']" );
     By endDateCreado=By.cssSelector( ".rowNoUndelete [class*='_td_col_5']" );
     By budgCreado=By.cssSelector( ".rowNoUndelete [class*='_td_col_7']" );
@@ -54,12 +53,6 @@ public class ProjectManagerPage extends BasePage {
         return titulo;
     }
 
-    public String getNombreVentanaEditarProyecto(){
-        String ventana = winHandles( 1 );
-        switchToVentana( ventana );
-        String titulo = getTitle();
-        return titulo;
-    }
 
     public String getTextoVentanaConfirmacion(){
 
@@ -100,7 +93,6 @@ public class ProjectManagerPage extends BasePage {
         datosProyecto.add( getText( idProyectoCreado ) );
         datosProyecto.add( getText( nombreProyectoCreado ) );
         datosProyecto.add( getText( priorityCreado ) );
-        datosProyecto.add( getText( ownerCreado ) );
         datosProyecto.add( getText( startDateCreado ) );
         datosProyecto.add( getText(endDateCreado ) );
         datosProyecto.add( getText( budgCreado ) );

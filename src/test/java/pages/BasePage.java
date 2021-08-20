@@ -21,8 +21,10 @@ public class BasePage {
     private static WebDriverWait wait;
     private static By messageSave;
 
+
     static{
         System.setProperty( "webdriver.chrome.driver" , "./src/test/resources/chromedriver.exe" );
+
         ChromeOptions chromeOptions = new ChromeOptions();
         driver = new ChromeDriver( chromeOptions );
         wait = new WebDriverWait( driver , 20 );

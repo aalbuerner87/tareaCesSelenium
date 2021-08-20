@@ -49,6 +49,8 @@ public class TestAddressBook {
     }
 
     @Test
+    @Tag( "Para_Suite_AmbienteTest" )
+    @DisplayName("Test Crear Contacto Nuevo")
     public void testCrearContacto (){
         String tituloPagina = addressBookPage.getNombreVentanaAgenda();
         assertEquals( "EGroupware [Address Book]" , tituloPagina );
@@ -72,13 +74,5 @@ public class TestAddressBook {
         addressBookPage.cerrarVentanaAgenda();
 
     }
-
-    @AfterAll
-    public void cerrarNavegador(){
-
-        addressBookPage.cerrarNavegador();
-    }
-
-
 
 }
