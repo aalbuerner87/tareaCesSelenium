@@ -24,15 +24,31 @@ public class TestProject {
     String tituloProyecto;
     String tituloProyectoConsulta;
     String recursoAgregado;
-
+    String idProyectoConsulta;
+    String nombreProyectoConsulta;
+    String priority;
+    String owner;
+    String startDate;
+    String endDateCreado;
+    String budg;
+    String times;
+    LeerProperties datos= new LeerProperties();
+    Properties datosProyecto;
 
     @BeforeAll
     public void datos (){
-        LeerProperties datos= new LeerProperties();
-        Properties datosProyecto=datos.leerProperties();
+        
+        datosProyecto=datos.leerProperties();
         tituloProyecto = datosProyecto.getProperty("tituloProyecto");
-        tituloProyectoConsulta = datosProyecto.getProperty( "tituloProyectoConsulta" );
         recursoAgregado = datosProyecto.getProperty( "recursoAgregado" );
+        idProyectoConsulta =datosProyecto.getProperty( "recursoAgregado" );
+        nombreProyectoConsulta =datosProyecto.getProperty( "nombreProyectoConsulta" );
+        priority =datosProyecto.getProperty( "priority" );
+        owner =datosProyecto.getProperty( "owner" );
+        startDate =datosProyecto.getProperty( "startDate" );
+        endDateCreado=datosProyecto.getProperty( "endDateCreado" );
+        budg=datosProyecto.getProperty( "budg" );
+        times =datosProyecto.getProperty( "times" );
 
     }
 
@@ -76,21 +92,19 @@ public class TestProject {
 
     public void testConsultarProyecto (){
 
-        projectManager.abrirVentanaProyecto();
-        id = addProjectPage.generarIdProyecto();
-        addProjectPage.escribirProyecto( id , tituloProyectoConsulta );
-        addProjectPage.guardarCambios();
+        projectManager.abrirTabProyecto();
+        id = datosProyecto.getProperty( "idProyectoConsulta" );
         projectManager.busquedaProyectoCreado( id );
         List<String> proyecto = new ArrayList<String>();
         proyecto = projectManager.getDatosProyecto();
         assertEquals( id , proyecto.get( 0 ) );
-        assertEquals( tituloProyectoConsulta , proyecto.get( 1 ) );
-        projectManager.abrirProyecto();
-        String tituloPagina = projectManager.getNombreVentanaEditarProyecto();
-        assertEquals( "EGroupware [Project Manager - Edit project]" , tituloPagina );
-        addProjectPage.guardarCambios();
-        projectManager.eliminarProyecto();
-        projectManager.confirmarDelete();
+        assertEquals( nombreProyectoConsulta , proyecto.get( 1 ) );
+        assertEquals( priority , proyecto.get( 2 ) );
+        assertEquals( owner , proyecto.get( 3 ) );
+        assertEquals( startDate , proyecto.get( 4 ) );
+        assertEquals( endDateCreado , proyecto.get( 5 ) );
+        assertEquals( budg , proyecto.get( 6 ) );
+        assertEquals( times , proyecto.get( 7 ) );
         projectManager.cerrarVentanaProyecto();
     }
 
@@ -108,7 +122,7 @@ public class TestProject {
         String recursoAgregadoM = projectManager.comprobarRecursos();
         assertEquals( recursoAgregado , recursoAgregadoM );
         projectManager.cerrarVentanaProyecto();
-        projectManager.clickjs();
+        projectManager.abrirTabProyecto();
         projectManager.eliminarProyecto();
         projectManager.confirmarDelete();
         projectManager.cerrarVentanaProyecto();

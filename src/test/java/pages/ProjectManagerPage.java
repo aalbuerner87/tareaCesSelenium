@@ -16,6 +16,12 @@ public class ProjectManagerPage extends BasePage {
     By cerrarProyecto = By.cssSelector( "#projectmanager-egw_fw_ui_tab_header > .egw_fw_ui_tab_close_button" );
     By idProyectoCreado = By.cssSelector( ".rowNoUndelete [class*='_td_col_0']" );
     By nombreProyectoCreado = By.cssSelector( ".rowNoUndelete [class*='_td_col_12']" );
+    By priorityCreado=By.cssSelector( ".rowNoUndelete [class*='_td_col_1']" );
+    By ownerCreado=By.cssSelector( ".rowNoUndelete [class*='_td_col_2']" );
+    By startDateCreado=By.cssSelector( ".rowNoUndelete [class*='_td_col_4']" );
+    By endDateCreado=By.cssSelector( ".rowNoUndelete [class*='_td_col_5']" );
+    By budgCreado=By.cssSelector( ".rowNoUndelete [class*='_td_col_7']" );
+    By timesCreado=By.cssSelector( ".rowNoUndelete [class*='_td_col_9']" );
     By delete = By.xpath( "//*[@class='sub_item'][contains(@id,'delete')]" );
     By open= By.xpath( "//*[@class='sub_item'][contains(@id,'open')]" );
     By texto = By.cssSelector( ".ui-dialog.ui-widget .ui-dialog-content" );
@@ -36,7 +42,7 @@ public class ProjectManagerPage extends BasePage {
         switchToVentana( ventana );
     }
 
-    public void clickjs(){
+    public void abrirTabProyecto (){
 
         clickJs( project );
 
@@ -89,13 +95,18 @@ public class ProjectManagerPage extends BasePage {
 
     public List<String> getDatosProyecto (){
 
-        List<String> datosProyecto = new ArrayList<String>( );
-        String idProyecto = getText( idProyectoCreado );
-        String nombreProyecto = getText( nombreProyectoCreado );
-        datosProyecto.add( idProyecto );
-        datosProyecto.add( nombreProyecto );
-        System.out.println( "nombreProyecto = " + nombreProyecto );
-        System.out.println( "e = " + idProyecto );
+        List<String> datosProyecto = new ArrayList<String>();
+
+        datosProyecto.add( getText( idProyectoCreado ) );
+        datosProyecto.add( getText( nombreProyectoCreado ) );
+        datosProyecto.add( getText( priorityCreado ) );
+        datosProyecto.add( getText( ownerCreado ) );
+        datosProyecto.add( getText( startDateCreado ) );
+        datosProyecto.add( getText(endDateCreado ) );
+        datosProyecto.add( getText( budgCreado ) );
+        datosProyecto.add( getText( timesCreado ) );
+
+
         return datosProyecto;
 
 
@@ -129,7 +140,6 @@ public class ProjectManagerPage extends BasePage {
 
     dobleClick( nombreProyectoCreado );
     String miembro = getText( titleTabla );
-    System.out.println( "miembro = " + miembro );
     return miembro;
 
     }
