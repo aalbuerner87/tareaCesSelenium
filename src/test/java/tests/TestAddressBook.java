@@ -54,6 +54,8 @@ public class TestAddressBook {
         assertEquals( "EGroupware [Address Book]" , tituloPagina );
         addressBookPage.crearContacto( organizations , nombre , mail , prefix , movil , bussPhones , job );
         addressBookPage.guardarAgenda();
+        String mensajesave = addressBookPage.getMensaje();
+        assertEquals( "Contact saved" , mensajesave );
         addressBookPage.busquedaContactoCreado( mail );
         List<String> contacto = new ArrayList<String>();
         contacto = addressBookPage.getDatosContacto();

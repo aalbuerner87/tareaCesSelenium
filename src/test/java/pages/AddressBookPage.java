@@ -75,6 +75,8 @@ public class AddressBookPage extends BasePage {
         return messageGetText();
     }
 
+
+
     public void cerrarVentanaAgenda(){
 
         click( cerrarAgenda);
@@ -107,9 +109,7 @@ public class AddressBookPage extends BasePage {
 
 
     public void eliminarContacto ( ){
-        //dobleClick( nombreTabla );
-       // String info = winHandles( 0 );
-       // switchToVentana( info );
+
         String ventana = winHandles( 0 );
         switchToVentana( ventana );
         clicRigthandMove( area,delete );
