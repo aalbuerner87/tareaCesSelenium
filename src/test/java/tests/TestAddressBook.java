@@ -65,7 +65,9 @@ public class TestAddressBook {
         assertEquals( mail , contacto.get( 3 ) );
         addressBookPage.eliminarContacto();
         addressBookPage.confirmarDelete();
-       addressBookPage.cerrarVentanaAgenda();
+        String mensajedelete = addressBookPage.getMensaje();
+        assertEquals( "1 event(s) Deleted" , mensajedelete );
+        addressBookPage.cerrarVentanaAgenda();
 
     }
 

@@ -8,7 +8,7 @@ public class AddressBookPage extends BasePage {
 
     By agenda = By.cssSelector( "#addressbook_sidebox_header" );
     By add=By.id( "addressbook-index_add" );
-    By cerrarAgenda=By.id(".egw_fw_ui_tab_close_button");
+    By cerrarAgenda=By.cssSelector("#addressbook-egw_fw_ui_tab_header > .egw_fw_ui_tab_close_button");
     By organization=By.id( "addressbook-edit_org_name" );
     By name=By.cssSelector( "#addressbook-edit_n_fn" );
     By prefix=By.cssSelector( "#addressbook-edit_n_prefix" );
@@ -27,7 +27,6 @@ public class AddressBookPage extends BasePage {
     By correoTabla = By.cssSelector( ".contact_contact [class*='_td_col_7']" );
     By delete = By.xpath( "//*[contains(@id,'WebMenuTopId')][not(contains(@style,'display: none'))]/descendant::*[@class='sub_item'][contains(@id,'delete')]" );
     By area=By.cssSelector( ".contact_contact" );
-    By pestana=By.cssSelector( ".egw_fw_ui_tab_header ui-droppable egw_fw_ui_tab_header_active" );
     By yesBoton=By.id("dialog[yes]");
 
     public AddressBookPage ( ){
@@ -71,7 +70,6 @@ public class AddressBookPage extends BasePage {
     }
 
     public String getMensaje (){
-        System.out.println( " messageGetText() = " +  messageGetText() );
         String ventana = winHandles( 0 );
         switchToVentana( ventana );
         return messageGetText();
@@ -125,6 +123,8 @@ public class AddressBookPage extends BasePage {
 
 
     }
+
+
 
     public void cerrarNavegador(){
 

@@ -105,7 +105,6 @@ public class TestProject {
         assertEquals( endDateCreado , proyecto.get( 5 ) );
         assertEquals( budg , proyecto.get( 6 ) );
         assertEquals( times , proyecto.get( 7 ) );
-
         projectManager.cerrarVentanaProyecto();
     }
 
