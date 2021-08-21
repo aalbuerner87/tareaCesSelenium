@@ -6,6 +6,7 @@ import pages.InicioPage;
 import pages.ProjectManagerPage;
 import util.LeerProperties;
 
+import java.net.MalformedURLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
@@ -51,7 +52,7 @@ public class TestProject {
     }
 
     @BeforeEach
-    public void entrar (){
+    public void entrar ()throws MalformedURLException{
 
         login.IniciarSesion();
 

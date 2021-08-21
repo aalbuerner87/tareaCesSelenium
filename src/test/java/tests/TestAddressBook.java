@@ -5,6 +5,7 @@ import pages.AddressBookPage;
 import pages.InicioPage;
 import util.LeerProperties;
 
+import java.net.MalformedURLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
@@ -42,7 +43,7 @@ public class TestAddressBook {
     }
 
     @BeforeEach
-    public void entrar (){
+    public void entrar ()throws MalformedURLException{
 
         login.IniciarSesion();
 
