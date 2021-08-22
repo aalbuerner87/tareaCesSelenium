@@ -38,7 +38,7 @@ public class TestProject {
     @BeforeAll
     public void datos (){
         
-        datosProyecto=datos.leerProperties();
+        datosProyecto=datos.leerDatos();
         tituloProyecto = datosProyecto.getProperty("tituloProyecto");
         recursoAgregado = datosProyecto.getProperty( "recursoAgregado" );
         idProyectoConsulta =datosProyecto.getProperty( "recursoAgregado" );

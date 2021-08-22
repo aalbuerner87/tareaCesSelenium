@@ -2,6 +2,7 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,17 +17,17 @@ public class ProjectManagerPage extends BasePage {
     By cerrarProyecto = By.cssSelector( "#projectmanager-egw_fw_ui_tab_header > .egw_fw_ui_tab_close_button" );
     By idProyectoCreado = By.cssSelector( ".rowNoUndelete [class*='_td_col_0']" );
     By nombreProyectoCreado = By.cssSelector( ".rowNoUndelete [class*='_td_col_12']" );
-    By priorityCreado=By.cssSelector( ".rowNoUndelete [class*='_td_col_1']" );
-    By startDateCreado=By.cssSelector( ".rowNoUndelete [class*='_td_col_4']" );
-    By endDateCreado=By.cssSelector( ".rowNoUndelete [class*='_td_col_5']" );
-    By budgCreado=By.cssSelector( ".rowNoUndelete [class*='_td_col_7']" );
-    By timesCreado=By.cssSelector( ".rowNoUndelete [class*='_td_col_9']" );
+    By priorityCreado = By.cssSelector( ".rowNoUndelete [class*='_td_col_1']" );
+    By startDateCreado = By.cssSelector( ".rowNoUndelete [class*='_td_col_4']" );
+    By endDateCreado = By.cssSelector( ".rowNoUndelete [class*='_td_col_5']" );
+    By budgCreado = By.cssSelector( ".rowNoUndelete [class*='_td_col_7']" );
+    By timesCreado = By.cssSelector( ".rowNoUndelete [class*='_td_col_9']" );
     By delete = By.xpath( "//*[@class='sub_item'][contains(@id,'delete')]" );
-    By open= By.xpath( "//*[@class='sub_item'][contains(@id,'open')]" );
+    By open = By.xpath( "//*[@class='sub_item'][contains(@id,'open')]" );
     By texto = By.cssSelector( ".ui-dialog.ui-widget .ui-dialog-content" );
-    By yesBoton=By.id("dialog[yes]");
-    By noElementosBusqueda=By.xpath( "//*[@id=\"projectmanager-list_nm\"]/div[2]/table/tbody/tr/td/div/table/tbody/tr/td" );
-    By titleTabla=By.cssSelector( ".th.rowNoDelete.row_category.row.ui-droppable [class*='_td_col_4']" );
+    By yesBoton = By.id( "dialog[yes]" );
+    By noElementosBusqueda = By.xpath( "//*[@id=\"projectmanager-list_nm\"]/div[2]/table/tbody/tr/td/div/table/tbody/tr/td" );
+    By titleTabla = By.cssSelector( ".th.rowNoDelete.row_category.row.ui-droppable [class*='_td_col_4']" );
 
     public ProjectManagerPage (){
         super( driver );
@@ -34,33 +35,35 @@ public class ProjectManagerPage extends BasePage {
 
 
     public void abrirVentanaProyecto (){
-
         clickJs( project );
         click( add );
         String ventana = winHandles( 1 );
         switchToVentana( ventana );
+
+
     }
 
     public void abrirTabProyecto (){
+
 
         clickJs( project );
 
     }
 
-    public String getNombreVentanaProyecto(){
+    public String getNombreVentanaProyecto (){
         abrirVentanaProyecto();
         String titulo = getTitle();
         return titulo;
     }
 
 
-    public String getTextoVentanaConfirmacion(){
+    public String getTextoVentanaConfirmacion (){
 
-       return getText( texto );
+        return getText( texto );
 
     }
 
-    public void confirmarDelete(){
+    public void confirmarDelete (){
 
         click( yesBoton );
 
@@ -94,7 +97,7 @@ public class ProjectManagerPage extends BasePage {
         datosProyecto.add( getText( nombreProyectoCreado ) );
         datosProyecto.add( getText( priorityCreado ) );
         datosProyecto.add( getText( startDateCreado ) );
-        datosProyecto.add( getText(endDateCreado ) );
+        datosProyecto.add( getText( endDateCreado ) );
         datosProyecto.add( getText( budgCreado ) );
         datosProyecto.add( getText( timesCreado ) );
 
@@ -105,38 +108,36 @@ public class ProjectManagerPage extends BasePage {
     }
 
 
-    public void eliminarProyecto ( ){
+    public void eliminarProyecto (){
         String ventana = winHandles( 0 );
         switchToVentana( ventana );
-        clicRigthandMove( idProyectoCreado,delete );
-
+        clicRigthandMove( idProyectoCreado , delete );
 
 
     }
 
-    public void abrirProyecto ( ){
+    public void abrirProyecto (){
         String ventana = winHandles( 0 );
         switchToVentana( ventana );
-        clicRigthandMove( idProyectoCreado,open );
-
+        clicRigthandMove( idProyectoCreado , open );
 
 
     }
 
-    public boolean busquedaSinElementos(){
+    public boolean busquedaSinElementos (){
 
         return elementIsDisplayed( noElementosBusqueda );
     }
 
-    public String comprobarRecursos(){
+    public String comprobarRecursos (){
 
-    dobleClick( nombreProyectoCreado );
-    String miembro = getText( titleTabla );
-    return miembro;
+        dobleClick( nombreProyectoCreado );
+        String miembro = getText( titleTabla );
+        return miembro;
 
     }
 
-    public void cerrarNavegador(){
+    public void cerrarNavegador (){
 
         closedBrowser();
 
