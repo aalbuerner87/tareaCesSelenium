@@ -5,6 +5,7 @@ import pages.AddressBookPage;
 import pages.InicioPage;
 import util.LeerProperties;
 
+import java.net.MalformedURLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
@@ -42,13 +43,15 @@ public class TestAddressBook {
     }
 
     @BeforeEach
-    public void entrar (){
+    public void entrar ()throws MalformedURLException{
 
         login.IniciarSesion();
 
     }
 
     @Test
+    @Tag( "Para_Suite_AmbienteTest" )
+    @DisplayName("Test Crear Contacto Nuevo")
     public void testCrearContacto (){
         String tituloPagina = addressBookPage.getNombreVentanaAgenda();
         assertEquals( "EGroupware [Address Book]" , tituloPagina );
@@ -72,13 +75,5 @@ public class TestAddressBook {
         addressBookPage.cerrarVentanaAgenda();
 
     }
-
-    @AfterAll
-    public void cerrarNavegador(){
-
-        addressBookPage.cerrarNavegador();
-    }
-
-
 
 }

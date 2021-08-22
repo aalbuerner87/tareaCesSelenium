@@ -2,6 +2,8 @@ package pages;
 
 import org.openqa.selenium.By;
 import util.LeerProperties;
+
+import java.net.MalformedURLException;
 import java.util.Properties;
 
 public class InicioPage extends BasePage {
@@ -20,7 +22,6 @@ public class InicioPage extends BasePage {
 
 
     public void IniciarSesion (){
-
 
         LeerProperties datos= new LeerProperties();
         Properties credenciales=datos.leerProperties();
