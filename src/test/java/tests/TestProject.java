@@ -62,7 +62,6 @@ public class TestProject {
     @Tag( "Para_Suite_AmbienteTest" )
     @DisplayName("Test crear proyecto")
     public void testCrearProyecto (){
-
         String tituloPagina = projectManager.getNombreVentanaProyecto();
         assertEquals( "EGroupware [Project Manager - Add project]" , tituloPagina );
         id = addProjectPage.generarIdProyecto();
@@ -118,10 +117,14 @@ public class TestProject {
         id = addProjectPage.generarIdProyecto();
         addProjectPage.escribirProyecto( id , tituloProyecto );
         addProjectPage.guardarCambios();
+        String mensajeSave = projectManager.getMensaje();
+        assertEquals( "Project saved." , mensajeSave );
         projectManager.busquedaProyectoCreado( id );
         projectManager.abrirProyecto();
         addProjectPage.agregarRecursoMiembro( recursoAgregado );
         addProjectPage.guardarCambios();
+        String mensajeSave2 = projectManager.getMensaje();
+        assertEquals( "Project saved." , mensajeSave2 );
         String recursoAgregadoM = projectManager.comprobarRecursos();
         assertEquals( recursoAgregado , recursoAgregadoM );
         projectManager.cerrarVentanaProyecto();

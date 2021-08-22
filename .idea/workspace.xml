@@ -5,17 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="46c6c4c7-921e-40ee-b266-6e25bab484f0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/resources/msedgedriver.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/InicioPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/InicioPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/TestAddressBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/TestAddressBook.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/TestProject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/TestProject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/datos.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/datos.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/datos.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/datos.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/geckodriver.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/msedgedriver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/msedgedriver.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/geckodriver.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/msedgedriver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/msedgedriver.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/pages/BasePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/BasePage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/InicioPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/InicioPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/TestAddressBook.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/TestAddressBook.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/tests/TestProject.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/TestProject.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -30,7 +27,67 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/tests/TestProject.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/suite/TestSuite.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="44" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/pages/BasePage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2312">
+              <caret line="155" column="18" selection-start-line="155" selection-start-column="18" selection-end-line="155" selection-end-column="18" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/pages/ProjectManagerPage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1207">
+              <caret line="76" column="23" selection-start-line="76" selection-start-column="23" selection-end-line="76" selection-end-column="23" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1680#1681#0" expanded="true" />
+                <element signature="e#1711#1712#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/datos.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="60" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -71,13 +128,13 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/suite/TestSuite.java" />
         <option value="$PROJECT_DIR$/src/test/java/tests/TestAddressBook.java" />
-        <option value="$PROJECT_DIR$/src/test/java/tests/TestProject.java" />
         <option value="$PROJECT_DIR$/src/test/java/pages/AddressBookPage.java" />
-        <option value="$PROJECT_DIR$/src/test/java/pages/ProjectManagerPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/pages/AddProjectPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/pages/InicioPage.java" />
-        <option value="$PROJECT_DIR$/src/test/resources/datos.properties" />
+        <option value="$PROJECT_DIR$/src/test/java/pages/ProjectManagerPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/pages/BasePage.java" />
+        <option value="$PROJECT_DIR$/src/test/resources/datos.properties" />
+        <option value="$PROJECT_DIR$/src/test/java/tests/TestProject.java" />
       </list>
     </option>
   </component>
@@ -93,14 +150,71 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="CesAutomation" type="b2602c69:ProjectViewProjectNode" />
               <item name="Tarea 5" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CesAutomation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tarea 5" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CesAutomation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tarea 5" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CesAutomation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tarea 5" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CesAutomation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tarea 5" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CesAutomation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tarea 5" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="suite" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CesAutomation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tarea 5" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CesAutomation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tarea 5" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CesAutomation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tarea 5" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CesAutomation" type="b2602c69:ProjectViewProjectNode" />
@@ -122,13 +236,13 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\63445142\Desktop\CURSO DEL CES AUTOMATIZACIÖN\Módulo 3\Tarea 5\src\test\resources" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\63445142\Desktop\CURSO DEL CES AUTOMATIZACIÖN\Módulo 3\Tarea 4\src\test\java\util" />
       <recent name="C:\Users\63445142\Desktop\CURSO DEL CES AUTOMATIZACIÖN\Módulo 3\Tarea 4\src\test\java" />
       <recent name="C:\Users\63445142\Desktop\CURSO DEL CES AUTOMATIZACIÖN\Módulo 3\Tarea 4\src\test\resources" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\63445142\Desktop\CURSO DEL CES AUTOMATIZACIÖN\Módulo 3\Tarea 5\src\test\resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -143,22 +257,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TestProject.testAgregarRecursoMiembro">
-    <configuration name="TestAddressBook" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CesAutomation" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="suite.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.TestAddressBook" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.TestSuite">
     <configuration name="TestAddressBook.testCrearContacto" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CesAutomation" />
       <extension name="coverage">
@@ -175,7 +274,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestProject.testAgregarRecursoMiembro" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestProject" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CesAutomation" />
       <extension name="coverage">
         <pattern>
@@ -185,8 +284,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.TestProject" />
-      <option name="METHOD_NAME" value="testAgregarRecursoMiembro" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -202,6 +300,22 @@
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.TestProject" />
       <option name="METHOD_NAME" value="testConsultarProyecto" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestProject.testCrearProyecto" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CesAutomation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.TestProject" />
+      <option name="METHOD_NAME" value="testCrearProyecto" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -224,11 +338,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestProject.testAgregarRecursoMiembro" />
         <item itemvalue="JUnit.TestSuite" />
-        <item itemvalue="JUnit.TestAddressBook.testCrearContacto" />
+        <item itemvalue="JUnit.TestProject.testCrearProyecto" />
         <item itemvalue="JUnit.TestProject.testConsultarProyecto" />
-        <item itemvalue="JUnit.TestAddressBook" />
+        <item itemvalue="JUnit.TestProject" />
+        <item itemvalue="JUnit.TestAddressBook.testCrearContacto" />
       </list>
     </recent_temporary>
   </component>
@@ -246,42 +360,43 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestProject_testConsultarProyecto - 2021.08.21 at 01h 02m 33s.xml">
-      <configuration name="TestProject.testConsultarProyecto" configurationId="JUnit" />
+    <history-entry file="TestProject_testCrearProyecto - 2021.08.21 at 23h 37m 32s.xml">
+      <configuration name="TestProject.testCrearProyecto" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestProject_testConsultarProyecto - 2021.08.21 at 01h 14m 32s.xml">
-      <configuration name="TestProject.testConsultarProyecto" configurationId="JUnit" />
+    <history-entry file="TestProject_testCrearProyecto - 2021.08.21 at 23h 44m 05s.xml">
+      <configuration name="TestProject.testCrearProyecto" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestProject_testConsultarProyecto - 2021.08.21 at 01h 15m 09s.xml">
-      <configuration name="TestProject.testConsultarProyecto" configurationId="JUnit" />
+    <history-entry file="TestProject_testCrearProyecto - 2021.08.21 at 23h 46m 13s.xml">
+      <configuration name="TestProject.testCrearProyecto" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestProject_testAgregarRecursoMiembro - 2021.08.21 at 01h 15m 55s.xml">
-      <configuration name="TestProject.testAgregarRecursoMiembro" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestAddressBook_testCrearContacto - 2021.08.21 at 01h 16m 51s.xml">
-      <configuration name="TestAddressBook.testCrearContacto" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestSuite - 2021.08.21 at 01h 18m 38s.xml">
+    <history-entry file="TestSuite - 2021.08.21 at 23h 47m 10s.xml">
       <configuration name="TestSuite" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestProject_testAgregarRecursoMiembro - 2021.08.21 at 01h 33m 15s.xml">
-      <configuration name="TestProject.testAgregarRecursoMiembro" configurationId="JUnit" />
+    <history-entry file="TestSuite - 2021.08.21 at 23h 48m 36s.xml">
+      <configuration name="TestSuite" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestProject_testAgregarRecursoMiembro - 2021.08.21 at 01h 33m 40s.xml">
-      <configuration name="TestProject.testAgregarRecursoMiembro" configurationId="JUnit" />
+    <history-entry file="TestSuite - 2021.08.21 at 23h 51m 28s.xml">
+      <configuration name="TestSuite" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestProject_testAgregarRecursoMiembro - 2021.08.21 at 01h 37m 40s.xml">
-      <configuration name="TestProject.testAgregarRecursoMiembro" configurationId="JUnit" />
+    <history-entry file="TestSuite - 2021.08.22 at 00h 53m 57s.xml">
+      <configuration name="TestSuite" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestProject_testAgregarRecursoMiembro - 2021.08.21 at 01h 38m 55s.xml">
-      <configuration name="TestProject.testAgregarRecursoMiembro" configurationId="JUnit" />
+    <history-entry file="TestSuite - 2021.08.22 at 00h 57m 22s.xml">
+      <configuration name="TestSuite" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestSuite - 2021.08.22 at 01h 08m 41s.xml">
+      <configuration name="TestSuite" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestSuite - 2021.08.22 at 01h 09m 51s.xml">
+      <configuration name="TestSuite" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8325991" visible="true" weight="0.2622108" />
-      <window_info id="Structure" order="1" sideWeight="0.16740088" side_tool="true" visible="true" weight="0.2622108" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.83160084" visible="true" weight="0.2718509" />
+      <window_info id="Structure" order="1" sideWeight="0.16839917" side_tool="true" weight="0.26542416" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
@@ -289,13 +404,13 @@
       <window_info id="Learn" order="6" weight="0.32969153" />
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32881773" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.4119171" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.37807882" />
+      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.3277202" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4119171" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.376943" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32881773" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3277202" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.3238342" />
@@ -351,7 +466,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/tests/TestProject.java</url>
-          <line>115</line>
+          <line>114</line>
           <properties class="tests.TestProject" method="testAgregarRecursoMiembro">
             <option name="EMULATED" value="true" />
           </properties>
@@ -359,11 +474,11 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/tests/TestProject.java</url>
-          <line>94</line>
-          <properties class="tests.TestProject" method="testConsultarProyecto">
+          <line>63</line>
+          <properties class="tests.TestProject" method="testCrearProyecto">
             <option name="EMULATED" value="true" />
           </properties>
-          <option name="timeStamp" value="14" />
+          <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/tests/TestProject.java</url>
@@ -376,6 +491,12 @@
           <line>14</line>
           <properties />
           <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/tests/TestProject.java</url>
+          <line>92</line>
+          <properties />
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -495,13 +616,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_281/src.zip!/java/lang/Thread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="140" column="6" selection-start-line="140" selection-start-column="6" selection-end-line="140" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_281/src.zip!/java/util/concurrent/TimeUnit.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
@@ -520,16 +634,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/util/LeeFichero.java" />
     <entry file="file://$PROJECT_DIR$/src/test/resources/properties.txt" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/util/LeerProperties.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="10" selection-end-line="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-remote-driver/3.141.59/selenium-remote-driver-3.141.59.jar!/org/openqa/selenium/remote/RemoteWebDriver.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="143">
@@ -560,18 +664,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/pages/ProjectManagerPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="31" column="24" lean-forward="true" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1680#1681#0" expanded="true" />
-            <element signature="e#1711#1712#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_281/jre/lib/plugin.jar!/sun/plugin2/util/BrowserType.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -579,44 +671,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_281/src.zip!/java/lang/Thread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="51" column="21" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/pages/InicioPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="26" column="55" lean-forward="true" selection-start-line="25" selection-start-column="7" selection-end-line="26" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="143">
+          <caret line="140" column="6" selection-start-line="140" selection-start-column="6" selection-end-line="140" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/tests/TestAddressBook.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="49" column="5" lean-forward="true" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
+        <state relative-caret-position="663">
+          <caret line="49" column="5" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/datos.properties">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="31" column="12" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
+        <state relative-caret-position="83">
+          <caret line="43" column="24" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/suite/TestSuite.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/util/LeerProperties.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        <state relative-caret-position="374">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pages/InicioPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="25" column="42" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -625,8 +717,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/tests/TestProject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="114" column="54" selection-start-line="114" selection-start-column="54" selection-end-line="114" selection-end-column="54" />
+        <state relative-caret-position="102">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -635,8 +727,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/pages/BasePage.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2312">
+          <caret line="155" column="18" selection-start-line="155" selection-start-column="18" selection-end-line="155" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pages/ProjectManagerPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1207">
+          <caret line="76" column="23" selection-start-line="76" selection-start-column="23" selection-end-line="76" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1680#1681#0" expanded="true" />
+            <element signature="e#1711#1712#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/datos.properties">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
-          <caret line="30" column="1" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
+          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/suite/TestSuite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="44" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

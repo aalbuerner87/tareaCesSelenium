@@ -8,8 +8,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -35,17 +33,13 @@ public class BasePage {
         Properties browser = datos.leerProperties();
         String browserType = browser.getProperty( "browser" );
         if(browserType.equalsIgnoreCase( "chrome" )){
+
             System.setProperty( "webdriver.chrome.driver" , "./src/test/resources/chromedriver.exe" );
             ChromeOptions chromeOptions = new ChromeOptions();
             driver = new ChromeDriver( chromeOptions );
 
 
-        } else if(browserType.equalsIgnoreCase( "firefox" )){
-
-            System.setProperty( "webdriver.gecko.driver" , "./src/test/resources/geckodriver.exe" );
-            FirefoxOptions firefoxOptions = new FirefoxOptions();
-            driver = new FirefoxDriver( firefoxOptions );
-        } else if(browserType.equalsIgnoreCase( "edge" )){
+           } else if(browserType.equalsIgnoreCase( "edge" )){
 
             System.setProperty( "webdriver.edge.driver" , "./src/test/resources/msedgedriver.exe" );
             EdgeOptions edgeOptions = new EdgeOptions();
@@ -186,5 +180,7 @@ public class BasePage {
         lista.selectByVisibleText( value );
 
     }
+
+
 
 }
