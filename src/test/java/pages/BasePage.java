@@ -6,12 +6,18 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.support.ui.Select;
+
+import java.util.Properties;
 import java.util.Set;
+
 import org.openqa.selenium.Keys;
+import util.LeerProperties;
 
 
 public class BasePage {
@@ -21,10 +27,25 @@ public class BasePage {
     private static WebDriverWait wait;
     private static By messageSave;
 
+
     static{
-        System.setProperty( "webdriver.chrome.driver" , "./src/test/resources/chromedriver.exe" );
-        ChromeOptions chromeOptions = new ChromeOptions();
-        driver = new ChromeDriver( chromeOptions );
+        LeerProperties config = new LeerProperties();
+        Properties browser = config.leerConfig();
+        String browserType = browser.getProperty( "browser" );
+        if(browserType.equalsIgnoreCase( "chrome" )){
+
+            System.setProperty( "webdriver.chrome.driver" , "./src/test/resources/chromedriver.exe" );
+            ChromeOptions chromeOptions = new ChromeOptions();
+            driver = new ChromeDriver( chromeOptions );
+
+
+           } else if(browserType.equalsIgnoreCase( "edge" )){
+
+            System.setProperty( "webdriver.edge.driver" , "./src/test/resources/msedgedriver.exe" );
+            EdgeOptions edgeOptions = new EdgeOptions();
+            driver = new EdgeDriver( edgeOptions );
+        }
+
         wait = new WebDriverWait( driver , 20 );
         messageSave = By.id( "egw_message" );
     }
@@ -33,6 +54,7 @@ public class BasePage {
         BasePage.driver = driver;
         wait = new WebDriverWait( driver , 20 );
     }
+
 
     public static void navigateTo ( String url ){
 
@@ -64,7 +86,7 @@ public class BasePage {
 
     public void click ( By locator ){
 
-       find(locator).click();
+        find( locator ).click();
 
 
     }
@@ -158,5 +180,7 @@ public class BasePage {
         lista.selectByVisibleText( value );
 
     }
+
+
 
 }

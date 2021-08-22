@@ -6,6 +6,7 @@ import pages.InicioPage;
 import pages.ProjectManagerPage;
 import util.LeerProperties;
 
+import java.net.MalformedURLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
@@ -27,7 +28,6 @@ public class TestProject {
     String idProyectoConsulta;
     String nombreProyectoConsulta;
     String priority;
-    String owner;
     String startDate;
     String endDateCreado;
     String budg;
@@ -38,13 +38,12 @@ public class TestProject {
     @BeforeAll
     public void datos (){
         
-        datosProyecto=datos.leerProperties();
+        datosProyecto=datos.leerDatos();
         tituloProyecto = datosProyecto.getProperty("tituloProyecto");
         recursoAgregado = datosProyecto.getProperty( "recursoAgregado" );
         idProyectoConsulta =datosProyecto.getProperty( "recursoAgregado" );
         nombreProyectoConsulta =datosProyecto.getProperty( "nombreProyectoConsulta" );
         priority =datosProyecto.getProperty( "priority" );
-        owner =datosProyecto.getProperty( "owner" );
         startDate =datosProyecto.getProperty( "startDate" );
         endDateCreado=datosProyecto.getProperty( "endDateCreado" );
         budg=datosProyecto.getProperty( "budg" );
@@ -53,15 +52,16 @@ public class TestProject {
     }
 
     @BeforeEach
-    public void entrar (){
+    public void entrar ()throws MalformedURLException{
 
         login.IniciarSesion();
 
     }
 
     @Test
+    @Tag( "Para_Suite_AmbienteTest" )
+    @DisplayName("Test crear proyecto")
     public void testCrearProyecto (){
-
         String tituloPagina = projectManager.getNombreVentanaProyecto();
         assertEquals( "EGroupware [Project Manager - Add project]" , tituloPagina );
         id = addProjectPage.generarIdProyecto();
@@ -89,7 +89,8 @@ public class TestProject {
     }
 
     @Test
-
+    @Tag( "Para_Suite_AmbienteTest" )
+    @DisplayName("Test consulta de un proyecto creado")
     public void testConsultarProyecto (){
 
         projectManager.abrirTabProyecto();
@@ -100,25 +101,30 @@ public class TestProject {
         assertEquals( id , proyecto.get( 0 ) );
         assertEquals( nombreProyectoConsulta , proyecto.get( 1 ) );
         assertEquals( priority , proyecto.get( 2 ) );
-        assertEquals( owner , proyecto.get( 3 ) );
-        assertEquals( startDate , proyecto.get( 4 ) );
-        assertEquals( endDateCreado , proyecto.get( 5 ) );
-        assertEquals( budg , proyecto.get( 6 ) );
-        assertEquals( times , proyecto.get( 7 ) );
+        assertEquals( startDate , proyecto.get( 3 ) );
+        assertEquals( endDateCreado , proyecto.get( 4 ) );
+        assertEquals( budg , proyecto.get( 5) );
+        assertEquals( times , proyecto.get( 6 ) );
         projectManager.cerrarVentanaProyecto();
     }
 
 
     @Test
+    @Tag( "Para_Suite_AmbienteTest")
+    @DisplayName("Test agrega recursos a un proyecto")
     public void testAgregarRecursoMiembro (){
         projectManager.abrirVentanaProyecto();
         id = addProjectPage.generarIdProyecto();
         addProjectPage.escribirProyecto( id , tituloProyecto );
         addProjectPage.guardarCambios();
+        String mensajeSave = projectManager.getMensaje();
+        assertEquals( "Project saved." , mensajeSave );
         projectManager.busquedaProyectoCreado( id );
         projectManager.abrirProyecto();
         addProjectPage.agregarRecursoMiembro( recursoAgregado );
         addProjectPage.guardarCambios();
+        String mensajeSave2 = projectManager.getMensaje();
+        assertEquals( "Project saved." , mensajeSave2 );
         String recursoAgregadoM = projectManager.comprobarRecursos();
         assertEquals( recursoAgregado , recursoAgregadoM );
         projectManager.cerrarVentanaProyecto();
@@ -131,7 +137,6 @@ public class TestProject {
 
 
     }
-
     @AfterAll
     public void cerrarNavegador (){
 

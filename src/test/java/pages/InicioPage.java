@@ -2,6 +2,7 @@ package pages;
 
 import org.openqa.selenium.By;
 import util.LeerProperties;
+
 import java.util.Properties;
 
 public class InicioPage extends BasePage {
@@ -21,9 +22,8 @@ public class InicioPage extends BasePage {
 
     public void IniciarSesion (){
 
-
         LeerProperties datos= new LeerProperties();
-        Properties credenciales=datos.leerProperties();
+        Properties credenciales=datos.leerDatos();
         user=credenciales.getProperty( "user" );
         pass=credenciales.getProperty( "pass" );
         url=credenciales.getProperty( "url" );
