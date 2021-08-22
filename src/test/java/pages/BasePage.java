@@ -29,8 +29,8 @@ public class BasePage {
 
 
     static{
-        LeerProperties datos = new LeerProperties();
-        Properties browser = datos.leerProperties();
+        LeerProperties config = new LeerProperties();
+        Properties browser = config.leerConfig();
         String browserType = browser.getProperty( "browser" );
         if(browserType.equalsIgnoreCase( "chrome" )){
 

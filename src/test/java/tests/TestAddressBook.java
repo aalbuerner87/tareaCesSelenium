@@ -31,7 +31,7 @@ public class TestAddressBook {
     public void datos (){
 
         LeerProperties datos= new LeerProperties();
-        Properties contacto=datos.leerProperties();
+        Properties contacto=datos.leerDatos();
          nombre=contacto.getProperty( "nombre" );
          movil=contacto.getProperty( "movil" );
          mail=contacto.getProperty( "mail" );
