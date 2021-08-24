@@ -24,7 +24,7 @@ public class ProjectManagerPage extends BasePage {
     By endDateCreado = By.cssSelector( localizador.getProperty( "endDateCreadoByCss" ) );
     By budgCreado = By.cssSelector( localizador.getProperty( "budgCreadoByCss" ) );
     By timesCreado = By.cssSelector( localizador.getProperty( "timesCreadoByCss" ) );
-    By delete = By.xpath( localizador.getProperty( "deleteByXp" ) );
+    By delete = By.xpath( localizador.getProperty( "deleteProjectByXp" ) );
     By open = By.xpath( localizador.getProperty( "openByXp" ) );
     By texto = By.cssSelector( localizador.getProperty( "textoByCss" ) );
     By yesBoton = By.id( localizador.getProperty( "yesBotonById" ) );

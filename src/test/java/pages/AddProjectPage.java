@@ -55,7 +55,6 @@ public class AddProjectPage extends BasePage {
         click( category );
         String video = "29";
         selectOption( category , video );
-        ;
         enter( category );
         click( members );
         click( membersSelect );

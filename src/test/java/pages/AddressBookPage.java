@@ -25,8 +25,6 @@ public class AddressBookPage extends BasePage {
     By mail = By.id( localizador.getProperty( "mailById" ) );
     By jobTitle = By.id( localizador.getProperty( "jobTitleById" ) );
     By busqueda = By.cssSelector( localizador.getProperty( "busquedaAdByCss" ) );
-
-
     By applyBoton = By.id( localizador.getProperty( "applyBotonById" ) );
     By nombreTabla = By.cssSelector( localizador.getProperty( "nombreTablaByCss" ) );
     By paisTabla = By.cssSelector( localizador.getProperty( "paisTablaByCss" ) );
@@ -35,6 +33,8 @@ public class AddressBookPage extends BasePage {
     By delete = By.xpath( localizador.getProperty( "deleteByXp" ) );
     By area = By.cssSelector( localizador.getProperty( "areaByCss" ) );
     By yesBoton = By.id( localizador.getProperty( "yesBotonById" ) );
+    By cerrarPais=By.cssSelector( localizador.getProperty("cerrarCountryByCss" ));
+    By paisContacto=By.cssSelector( localizador.getProperty("countryByCss" ));
 
     public AddressBookPage (){
         super( driver );
@@ -56,21 +56,55 @@ public class AddressBookPage extends BasePage {
     }
 
 
-    public void crearContacto ( String organizations , String nombre , String mails , String prefixs , String movils , String bussPhones , String job ){
+    public String generarPrefix (){
 
+       int prefixn = (int) (Math.random() * 1000 + 1);
+       String prefix = "prefix"+ prefixn;
+       return prefix;
+
+   }
+   public void agregarNombre(String nombre,String prefixs){
+       click( name );
+       write( prefix , prefixs );
+       write( firstName , nombre );
+       click( okBoton );
+
+   }
+
+    public void agregarOrganizacion(String organizations){
         write( organization , organizations );
-        click( name );
-        write( prefix , prefixs );
-        write( firstName , nombre );
-        click( okBoton );
-        write( bussPhone , bussPhones );
-        write( movil , movils );
-        write( mail , mails );
-        write( jobTitle , job );
-        click( applyBoton );
 
     }
 
+    public void agregarmMails(String mails){
+        write( mail , mails );
+
+    }
+
+    public void agregarMovil(String movils){
+        write( movil , movils );
+
+    }
+    public void agregarTelefNegocio(String bussPhones){
+        write( bussPhone , bussPhones );
+
+    }
+    public void agregarOcupacion(String job){
+        write( jobTitle , job );
+
+    }
+
+    public void guardarContacto(){
+        click( applyBoton );
+    }
+public void agregarPais(String paisNuevo){
+
+
+       click(cerrarPais );
+       write(paisContacto,paisNuevo);
+
+
+}
     public void guardarAgenda (){
 
         click( saveBoton );
@@ -96,6 +130,7 @@ public class AddressBookPage extends BasePage {
         enter( busqueda );
 
     }
+
 
     public List<String> getDatosContacto (){
 

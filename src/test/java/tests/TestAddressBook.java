@@ -4,8 +4,6 @@ import org.junit.jupiter.api.*;
 import pages.AddressBookPage;
 import pages.InicioPage;
 import util.LeerProperties;
-
-import java.net.MalformedURLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
@@ -35,7 +33,7 @@ public class TestAddressBook {
          nombre=contacto.getProperty( "nombre" );
          movil=contacto.getProperty( "movil" );
          mail=contacto.getProperty( "mail" );
-         prefix=contacto.getProperty( "prefix" );
+         prefix=addressBookPage.generarPrefix();
          bussPhones=contacto.getProperty( "bussPhones" );
          job=contacto.getProperty( "job" );
          organizations=contacto.getProperty( "organizations" );
@@ -43,19 +41,25 @@ public class TestAddressBook {
     }
 
     @BeforeEach
-    public void entrar ()throws MalformedURLException{
+    public void entrar (){
 
         login.IniciarSesion();
 
     }
 
-    @Test
+     @Test
     @Tag( "Para_Suite_AmbienteTest" )
     @DisplayName("Test Crear Contacto Nuevo")
     public void testCrearContacto (){
         String tituloPagina = addressBookPage.getNombreVentanaAgenda();
         assertEquals( "EGroupware [Address Book]" , tituloPagina );
-        addressBookPage.crearContacto( organizations , nombre , mail , prefix , movil , bussPhones , job );
+        addressBookPage.agregarOrganizacion(organizations );
+        addressBookPage.agregarNombre( nombre,prefix );
+        addressBookPage.agregarMovil( movil );
+        addressBookPage.agregarTelefNegocio( bussPhones );
+        addressBookPage.agregarmMails( mail );
+        addressBookPage.agregarPais( pais );
+        addressBookPage.agregarOcupacion( job );
         addressBookPage.guardarAgenda();
         String mensajesave = addressBookPage.getMensaje();
         assertEquals( "Contact saved" , mensajesave );
@@ -75,5 +79,6 @@ public class TestAddressBook {
         addressBookPage.cerrarVentanaAgenda();
 
     }
+
 
 }
