@@ -1,0 +1,9 @@
+pages\BasePage.class
+pages\ProjectManagerPage.class
+pages\InicioPage.class
+tests\TestAddressBook.class
+util\LeerProperties.class
+pages\AddressBookPage.class
+suite\TestSuite.class
+pages\AddProjectPage.class
+tests\TestProject.class

@@ -126,12 +126,4 @@ public class AddressBookPage extends BasePage {
 
 
 
-    public void cerrarNavegador(){
-
-        closedBrowser();
-
-    }
-
-
-
 }

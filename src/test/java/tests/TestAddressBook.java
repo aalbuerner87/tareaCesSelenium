@@ -63,7 +63,7 @@ public class TestAddressBook {
         List<String> contacto = new ArrayList<String>();
         contacto = addressBookPage.getDatosContacto();
         String union = ", " + nombre + "\n" + organizations + "\n" + job;
-        String telefonos = movil + "\n" + bussPhones;
+        String telefonos = bussPhones + "\n" + movil;
         assertEquals( union , contacto.get( 0 ) );
         assertEquals( pais , contacto.get( 1 ) );
         assertEquals( telefonos , contacto.get( 2 ) );
