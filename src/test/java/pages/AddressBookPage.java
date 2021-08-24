@@ -1,72 +1,79 @@
 package pages;
 
 import org.openqa.selenium.By;
+import util.LeerProperties;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Properties;
 
 public class AddressBookPage extends BasePage {
 
-    By agenda = By.cssSelector( "#addressbook_sidebox_header" );
-    By add=By.id( "addressbook-index_add" );
-    By cerrarAgenda=By.cssSelector("#addressbook-egw_fw_ui_tab_header > .egw_fw_ui_tab_close_button");
-    By organization=By.id( "addressbook-edit_org_name" );
-    By name=By.cssSelector( "#addressbook-edit_n_fn" );
-    By prefix=By.cssSelector( "#addressbook-edit_n_prefix" );
-    By firstName=By.cssSelector( "#addressbook-edit_n_given" );
-    By okBoton=By.id( "addressbook-edit_button[ok]" );
-    By saveBoton=By.id( "addressbook-edit_button[save]" );
-    By bussPhone=By.id( "addressbook-edit_tel_work" );
-    By movil=By.id( "addressbook-edit_tel_cell" );
-    By mail=By.id("addressbook-edit_email");
-    By jobTitle=By.id( "addressbook-edit_title" );
-    By busqueda=By.cssSelector( "#addressbook-index_nm .et2_textbox" );
-    By applyBoton=By.id("addressbook-edit_button[apply]");
-    By nombreTabla = By.cssSelector( ".contact_contact [class*='_td_col_1']" ); //name
-    By paisTabla = By.cssSelector( ".contact_contact [class*='_td_col_3']" ); //pais
-    By celularTabla = By.cssSelector( ".contact_contact [class*='_td_col_5']" );
-    By correoTabla = By.cssSelector( ".contact_contact [class*='_td_col_7']" );
-    By delete = By.xpath( "//*[contains(@id,'WebMenuTopId')][not(contains(@style,'display: none'))]/descendant::*[@class='sub_item'][contains(@id,'delete')]" );
-    By area=By.cssSelector( ".contact_contact" );
-    By yesBoton=By.id("dialog[yes]");
+    LeerProperties localizadores = new LeerProperties();
+    Properties localizador = localizadores.leerLocalizadores();
+    By agenda = By.cssSelector( localizador.getProperty( "agendaByCss" ) );
+    By add = By.id( localizador.getProperty( "addAgById" ) );
+    By cerrarAgenda = By.cssSelector( localizador.getProperty( "cerrarAgendaByCss" ) );
+    By organization = By.id( localizador.getProperty( "organizationById" ) );
+    By name = By.cssSelector( localizador.getProperty( "nameByCss" ) );
+    By prefix = By.cssSelector( localizador.getProperty( "prefixByCss" ) );
+    By firstName = By.cssSelector( localizador.getProperty( "firstNameByCss" ) );
+    By okBoton = By.id( localizador.getProperty( "okBotonById" ) );
+    By saveBoton = By.id( localizador.getProperty( "saveBotonById" ) );
+    By bussPhone = By.id( localizador.getProperty( "bussPhoneById" ) );
+    By movil = By.id( localizador.getProperty( "movilById" ) );
+    By mail = By.id( localizador.getProperty( "mailById" ) );
+    By jobTitle = By.id( localizador.getProperty( "jobTitleById" ) );
+    By busqueda = By.cssSelector( localizador.getProperty( "busquedaAdByCss" ) );
 
-    public AddressBookPage ( ){
+
+    By applyBoton = By.id( localizador.getProperty( "applyBotonById" ) );
+    By nombreTabla = By.cssSelector( localizador.getProperty( "nombreTablaByCss" ) );
+    By paisTabla = By.cssSelector( localizador.getProperty( "paisTablaByCss" ) );
+    By celularTabla = By.cssSelector( localizador.getProperty( "celularTablaByCss" ) );
+    By correoTabla = By.cssSelector( localizador.getProperty( "correoTablaByCss" ) );
+    By delete = By.xpath( localizador.getProperty( "deleteByXp" ) );
+    By area = By.cssSelector( localizador.getProperty( "areaByCss" ) );
+    By yesBoton = By.id( localizador.getProperty( "yesBotonById" ) );
+
+    public AddressBookPage (){
         super( driver );
     }
 
 
-        public void abrirVentanaAgenda (){
+    public void abrirVentanaAgenda (){
 
-            clickJs( agenda );
-            click( add );
-            String ventana = winHandles( 1 );
-            switchToVentana( ventana );
-        }
+        clickJs( agenda );
+        click( add );
+        String ventana = winHandles( 1 );
+        switchToVentana( ventana );
+    }
 
-        public String getNombreVentanaAgenda(){
-            abrirVentanaAgenda();
-            String titulo = getTitle();
-            return titulo;
-        }
+    public String getNombreVentanaAgenda (){
+        abrirVentanaAgenda();
+        String titulo = getTitle();
+        return titulo;
+    }
 
 
-    public void crearContacto(String organizations,String nombre,String mails,String prefixs,String movils,String bussPhones,String job){
+    public void crearContacto ( String organizations , String nombre , String mails , String prefixs , String movils , String bussPhones , String job ){
 
-        write( organization,organizations );
+        write( organization , organizations );
         click( name );
-        write( prefix,prefixs );
-        write(firstName,nombre);
-        click(okBoton);
-        write(bussPhone,bussPhones);
-        write(movil,movils);
-        write(mail,mails);
-        write( jobTitle,job );
+        write( prefix , prefixs );
+        write( firstName , nombre );
+        click( okBoton );
+        write( bussPhone , bussPhones );
+        write( movil , movils );
+        write( mail , mails );
+        write( jobTitle , job );
         click( applyBoton );
 
     }
 
-    public void guardarAgenda(){
+    public void guardarAgenda (){
 
-        click(saveBoton);
+        click( saveBoton );
     }
 
     public String getMensaje (){
@@ -76,10 +83,9 @@ public class AddressBookPage extends BasePage {
     }
 
 
+    public void cerrarVentanaAgenda (){
 
-    public void cerrarVentanaAgenda(){
-
-        click( cerrarAgenda);
+        click( cerrarAgenda );
     }
 
     public void busquedaContactoCreado ( String mail ){
@@ -93,11 +99,11 @@ public class AddressBookPage extends BasePage {
 
     public List<String> getDatosContacto (){
 
-        List<String> datosContacto = new ArrayList<String>( );
-        String nameT = getText(nombreTabla);
-        String paisT = getText(paisTabla);
-        String celularT = getText(celularTabla);
-        String correoT = getText(correoTabla);
+        List<String> datosContacto = new ArrayList<String>();
+        String nameT = getText( nombreTabla );
+        String paisT = getText( paisTabla );
+        String celularT = getText( celularTabla );
+        String correoT = getText( correoTabla );
         datosContacto.add( nameT );
         datosContacto.add( paisT );
         datosContacto.add( celularT );
@@ -108,30 +114,21 @@ public class AddressBookPage extends BasePage {
     }
 
 
-    public void eliminarContacto ( ){
+    public void eliminarContacto (){
 
         String ventana = winHandles( 0 );
         switchToVentana( ventana );
-        clicRigthandMove( area,delete );
-
+        clicRigthandMove( area , delete );
 
 
     }
-    public void confirmarDelete(){
+
+    public void confirmarDelete (){
 
         click( yesBoton );
 
 
     }
-
-
-
-    public void cerrarNavegador(){
-
-        closedBrowser();
-
-    }
-
 
 
 }

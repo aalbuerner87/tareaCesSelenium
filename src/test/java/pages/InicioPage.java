@@ -7,12 +7,19 @@ import java.util.Properties;
 
 public class InicioPage extends BasePage {
 
-    By login = By.xpath( "//input[@name='login']" );
-    By clave = By.xpath( "//input[@name='passwd']" );
-    By boton = By.cssSelector( "tr:nth-child(8) input" );
-    String url ;
-    String user  ;
-    String pass  ;
+
+    String url;
+    String user;
+    String pass;
+
+    LeerProperties localizadores = new LeerProperties();
+    Properties localizador = localizadores.leerLocalizadores();
+    LeerProperties datos = new LeerProperties();
+    Properties credenciales = datos.leerDatos();
+    By login = By.xpath( localizador.getProperty( "loginByXp" ) );
+    By clave = By.xpath( localizador.getProperty( "claveByXp" ) );
+    By boton = By.xpath( localizador.getProperty( "botonByXp" ) );
+
 
     public InicioPage (){
 
@@ -22,11 +29,10 @@ public class InicioPage extends BasePage {
 
     public void IniciarSesion (){
 
-        LeerProperties datos= new LeerProperties();
-        Properties credenciales=datos.leerDatos();
-        user=credenciales.getProperty( "user" );
-        pass=credenciales.getProperty( "pass" );
-        url=credenciales.getProperty( "url" );
+
+        user = credenciales.getProperty( "user" );
+        pass = credenciales.getProperty( "pass" );
+        url = credenciales.getProperty( "url" );
         navigateTo( url );
         write( login , user );
         write( clave , pass );
@@ -36,7 +42,7 @@ public class InicioPage extends BasePage {
     }
 
 
-    }
+}
 
 
 
