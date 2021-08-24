@@ -8,10 +8,11 @@ import java.util.Properties;
 
 public class LeerProperties {
 
+    Properties properties = new Properties();
 
     public Properties leerDatos (){
 
-        Properties properties = new Properties();
+       // Properties properties = new Properties();
         try {
 
             properties.load( new FileInputStream( new File( "src/test/resources/datos.properties" ) ) );
@@ -27,10 +28,25 @@ public class LeerProperties {
 
     public Properties leerConfig (){
 
-        Properties properties = new Properties();
+       // Properties properties = new Properties();
         try {
 
             properties.load( new FileInputStream( new File( "src/test/resources/config.properties" ) ) );
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return properties;
+
+    }
+    public Properties leerLocalizadores(){
+
+        //Properties properties = new Properties();
+        try {
+
+            properties.load( new FileInputStream( new File( "src/test/resources/localizadores.properties" ) ) );
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();

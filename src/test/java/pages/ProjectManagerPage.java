@@ -2,32 +2,34 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import util.LeerProperties;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Properties;
 
 
 public class ProjectManagerPage extends BasePage {
 
-    InicioPage inicio = new InicioPage();
-    private static WebDriverWait wait;
-    By project = By.cssSelector( "#projectmanager_sidebox_header" );
-    By add = By.id( "projectmanager-list_add" );
-    By busqueda = By.cssSelector( "#projectmanager-list_nm .et2_textbox" );
-    By cerrarProyecto = By.cssSelector( "#projectmanager-egw_fw_ui_tab_header > .egw_fw_ui_tab_close_button" );
-    By idProyectoCreado = By.cssSelector( ".rowNoUndelete [class*='_td_col_0']" );
-    By nombreProyectoCreado = By.cssSelector( ".rowNoUndelete [class*='_td_col_12']" );
-    By priorityCreado = By.cssSelector( ".rowNoUndelete [class*='_td_col_1']" );
-    By startDateCreado = By.cssSelector( ".rowNoUndelete [class*='_td_col_4']" );
-    By endDateCreado = By.cssSelector( ".rowNoUndelete [class*='_td_col_5']" );
-    By budgCreado = By.cssSelector( ".rowNoUndelete [class*='_td_col_7']" );
-    By timesCreado = By.cssSelector( ".rowNoUndelete [class*='_td_col_9']" );
-    By delete = By.xpath( "//*[@class='sub_item'][contains(@id,'delete')]" );
-    By open = By.xpath( "//*[@class='sub_item'][contains(@id,'open')]" );
-    By texto = By.cssSelector( ".ui-dialog.ui-widget .ui-dialog-content" );
-    By yesBoton = By.id( "dialog[yes]" );
-    By noElementosBusqueda = By.xpath( "//*[@id=\"projectmanager-list_nm\"]/div[2]/table/tbody/tr/td/div/table/tbody/tr/td" );
-    By titleTabla = By.cssSelector( ".th.rowNoDelete.row_category.row.ui-droppable [class*='_td_col_4']" );
+    LeerProperties localizadores = new LeerProperties();
+    Properties localizador = localizadores.leerLocalizadores();
+    By project = By.cssSelector( localizador.getProperty( "projectById" ) );
+    By add = By.id( localizador.getProperty( "addById" ) );
+    By busqueda = By.cssSelector( localizador.getProperty( "busquedaByCss" ) );
+    By cerrarProyecto = By.cssSelector( localizador.getProperty( "cerrarProyectoByCss" ) );
+    By idProyectoCreado = By.cssSelector( localizador.getProperty( "idProyectoCreadoByCss" ) );
+    By nombreProyectoCreado = By.cssSelector( localizador.getProperty( "nombreProyectoCreadoByCss" ) );
+    By priorityCreado = By.cssSelector( localizador.getProperty( "priorityCreadoByCss" ) );
+    By startDateCreado = By.cssSelector( localizador.getProperty( "startDateCreadoByCss" ) );
+    By endDateCreado = By.cssSelector( localizador.getProperty( "endDateCreadoByCss" ) );
+    By budgCreado = By.cssSelector( localizador.getProperty( "budgCreadoByCss" ) );
+    By timesCreado = By.cssSelector( localizador.getProperty( "timesCreadoByCss" ) );
+    By delete = By.xpath( localizador.getProperty( "deleteByXp" ) );
+    By open = By.xpath( localizador.getProperty( "openByXp" ) );
+    By texto = By.cssSelector( localizador.getProperty( "textoByCss" ) );
+    By yesBoton = By.id( localizador.getProperty( "yesBotonById" ) );
+    By noElementosBusqueda = By.xpath( localizador.getProperty( "noElementosBusquedaByXp" ) );
+    By titleTabla = By.cssSelector( localizador.getProperty( "titleTablaByCss" ) );
 
     public ProjectManagerPage (){
         super( driver );

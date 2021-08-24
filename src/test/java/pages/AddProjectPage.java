@@ -1,22 +1,22 @@
 package pages;
 
 import org.openqa.selenium.By;
+import util.LeerProperties;
+
+import java.util.Properties;
 
 public class AddProjectPage extends BasePage {
 
-
-    By titulo = By.id( "projectmanager-edit_pm_title" );
-    By num = By.id( "projectmanager-edit_pm_number" );
-    By save = By.id( "projectmanager-edit_save" );
-    By messageSave = By.id( "egw_message" );
+    LeerProperties localizadores = new LeerProperties();
+    Properties localizador = localizadores.leerLocalizadores();
+    By titulo = By.id( localizador.getProperty( "tituloById" ) );
+    By num = By.id( localizador.getProperty( "numById" ) );
+    By save = By.id( localizador.getProperty( "saveById" ) );
+    By category = By.id( localizador.getProperty( "categoryById" ) );
+    By members = By.xpath( localizador.getProperty( "membersByXp" ) );
+    By membersSelect = By.id( localizador.getProperty( "membersSelectById" ) );
+    By addMemBoton = By.cssSelector( localizador.getProperty( "addMemBotonByCss" ) );
     String id = "";
-    By category = By.id( "projectmanager-edit_cat_id" );
-    By optionCategory = By.xpath( "//*[@id=\"projectmanager-edit_cat_id\"]/option[2]" );
-    By members = By.xpath( "//*[@id=\"projectmanager-edit_tabs\"]/div[1]/span[3]" );
-    By membersSelect = By.id( "projectmanager-edit_member[1]" );
-    By memOtion = By.xpath( "//*[@id=\"projectmanager-edit_member[1]\"]/option[3]" );
-    By addMemBoton = By.cssSelector( "#projectmanager-edit_add" );
-
 
     public AddProjectPage (){
         super( driver );
@@ -47,20 +47,21 @@ public class AddProjectPage extends BasePage {
     }
 
 
-    public void agregarRecursoMiembro (String Miembro){
+    public void agregarRecursoMiembro ( String Miembro ){
 
 
         String ventana = winHandles( 1 );
         switchToVentana( ventana );
         click( category );
-        String video="29";
-        selectOption( category,video );;
+        String video = "29";
+        selectOption( category , video );
+        ;
         enter( category );
         click( members );
         click( membersSelect );
-        selectOptionByText(membersSelect,Miembro );
+        selectOptionByText( membersSelect , Miembro );
         enter( membersSelect );
-        click(addMemBoton);
+        click( addMemBoton );
 
     }
 
