@@ -13,11 +13,10 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.support.ui.Select;
 
-import java.util.Properties;
 import java.util.Set;
 
 import org.openqa.selenium.Keys;
-import util.LeerProperties;
+import properties.*;
 
 
 public class BasePage {
@@ -29,9 +28,9 @@ public class BasePage {
 
 
     static{
-        LeerProperties config = new LeerProperties();
-        Properties browser = config.leerConfig();
-        String browserType = browser.getProperty( "browser" );
+
+       ConfigProperties browser=new ConfigProperties();
+       String browserType= browser.getBrowser();
         if(browserType.equalsIgnoreCase( "chrome" )){
 
             System.setProperty( "webdriver.chrome.driver" , "./src/test/resources/chromedriver.exe" );

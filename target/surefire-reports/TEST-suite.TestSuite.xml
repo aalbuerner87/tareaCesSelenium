@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="suite.TestSuite" time="57.506" tests="4" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="suite.TestSuite" time="59.224" tests="4" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -18,7 +18,8 @@
     <property name="user.country" value="UY"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="c:\Program Files\Java\jdk1.8.0_281\jre\bin"/>
-    <property name="sun.java.command" value="C:\Users\63445142\AppData\Local\Temp\surefire5343390924716406144\surefirebooter7655416161685903688.jar C:\Users\63445142\AppData\Local\Temp\surefire5343390924716406144 2021-08-24T00-47-14_296-jvmRun1 surefire7817605529549119802tmp surefire_05202112371453211498tmp"/>
+    <property name="sun.java.command" value="C:\Users\63445142\AppData\Local\Temp\surefire1797998308130091795\surefirebooter5699650167533893538.jar C:\Users\63445142\AppData\Local\Temp\surefire1797998308130091795 2021-08-25T00-03-02_202-jvmRun1 surefire1612637105462865371tmp surefire_07021916424717870078tmp"/>
+    <property name="test" value="TestSuite"/>
     <property name="surefire.test.class.path" value="C:\Users\63445142\Desktop\CURSO DEL CES AUTOMATIZACIÖN\Módulo 3\Tarea 5\target\test-classes;C:\Users\63445142\Desktop\CURSO DEL CES AUTOMATIZACIÖN\Módulo 3\Tarea 5\target\classes;c:\apache-maven-3.8.1\lib\org\seleniumhq\selenium\selenium-java\3.141.59\selenium-java-3.141.59.jar;c:\apache-maven-3.8.1\lib\org\seleniumhq\selenium\selenium-api\3.141.59\selenium-api-3.141.59.jar;c:\apache-maven-3.8.1\lib\org\seleniumhq\selenium\selenium-edge-driver\3.141.59\selenium-edge-driver-3.141.59.jar;c:\apache-maven-3.8.1\lib\org\seleniumhq\selenium\selenium-firefox-driver\3.141.59\selenium-firefox-driver-3.141.59.jar;c:\apache-maven-3.8.1\lib\org\seleniumhq\selenium\selenium-ie-driver\3.141.59\selenium-ie-driver-3.141.59.jar;c:\apache-maven-3.8.1\lib\org\seleniumhq\selenium\selenium-opera-driver\3.141.59\selenium-opera-driver-3.141.59.jar;c:\apache-maven-3.8.1\lib\org\seleniumhq\selenium\selenium-remote-driver\3.141.59\selenium-remote-driver-3.141.59.jar;c:\apache-maven-3.8.1\lib\org\seleniumhq\selenium\selenium-safari-driver\3.141.59\selenium-safari-driver-3.141.59.jar;c:\apache-maven-3.8.1\lib\org\seleniumhq\selenium\selenium-support\3.141.59\selenium-support-3.141.59.jar;c:\apache-maven-3.8.1\lib\net\bytebuddy\byte-buddy\1.8.15\byte-buddy-1.8.15.jar;c:\apache-maven-3.8.1\lib\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;c:\apache-maven-3.8.1\lib\com\google\guava\guava\25.0-jre\guava-25.0-jre.jar;c:\apache-maven-3.8.1\lib\com\google\code\findbugs\jsr305\1.3.9\jsr305-1.3.9.jar;c:\apache-maven-3.8.1\lib\org\checkerframework\checker-compat-qual\2.0.0\checker-compat-qual-2.0.0.jar;c:\apache-maven-3.8.1\lib\com\google\errorprone\error_prone_annotations\2.1.3\error_prone_annotations-2.1.3.jar;c:\apache-maven-3.8.1\lib\com\google\j2objc\j2objc-annotations\1.1\j2objc-annotations-1.1.jar;c:\apache-maven-3.8.1\lib\org\codehaus\mojo\animal-sniffer-annotations\1.14\animal-sniffer-annotations-1.14.jar;c:\apache-maven-3.8.1\lib\com\squareup\okhttp3\okhttp\3.11.0\okhttp-3.11.0.jar;c:\apache-maven-3.8.1\lib\com\squareup\okio\okio\1.14.0\okio-1.14.0.jar;c:\apache-maven-3.8.1\lib\org\seleniumhq\selenium\selenium-chrome-driver\3.141.59\selenium-chrome-driver-3.141.59.jar;c:\apache-maven-3.8.1\lib\org\junit\jupiter\junit-jupiter-engine\5.8.0-M1\junit-jupiter-engine-5.8.0-M1.jar;c:\apache-maven-3.8.1\lib\org\apiguardian\apiguardian-api\1.1.1\apiguardian-api-1.1.1.jar;c:\apache-maven-3.8.1\lib\org\junit\platform\junit-platform-engine\1.8.0-M1\junit-platform-engine-1.8.0-M1.jar;c:\apache-maven-3.8.1\lib\org\jetbrains\kotlin\kotlin-stdlib-jdk8\1.4.20\kotlin-stdlib-jdk8-1.4.20.jar;c:\apache-maven-3.8.1\lib\org\jetbrains\kotlin\kotlin-stdlib\1.4.20\kotlin-stdlib-1.4.20.jar;c:\apache-maven-3.8.1\lib\org\jetbrains\kotlin\kotlin-stdlib-common\1.4.20\kotlin-stdlib-common-1.4.20.jar;c:\apache-maven-3.8.1\lib\org\jetbrains\annotations\13.0\annotations-13.0.jar;c:\apache-maven-3.8.1\lib\org\jetbrains\kotlin\kotlin-stdlib-jdk7\1.4.20\kotlin-stdlib-jdk7-1.4.20.jar;c:\apache-maven-3.8.1\lib\org\junit\jupiter\junit-jupiter-api\5.8.0-M1\junit-jupiter-api-5.8.0-M1.jar;c:\apache-maven-3.8.1\lib\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;c:\apache-maven-3.8.1\lib\org\junit\platform\junit-platform-commons\1.8.0-M1\junit-platform-commons-1.8.0-M1.jar;c:\apache-maven-3.8.1\lib\org\junit\platform\junit-platform-suite-api\1.8.0-M1\junit-platform-suite-api-1.8.0-M1.jar;c:\apache-maven-3.8.1\lib\org\junit\platform\junit-platform-runner\1.7.2\junit-platform-runner-1.7.2.jar;c:\apache-maven-3.8.1\lib\junit\junit\4.13\junit-4.13.jar;c:\apache-maven-3.8.1\lib\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;c:\apache-maven-3.8.1\lib\org\junit\platform\junit-platform-launcher\1.7.2\junit-platform-launcher-1.7.2.jar;c:\apache-maven-3.8.1\lib\org\junit\jupiter\junit-jupiter-params\5.7.0\junit-jupiter-params-5.7.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\63445142"/>
@@ -31,7 +32,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\63445142\AppData\Local\Temp\surefire5343390924716406144\surefirebooter7655416161685903688.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\63445142\AppData\Local\Temp\surefire1797998308130091795\surefirebooter5699650167533893538.jar"/>
     <property name="sun.boot.class.path" value="c:\Program Files\Java\jdk1.8.0_281\jre\lib\resources.jar;c:\Program Files\Java\jdk1.8.0_281\jre\lib\rt.jar;c:\Program Files\Java\jdk1.8.0_281\jre\lib\sunrsasign.jar;c:\Program Files\Java\jdk1.8.0_281\jre\lib\jsse.jar;c:\Program Files\Java\jdk1.8.0_281\jre\lib\jce.jar;c:\Program Files\Java\jdk1.8.0_281\jre\lib\charsets.jar;c:\Program Files\Java\jdk1.8.0_281\jre\lib\jfr.jar;c:\Program Files\Java\jdk1.8.0_281\jre\classes"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
@@ -60,20 +61,20 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="52.0"/>
   </properties>
-  <testcase name="Test Crear Contacto Nuevo" classname="TestAddressBook" time="19.052">
-    <system-err><![CDATA[Starting MSEdgeDriver 92.0.902.78 (cf138c12fbef5d68392247688f16ca31d2b55bc5) on port 15668
+  <testcase name="Test Crear Contacto Nuevo" classname="TestAddressBook" time="17.498">
+    <system-err><![CDATA[Starting ChromeDriver 92.0.4515.107 (87a818b10553a07434ea9e2b6dccf3cbe7895134-refs/branch-heads/4515@{#1634}) on port 11802
 Only local connections are allowed.
-Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping MSEdgeDriver safe.
-MSEdgeDriver was started successfully.
-ago 24, 2021 12:47:18 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+ago 25, 2021 12:03:06 AM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFORMACIÓN: Detected dialect: W3C
-[1629776855.397][SEVERE]: Unable to receive message from renderer
 ]]></system-err>
   </testcase>
-  <testcase name="Test agrega recursos a un proyecto" classname="TestProject" time="16.789"/>
-  <testcase name="Test consulta de un proyecto creado" classname="TestProject" time="6.785"/>
-  <testcase name="Test crear proyecto" classname="TestProject" time="11.153">
-    <system-err><![CDATA[[1629776889.321][SEVERE]: Unable to receive message from renderer
+  <testcase name="Test agrega recursos a un proyecto" classname="TestProject" time="18.464">
+    <system-err><![CDATA[[1629860611.605][SEVERE]: Unable to receive message from renderer
+[1629860617.737][SEVERE]: Unable to receive message from renderer
 ]]></system-err>
   </testcase>
+  <testcase name="Test consulta de un proyecto creado" classname="TestProject" time="7.08"/>
+  <testcase name="Test crear proyecto" classname="TestProject" time="12.239"/>
 </testsuite>

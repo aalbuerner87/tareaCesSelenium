@@ -1,14 +1,14 @@
 package tests;
 
 import org.junit.jupiter.api.*;
+import pages.Add_AddressBookPage;
 import pages.AddressBookPage;
 import pages.InicioPage;
-import util.LeerProperties;
+import properties.*;
 
-import java.net.MalformedURLException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Properties;
+
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -16,8 +16,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class TestAddressBook {
 
-    InicioPage login=new InicioPage();
-    AddressBookPage addressBookPage=new AddressBookPage();
+    InicioPage login = new InicioPage();
+    AddressBookPage addressBookPage = new AddressBookPage();
+    Add_AddressBookPage add_addressBookPage=new Add_AddressBookPage();
+    DatosContactoproperties contacto = new DatosContactoproperties();
+
     String nombre;
     String movil;
     String mail;
@@ -30,33 +33,37 @@ public class TestAddressBook {
     @BeforeAll
     public void datos (){
 
-        LeerProperties datos= new LeerProperties();
-        Properties contacto=datos.leerDatos();
-         nombre=contacto.getProperty( "nombre" );
-         movil=contacto.getProperty( "movil" );
-         mail=contacto.getProperty( "mail" );
-         prefix=contacto.getProperty( "prefix" );
-         bussPhones=contacto.getProperty( "bussPhones" );
-         job=contacto.getProperty( "job" );
-         organizations=contacto.getProperty( "organizations" );
-         pais=contacto.getProperty( "pais" );
+        nombre = contacto.getNombre();
+        movil = contacto.getMovil();
+        mail = contacto.getMail();
+        prefix =  add_addressBookPage.generarPrefix();
+        bussPhones = contacto.getBussPhones();
+        job = contacto.getJob();
+        organizations = contacto.getOrganizations();
+        pais = contacto.getPais();
     }
 
     @BeforeEach
-    public void entrar ()throws MalformedURLException{
+    public void entrar (){
 
         login.IniciarSesion();
 
     }
 
     @Test
-    @Tag( "Para_Suite_AmbienteTest" )
+    @Tag("Para_Suite_AmbienteTest")
     @DisplayName("Test Crear Contacto Nuevo")
     public void testCrearContacto (){
         String tituloPagina = addressBookPage.getNombreVentanaAgenda();
         assertEquals( "EGroupware [Address Book]" , tituloPagina );
-        addressBookPage.crearContacto( organizations , nombre , mail , prefix , movil , bussPhones , job );
-        addressBookPage.guardarAgenda();
+        add_addressBookPage.agregarOrganizacion( organizations );
+        add_addressBookPage.agregarNombre( nombre , prefix );
+        add_addressBookPage.agregarMovil( movil );
+        add_addressBookPage.agregarTelefNegocio( bussPhones );
+        add_addressBookPage.agregarmMails( mail );
+        add_addressBookPage.agregarPais( pais );
+        add_addressBookPage.agregarOcupacion( job );
+        add_addressBookPage.guardarAgenda();
         String mensajesave = addressBookPage.getMensaje();
         assertEquals( "Contact saved" , mensajesave );
         addressBookPage.busquedaContactoCreado( mail );
@@ -75,5 +82,6 @@ public class TestAddressBook {
         addressBookPage.cerrarVentanaAgenda();
 
     }
+
 
 }

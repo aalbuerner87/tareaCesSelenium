@@ -1,25 +1,16 @@
 package pages;
 
-import org.openqa.selenium.By;
-import util.LeerProperties;
 
-import java.util.Properties;
+import properties.DatosProyectoProperties;
+import properties.*;
+
+
 
 public class InicioPage extends BasePage {
 
 
-    String url;
-    String user;
-    String pass;
-
-    LeerProperties localizadores = new LeerProperties();
-    Properties localizador = localizadores.leerLocalizadores();
-    LeerProperties datos = new LeerProperties();
-    Properties credenciales = datos.leerDatos();
-    By login = By.xpath( localizador.getProperty( "loginByXp" ) );
-    By clave = By.xpath( localizador.getProperty( "claveByXp" ) );
-    By boton = By.xpath( localizador.getProperty( "botonByXp" ) );
-
+    DatosProyectoProperties credenciales=new DatosProyectoProperties();
+    LocalizadorInicioProperties locator=new LocalizadorInicioProperties();
 
     public InicioPage (){
 
@@ -29,14 +20,10 @@ public class InicioPage extends BasePage {
 
     public void IniciarSesion (){
 
-
-        user = credenciales.getProperty( "user" );
-        pass = credenciales.getProperty( "pass" );
-        url = credenciales.getProperty( "url" );
-        navigateTo( url );
-        write( login , user );
-        write( clave , pass );
-        click( boton );
+        navigateTo( credenciales.getUrl() );
+        write( locator.getLogin() , credenciales.getUser() );
+        write( locator.getClave() , credenciales.getClave() );
+        click( locator.getBoton() );
 
 
     }

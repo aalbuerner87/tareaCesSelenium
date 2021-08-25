@@ -4,12 +4,11 @@ import org.junit.jupiter.api.*;
 import pages.AddProjectPage;
 import pages.InicioPage;
 import pages.ProjectManagerPage;
-import util.LeerProperties;
+import properties.*;
 
-import java.net.MalformedURLException;
+
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Properties;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -21,9 +20,9 @@ public class TestProject {
     InicioPage login = new InicioPage();
     ProjectManagerPage projectManager = new ProjectManagerPage();
     AddProjectPage addProjectPage = new AddProjectPage();
+    DatosProyectoProperties datos =new DatosProyectoProperties();
     String id;
     String tituloProyecto;
-    String tituloProyectoConsulta;
     String recursoAgregado;
     String idProyectoConsulta;
     String nombreProyectoConsulta;
@@ -32,34 +31,33 @@ public class TestProject {
     String endDateCreado;
     String budg;
     String times;
-    LeerProperties datos= new LeerProperties();
-    Properties datosProyecto;
+
+
 
     @BeforeAll
     public void datos (){
-        
-        datosProyecto=datos.leerDatos();
-        tituloProyecto = datosProyecto.getProperty("tituloProyecto");
-        recursoAgregado = datosProyecto.getProperty( "recursoAgregado" );
-        idProyectoConsulta =datosProyecto.getProperty( "recursoAgregado" );
-        nombreProyectoConsulta =datosProyecto.getProperty( "nombreProyectoConsulta" );
-        priority =datosProyecto.getProperty( "priority" );
-        startDate =datosProyecto.getProperty( "startDate" );
-        endDateCreado=datosProyecto.getProperty( "endDateCreado" );
-        budg=datosProyecto.getProperty( "budg" );
-        times =datosProyecto.getProperty( "times" );
 
+
+        tituloProyecto = datos.getTituloProyecto();
+        recursoAgregado = datos.getRecursoAgregado();
+        idProyectoConsulta = datos.getIdProyectoConsulta();
+        nombreProyectoConsulta = datos.getNombreProyectoConsulta();
+        priority = datos.getPriority();
+        startDate = datos.getStartDate();
+        endDateCreado = datos.getEndDateCreado();
+        budg = datos.getBudg();
+        times=datos.getTimes();
     }
 
     @BeforeEach
-    public void entrar ()throws MalformedURLException{
+    public void entrar () {
 
         login.IniciarSesion();
 
     }
 
     @Test
-    @Tag( "Para_Suite_AmbienteTest" )
+    @Tag("Para_Suite_AmbienteTest")
     @DisplayName("Test crear proyecto")
     public void testCrearProyecto (){
         String tituloPagina = projectManager.getNombreVentanaProyecto();
@@ -89,28 +87,33 @@ public class TestProject {
     }
 
     @Test
-    @Tag( "Para_Suite_AmbienteTest" )
+    @Tag("Para_Suite_AmbienteTest")
     @DisplayName("Test consulta de un proyecto creado")
     public void testConsultarProyecto (){
 
         projectManager.abrirTabProyecto();
-        id = datosProyecto.getProperty( "idProyectoConsulta" );
+        id=datos.getIdProyectoConsulta();
         projectManager.busquedaProyectoCreado( id );
-        List<String> proyecto = new ArrayList<String>();
-        proyecto = projectManager.getDatosProyecto();
-        assertEquals( id , proyecto.get( 0 ) );
-        assertEquals( nombreProyectoConsulta , proyecto.get( 1 ) );
-        assertEquals( priority , proyecto.get( 2 ) );
-        assertEquals( startDate , proyecto.get( 3 ) );
-        assertEquals( endDateCreado , proyecto.get( 4 ) );
-        assertEquals( budg , proyecto.get( 5) );
-        assertEquals( times , proyecto.get( 6 ) );
+        boolean comparaId = projectManager.idBusquedaDevuelto( id );
+        boolean comparaNombre = projectManager.nombreProyectoDevuelto( nombreProyectoConsulta );
+        boolean comparaPriority = projectManager.priorityDevuelto( priority );
+        boolean comparaStartDate = projectManager.startDateDevuelto( startDate );
+        boolean comparaEndDate = projectManager.endDateDevuelto( endDateCreado );
+        boolean comparaBudg = projectManager.budgDevuelto( budg );
+        boolean comparaTimes = projectManager.timesDevuelto( times );
+        assertTrue( comparaId );
+        assertTrue( comparaNombre );
+        assertTrue( comparaPriority );
+        assertTrue( comparaStartDate );
+        assertTrue( comparaEndDate );
+        assertTrue( comparaBudg );
+        assertTrue( comparaTimes );
         projectManager.cerrarVentanaProyecto();
-    }
+}
 
 
     @Test
-    @Tag( "Para_Suite_AmbienteTest")
+    @Tag("Para_Suite_AmbienteTest")
     @DisplayName("Test agrega recursos a un proyecto")
     public void testAgregarRecursoMiembro (){
         projectManager.abrirVentanaProyecto();
@@ -137,6 +140,7 @@ public class TestProject {
 
 
     }
+
     @AfterAll
     public void cerrarNavegador (){
 
