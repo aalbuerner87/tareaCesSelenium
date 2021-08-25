@@ -4,12 +4,11 @@ import org.junit.jupiter.api.*;
 import pages.AddProjectPage;
 import pages.InicioPage;
 import pages.ProjectManagerPage;
-import util.LeerProperties;
+import util.DatosProyectoProperties;
 
 import java.net.MalformedURLException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Properties;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -21,9 +20,9 @@ public class TestProject {
     InicioPage login = new InicioPage();
     ProjectManagerPage projectManager = new ProjectManagerPage();
     AddProjectPage addProjectPage = new AddProjectPage();
+    DatosProyectoProperties datos =new DatosProyectoProperties();
     String id;
     String tituloProyecto;
-    String tituloProyectoConsulta;
     String recursoAgregado;
     String idProyectoConsulta;
     String nombreProyectoConsulta;
@@ -32,23 +31,22 @@ public class TestProject {
     String endDateCreado;
     String budg;
     String times;
-    LeerProperties datos = new LeerProperties();
-    Properties datosProyecto;
+
+
 
     @BeforeAll
     public void datos (){
 
-        datosProyecto = datos.leerDatos();
-        tituloProyecto = datosProyecto.getProperty( "tituloProyecto" );
-        recursoAgregado = datosProyecto.getProperty( "recursoAgregado" );
-        idProyectoConsulta = datosProyecto.getProperty( "recursoAgregado" );
-        nombreProyectoConsulta = datosProyecto.getProperty( "nombreProyectoConsulta" );
-        priority = datosProyecto.getProperty( "priority" );
-        startDate = datosProyecto.getProperty( "startDate" );
-        endDateCreado = datosProyecto.getProperty( "endDateCreado" );
-        budg = datosProyecto.getProperty( "budg" );
-        times = datosProyecto.getProperty( "times" );
 
+        tituloProyecto = datos.getTituloProyecto();
+        recursoAgregado = datos.getRecursoAgregado();
+        idProyectoConsulta = datos.getIdProyectoConsulta();
+        nombreProyectoConsulta = datos.getNombreProyectoConsulta();
+        priority = datos.getPriority();
+        startDate = datos.getStartDate();
+        endDateCreado = datos.getEndDateCreado();
+        budg = datos.getBudg();
+        times=datos.getTimes();
     }
 
     @BeforeEach
@@ -94,7 +92,7 @@ public class TestProject {
     public void testConsultarProyecto (){
 
         projectManager.abrirTabProyecto();
-        id = datosProyecto.getProperty( "idProyectoConsulta" );
+        id=datos.getIdProyectoConsulta();
         projectManager.busquedaProyectoCreado( id );
         boolean comparaId = projectManager.idBusquedaDevuelto( id );
         boolean comparaNombre = projectManager.nombreProyectoDevuelto( nombreProyectoConsulta );

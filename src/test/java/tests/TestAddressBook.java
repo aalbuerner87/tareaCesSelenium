@@ -3,10 +3,12 @@ package tests;
 import org.junit.jupiter.api.*;
 import pages.AddressBookPage;
 import pages.InicioPage;
-import util.LeerProperties;
+import util.DatosContactoproperties;
+
+
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Properties;
+
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -14,8 +16,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class TestAddressBook {
 
-    InicioPage login=new InicioPage();
-    AddressBookPage addressBookPage=new AddressBookPage();
+    InicioPage login = new InicioPage();
+    AddressBookPage addressBookPage = new AddressBookPage();
+    DatosContactoproperties contacto = new DatosContactoproperties();
     String nombre;
     String movil;
     String mail;
@@ -28,16 +31,14 @@ public class TestAddressBook {
     @BeforeAll
     public void datos (){
 
-        LeerProperties datos= new LeerProperties();
-        Properties contacto=datos.leerDatos();
-         nombre=contacto.getProperty( "nombre" );
-         movil=contacto.getProperty( "movil" );
-         mail=contacto.getProperty( "mail" );
-         prefix=addressBookPage.generarPrefix();
-         bussPhones=contacto.getProperty( "bussPhones" );
-         job=contacto.getProperty( "job" );
-         organizations=contacto.getProperty( "organizations" );
-         pais=contacto.getProperty( "pais" );
+        nombre = contacto.getNombre();
+        movil = contacto.getMovil();
+        mail = contacto.getMail();
+        prefix = addressBookPage.generarPrefix();
+        bussPhones = contacto.getBussPhones();
+        job = contacto.getJob();
+        organizations = contacto.getOrganizations();
+        pais = contacto.getPais();
     }
 
     @BeforeEach
@@ -47,14 +48,14 @@ public class TestAddressBook {
 
     }
 
-     @Test
-    @Tag( "Para_Suite_AmbienteTest" )
+    @Test
+    @Tag("Para_Suite_AmbienteTest")
     @DisplayName("Test Crear Contacto Nuevo")
     public void testCrearContacto (){
         String tituloPagina = addressBookPage.getNombreVentanaAgenda();
         assertEquals( "EGroupware [Address Book]" , tituloPagina );
-        addressBookPage.agregarOrganizacion(organizations );
-        addressBookPage.agregarNombre( nombre,prefix );
+        addressBookPage.agregarOrganizacion( organizations );
+        addressBookPage.agregarNombre( nombre , prefix );
         addressBookPage.agregarMovil( movil );
         addressBookPage.agregarTelefNegocio( bussPhones );
         addressBookPage.agregarmMails( mail );

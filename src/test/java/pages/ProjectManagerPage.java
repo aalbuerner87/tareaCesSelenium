@@ -1,35 +1,31 @@
 package pages;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import util.LeerProperties;
+import util.LocalizadorProyProperties;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Properties;
-
 
 public class ProjectManagerPage extends BasePage {
 
-    LeerProperties localizadores = new LeerProperties();
-    Properties localizador = localizadores.leerLocalizadores();
-    By project = By.cssSelector( localizador.getProperty( "projectById" ) );
-    By add = By.id( localizador.getProperty( "addById" ) );
-    By busqueda = By.cssSelector( localizador.getProperty( "busquedaByCss" ) );
-    By cerrarProyecto = By.cssSelector( localizador.getProperty( "cerrarProyectoByCss" ) );
-    By idProyectoCreado = By.cssSelector( localizador.getProperty( "idProyectoCreadoByCss" ) );
-    By nombreProyectoCreado = By.cssSelector( localizador.getProperty( "nombreProyectoCreadoByCss" ) );
-    By priorityCreado = By.cssSelector( localizador.getProperty( "priorityCreadoByCss" ) );
-    By startDateCreado = By.cssSelector( localizador.getProperty( "startDateCreadoByCss" ) );
-    By endDateCreado = By.cssSelector( localizador.getProperty( "endDateCreadoByCss" ) );
-    By budgCreado = By.cssSelector( localizador.getProperty( "budgCreadoByCss" ) );
-    By timesCreado = By.cssSelector( localizador.getProperty( "timesCreadoByCss" ) );
-    By delete = By.xpath( localizador.getProperty( "deleteProjectByXp" ) );
-    By open = By.xpath( localizador.getProperty( "openByXp" ) );
-    By texto = By.cssSelector( localizador.getProperty( "textoByCss" ) );
-    By yesBoton = By.id( localizador.getProperty( "yesBotonById" ) );
-    By noElementosBusqueda = By.xpath( localizador.getProperty( "noElementosBusquedaByXp" ) );
-    By titleTabla = By.cssSelector( localizador.getProperty( "titleTablaByCss" ) );
+    LocalizadorProyProperties locator = new LocalizadorProyProperties();
+    By project = locator.getProyectoId();
+    By add = locator.getAdd();
+    By busqueda = locator.getBusqueda();
+    By cerrarProyecto = locator.getCerrarProyecto();
+    By idProyectoCreado = locator.getIdProyectoCreado();
+    By nombreProyectoCreado = locator.getNombreProyectoCreado();
+    By priorityCreado = locator.getPriorityCreado();
+    By startDateCreado = locator.getStartDateCreado();
+    By endDateCreado = locator.getEndDateCreado();
+    By budgCreado = locator.getBudgCreado();
+    By timesCreado = locator.getTimesCreado();
+    By delete = locator.getDeleteProject();
+    By open = locator.getOpen();
+    By texto = locator.getTexto();
+    By yesBoton = locator.getYesBoton();
+    By noElementosBusqueda = locator.getNoElementosBusqueda();
+    By titleTabla = locator.getTitleTabla();
 
     public ProjectManagerPage (){
         super( driver );
@@ -68,7 +64,6 @@ public class ProjectManagerPage extends BasePage {
     public void confirmarDelete (){
 
         click( yesBoton );
-
 
     }
 
@@ -164,7 +159,6 @@ public class ProjectManagerPage extends BasePage {
         String ventana = winHandles( 0 );
         switchToVentana( ventana );
         clicRigthandMove( idProyectoCreado , open );
-
 
     }
 

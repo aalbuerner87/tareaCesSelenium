@@ -17,6 +17,7 @@ import java.util.Properties;
 import java.util.Set;
 
 import org.openqa.selenium.Keys;
+import util.ConfigProperties;
 import util.LeerProperties;
 
 
@@ -29,9 +30,9 @@ public class BasePage {
 
 
     static{
-        LeerProperties config = new LeerProperties();
-        Properties browser = config.leerConfig();
-        String browserType = browser.getProperty( "browser" );
+
+       ConfigProperties browser=new ConfigProperties();
+       String browserType= browser.getBrowser();
         if(browserType.equalsIgnoreCase( "chrome" )){
 
             System.setProperty( "webdriver.chrome.driver" , "./src/test/resources/chromedriver.exe" );
