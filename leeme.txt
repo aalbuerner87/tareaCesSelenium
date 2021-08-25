@@ -1,6 +1,13 @@
-En el archivo datos.properties que se encuentra en src/test/resources/datos.properties
-se encuentran los datos (no se deben cambiar las claves, solo los valores en caso que se quieran cambiar los datos.
+En la ruta src/test/resources/ se encuentran 3 archivos de configuración
 
+1- datos.properties
+Es para la gestión de datos, cambiar el valor en caso que se requiera (ver instructivo)
+También es para cambiar las credenciales.
+2-config.properties
+Es para cambiar de navegador las opciones son chrome o Edge
+3- localizadores.properties
+Es para ajustar o agregar localizadores de las distintas páginas
+(para cambiar ver instructivo)
 
 
 luego guardar cambios
