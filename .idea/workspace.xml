@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46c6c4c7-921e-40ee-b266-6e25bab484f0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/pages/Add_AddressBookPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/AddProjectPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/AddProjectPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/AddressBookPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/AddressBookPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/ProjectManagerPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/ProjectManagerPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/TestAddressBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/TestAddressBook.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/datos.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/datos.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/localizadores.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/localizadores.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/AddressBookPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/AddressBookPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/TestAddressBook.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/TestAddressBook.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/TestProject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/TestProject.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -26,37 +18,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/pages/AddressBookPage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="573">
-              <caret line="35" column="82" lean-forward="true" selection-start-line="35" selection-start-column="82" selection-end-line="35" selection-end-column="82" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#3683#3684#0" expanded="true" />
-                <element signature="e#3718#3719#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/tests/TestAddressBook.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/tests/TestProject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1194">
-              <caret line="102" column="25" selection-start-line="102" selection-start-column="25" selection-end-line="102" selection-end-column="25" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="320">
+              <caret line="106" column="65" selection-start-line="106" selection-start-column="65" selection-end-line="106" selection-end-column="65" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/resources/datos.properties">
+        <entry file="file://$PROJECT_DIR$/src/test/java/pages/ProjectManagerPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="30" column="12" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="12" />
+            <state relative-caret-position="85">
+              <caret line="11" column="50" selection-end-line="191" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/localizadores.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="258">
+              <caret line="77" selection-start-line="77" selection-end-line="77" />
             </state>
           </provider>
         </entry>
@@ -101,20 +85,20 @@
         <option value="$PROJECT_DIR$/src/test/resources/properties.txt" />
         <option value="$PROJECT_DIR$/src/test/java/tests/TestSuite.java" />
         <option value="$PROJECT_DIR$/src/test/java/suite/TestSuite.java" />
-        <option value="$PROJECT_DIR$/src/test/java/tests/TestProject.java" />
         <option value="$PROJECT_DIR$/src/test/java/pages/BasePage.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/resources/config.properties" />
         <option value="$PROJECT_DIR$/target/surefire-reports/suite.TestSuite.txt" />
         <option value="$PROJECT_DIR$/src/test/java/pages/InicioPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/util/LeerProperties.java" />
-        <option value="$PROJECT_DIR$/src/test/resources/datos.properties" />
         <option value="$PROJECT_DIR$/src/test/java/pages/Add_AddressBookPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/pages/AddProjectPage.java" />
         <option value="$PROJECT_DIR$/src/test/resources/localizadores.properties" />
-        <option value="$PROJECT_DIR$/src/test/java/pages/ProjectManagerPage.java" />
-        <option value="$PROJECT_DIR$/src/test/java/tests/TestAddressBook.java" />
         <option value="$PROJECT_DIR$/src/test/java/pages/AddressBookPage.java" />
+        <option value="$PROJECT_DIR$/src/test/resources/datos.properties" />
+        <option value="$PROJECT_DIR$/src/test/java/tests/TestAddressBook.java" />
+        <option value="$PROJECT_DIR$/src/test/java/pages/ProjectManagerPage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/tests/TestProject.java" />
       </list>
     </option>
   </component>
@@ -232,7 +216,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TestAddressBook.testCrearContacto">
+  <component name="RunManager" selected="JUnit.TestProject.testConsultarProyecto">
     <configuration name="TestAddressBook.testCrearContacto" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CesAutomation" />
       <extension name="coverage">
@@ -313,11 +297,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestProject.testConsultarProyecto" />
         <item itemvalue="JUnit.TestAddressBook.testCrearContacto" />
         <item itemvalue="JUnit.TestProject" />
         <item itemvalue="JUnit.TestSuite" />
         <item itemvalue="JUnit.TestProject.testAgregarRecursoMiembro" />
-        <item itemvalue="JUnit.TestProject.testConsultarProyecto" />
       </list>
     </recent_temporary>
   </component>
@@ -335,21 +319,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestAddressBook_testCrearContacto - 2021.08.24 at 18h 15m 25s.xml">
-      <configuration name="TestAddressBook.testCrearContacto" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestAddressBook_testCrearContacto - 2021.08.24 at 18h 17m 08s.xml">
-      <configuration name="TestAddressBook.testCrearContacto" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestAddressBook_testCrearContacto - 2021.08.24 at 18h 19m 28s.xml">
-      <configuration name="TestAddressBook.testCrearContacto" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestAddressBook_testCrearContacto - 2021.08.24 at 18h 25m 08s.xml">
-      <configuration name="TestAddressBook.testCrearContacto" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestAddressBook_testCrearContacto - 2021.08.24 at 18h 29m 21s.xml">
-      <configuration name="TestAddressBook.testCrearContacto" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="TestAddressBook_testCrearContacto - 2021.08.24 at 18h 30m 49s.xml">
       <configuration name="TestAddressBook.testCrearContacto" configurationId="JUnit" />
     </history-entry>
@@ -365,9 +334,25 @@
     <history-entry file="TestAddressBook_testCrearContacto - 2021.08.24 at 18h 41m 21s.xml">
       <configuration name="TestAddressBook.testCrearContacto" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="TestAddressBook_testCrearContacto - 2021.08.24 at 18h 42m 53s.xml">
+      <configuration name="TestAddressBook.testCrearContacto" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestAddressBook_testCrearContacto - 2021.08.24 at 18h 44m 05s.xml">
+      <configuration name="TestAddressBook.testCrearContacto" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestProject_testConsultarProyecto - 2021.08.24 at 19h 03m 34s.xml">
+      <configuration name="TestProject.testConsultarProyecto" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestProject_testConsultarProyecto - 2021.08.24 at 19h 05m 39s.xml">
+      <configuration name="TestProject.testConsultarProyecto" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestProject_testConsultarProyecto - 2021.08.24 at 19h 08m 07s.xml">
+      <configuration name="TestProject.testConsultarProyecto" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="1592" y="-8" width="1616" height="916" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.83160084" visible="true" weight="0.2577121" />
       <window_info id="Structure" order="1" sideWeight="0.16839917" side_tool="true" weight="0.26542416" />
@@ -387,7 +372,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.3316062" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32253885" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32142857" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -440,7 +425,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/tests/TestProject.java</url>
-          <line>116</line>
+          <line>122</line>
           <properties class="tests.TestProject">
             <option name="EMULATED" value="true" />
           </properties>
@@ -464,7 +449,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/tests/TestAddressBook.java</url>
-          <line>82</line>
+          <line>52</line>
           <properties class="tests.TestAddressBook" method="testCrearContacto">
             <option name="EMULATED" value="true" />
           </properties>
@@ -743,20 +728,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/pages/ProjectManagerPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="26" column="75" lean-forward="true" selection-start-line="26" selection-start-column="75" selection-end-line="26" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/localizadores.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1496">
-          <caret line="88" column="17" selection-start-line="88" selection-end-line="88" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/pages/AddProjectPage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="646">
@@ -767,24 +738,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/tests/TestProject.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/tests/TestAddressBook.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="20" column="40" lean-forward="true" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/datos.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="30" column="12" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="12" />
+        <state relative-caret-position="85">
+          <caret line="5" column="27" lean-forward="true" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/pages/AddressBookPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="573">
-          <caret line="35" column="82" lean-forward="true" selection-start-line="35" selection-start-column="82" selection-end-line="35" selection-end-column="82" />
+        <state relative-caret-position="2622">
+          <caret line="162" column="26" lean-forward="true" selection-start-line="162" selection-start-column="26" selection-end-line="162" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#3683#3684#0" expanded="true" />
@@ -793,13 +757,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/tests/TestAddressBook.java">
+    <entry file="file://$PROJECT_DIR$/src/test/resources/datos.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1194">
-          <caret line="102" column="25" selection-start-line="102" selection-start-column="25" selection-end-line="102" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="299">
+          <caret line="30" column="9" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/localizadores.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="77" selection-start-line="77" selection-end-line="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pages/ProjectManagerPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="11" column="50" selection-end-line="191" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/tests/TestProject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="106" column="65" selection-start-line="106" selection-start-column="65" selection-end-line="106" selection-end-column="65" />
         </state>
       </provider>
     </entry>

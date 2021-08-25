@@ -109,6 +109,48 @@ public class ProjectManagerPage extends BasePage {
 
     }
 
+    public boolean idBusquedaDevuelto ( String idProyectoExistente ){
+        boolean compara = getText( idProyectoCreado ).equals( idProyectoExistente );
+        return compara;
+
+    }
+
+    public boolean nombreProyectoDevuelto ( String nombreExistente ){
+        boolean compara = getText( nombreProyectoCreado ).equals( nombreExistente );
+        return compara;
+
+    }
+
+    public boolean priorityDevuelto ( String priorityExistente ){
+        boolean compara = getText( priorityCreado ).equals( priorityExistente );
+        return compara;
+    }
+
+    public boolean startDateDevuelto ( String startDateExistente ){
+
+        boolean compara = getText( startDateCreado ).equals( startDateExistente );
+        return compara;
+
+    }
+
+    public boolean endDateDevuelto ( String endDateExistente ){
+
+        boolean compara = getText( endDateCreado ).equals( endDateExistente );
+        return compara;
+    }
+
+    public boolean budgDevuelto ( String budgExistente ){
+
+        boolean compara = getText( budgCreado ).equals( budgExistente );
+        return compara;
+
+    }
+
+    public boolean timesDevuelto ( String timesExistente ){
+        boolean compara = getText( timesCreado ).equals( timesExistente );
+        return compara;
+
+    }
 
     public void eliminarProyecto (){
         String ventana = winHandles( 0 );
