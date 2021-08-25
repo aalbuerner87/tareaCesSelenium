@@ -1,8 +1,8 @@
 package pages;
 
 
-import util.DatosProyectoProperties;
-import util.LocalizadorInicioProperties;
+import properties.DatosProyectoProperties;
+import properties.*;
 
 
 

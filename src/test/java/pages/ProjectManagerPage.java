@@ -1,7 +1,7 @@
 package pages;
 
 import org.openqa.selenium.By;
-import util.LocalizadorProyProperties;
+import properties.*;
 
 import java.util.ArrayList;
 import java.util.List;

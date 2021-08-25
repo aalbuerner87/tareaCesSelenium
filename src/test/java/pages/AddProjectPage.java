@@ -1,7 +1,7 @@
 package pages;
 
 import org.openqa.selenium.By;
-import util.LocalizadorAddProyProperties;
+import properties.*;
 
 public class AddProjectPage extends BasePage {
 

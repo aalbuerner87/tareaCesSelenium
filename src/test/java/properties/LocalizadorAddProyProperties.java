@@ -1,4 +1,4 @@
-package util;
+package properties;
 import org.openqa.selenium.By;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;

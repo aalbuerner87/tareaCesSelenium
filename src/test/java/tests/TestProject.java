@@ -4,9 +4,9 @@ import org.junit.jupiter.api.*;
 import pages.AddProjectPage;
 import pages.InicioPage;
 import pages.ProjectManagerPage;
-import util.DatosProyectoProperties;
+import properties.*;
 
-import java.net.MalformedURLException;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -50,7 +50,7 @@ public class TestProject {
     }
 
     @BeforeEach
-    public void entrar () throws MalformedURLException{
+    public void entrar () {
 
         login.IniciarSesion();
 

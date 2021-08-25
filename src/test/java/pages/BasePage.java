@@ -13,12 +13,10 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.support.ui.Select;
 
-import java.util.Properties;
 import java.util.Set;
 
 import org.openqa.selenium.Keys;
-import util.ConfigProperties;
-import util.LeerProperties;
+import properties.*;
 
 
 public class BasePage {

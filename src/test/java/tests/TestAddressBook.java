@@ -1,10 +1,10 @@
 package tests;
 
 import org.junit.jupiter.api.*;
+import pages.Add_AddressBookPage;
 import pages.AddressBookPage;
 import pages.InicioPage;
-import util.DatosContactoproperties;
-
+import properties.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,7 +18,9 @@ public class TestAddressBook {
 
     InicioPage login = new InicioPage();
     AddressBookPage addressBookPage = new AddressBookPage();
+    Add_AddressBookPage add_addressBookPage=new Add_AddressBookPage();
     DatosContactoproperties contacto = new DatosContactoproperties();
+
     String nombre;
     String movil;
     String mail;
@@ -34,7 +36,7 @@ public class TestAddressBook {
         nombre = contacto.getNombre();
         movil = contacto.getMovil();
         mail = contacto.getMail();
-        prefix = addressBookPage.generarPrefix();
+        prefix =  add_addressBookPage.generarPrefix();
         bussPhones = contacto.getBussPhones();
         job = contacto.getJob();
         organizations = contacto.getOrganizations();
@@ -54,14 +56,14 @@ public class TestAddressBook {
     public void testCrearContacto (){
         String tituloPagina = addressBookPage.getNombreVentanaAgenda();
         assertEquals( "EGroupware [Address Book]" , tituloPagina );
-        addressBookPage.agregarOrganizacion( organizations );
-        addressBookPage.agregarNombre( nombre , prefix );
-        addressBookPage.agregarMovil( movil );
-        addressBookPage.agregarTelefNegocio( bussPhones );
-        addressBookPage.agregarmMails( mail );
-        addressBookPage.agregarPais( pais );
-        addressBookPage.agregarOcupacion( job );
-        addressBookPage.guardarAgenda();
+        add_addressBookPage.agregarOrganizacion( organizations );
+        add_addressBookPage.agregarNombre( nombre , prefix );
+        add_addressBookPage.agregarMovil( movil );
+        add_addressBookPage.agregarTelefNegocio( bussPhones );
+        add_addressBookPage.agregarmMails( mail );
+        add_addressBookPage.agregarPais( pais );
+        add_addressBookPage.agregarOcupacion( job );
+        add_addressBookPage.guardarAgenda();
         String mensajesave = addressBookPage.getMensaje();
         assertEquals( "Contact saved" , mensajesave );
         addressBookPage.busquedaContactoCreado( mail );
