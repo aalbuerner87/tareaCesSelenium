@@ -10,7 +10,7 @@ public class InicioPage extends BasePage {
 
 
     DatosProyectoProperties credenciales=new DatosProyectoProperties();
-    LocalizadorInicioProperties locator=new LocalizadorInicioProperties();
+    SelectorInicioProperties locator=new SelectorInicioProperties();
 
     public InicioPage (){
 

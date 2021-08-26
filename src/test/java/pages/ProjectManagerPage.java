@@ -8,7 +8,7 @@ import java.util.List;
 
 public class ProjectManagerPage extends BasePage {
 
-    LocalizadorProyProperties locator = new LocalizadorProyProperties();
+    SelectorProyProperties locator = new SelectorProyProperties();
     By project = locator.getProyectoId();
     By add = locator.getAdd();
     By busqueda = locator.getBusqueda();
@@ -33,7 +33,7 @@ public class ProjectManagerPage extends BasePage {
 
 
     public void abrirVentanaProyecto (){
-        clickJs( project );
+
         click( add );
         String ventana = winHandles( 1 );
         switchToVentana( ventana );
@@ -43,12 +43,13 @@ public class ProjectManagerPage extends BasePage {
 
     public void abrirTabProyecto (){
 
+        clickJs(project);
 
-        clickJs( project );
 
     }
 
     public String getNombreVentanaProyecto (){
+        abrirTabProyecto();
         abrirVentanaProyecto();
         String titulo = getTitle();
         return titulo;
@@ -68,7 +69,8 @@ public class ProjectManagerPage extends BasePage {
     }
 
     public void cerrarVentanaProyecto (){
-
+        String ventana = winHandles( 0 );
+        switchToVentana( ventana );
         click( cerrarProyecto );
     }
 
@@ -89,7 +91,6 @@ public class ProjectManagerPage extends BasePage {
     public List<String> getDatosProyecto (){
 
         List<String> datosProyecto = new ArrayList<String>();
-
         datosProyecto.add( getText( idProyectoCreado ) );
         datosProyecto.add( getText( nombreProyectoCreado ) );
         datosProyecto.add( getText( priorityCreado ) );
