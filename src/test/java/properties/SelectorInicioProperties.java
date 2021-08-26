@@ -7,13 +7,13 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Properties;
 
-public class LocalizadorInicioProperties {
+public class SelectorInicioProperties {
 
     private Properties properties;
     private final String propertyFilePath = "src/test/resources/localizadores.properties";
 
 
-    public LocalizadorInicioProperties (){
+    public SelectorInicioProperties(){
         BufferedReader reader;
         try {
             reader = new BufferedReader( new FileReader( propertyFilePath ) );
@@ -29,6 +29,7 @@ public class LocalizadorInicioProperties {
             throw new RuntimeException( "Configuration.properties not found at " + propertyFilePath );
         }
     }
+
 
     public By getLogin (){
         String loginByXp = properties.getProperty( "loginByXp" );

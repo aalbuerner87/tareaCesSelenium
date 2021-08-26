@@ -5,7 +5,7 @@ import properties.*;
 
 public class AddProjectPage extends BasePage {
 
-    LocalizadorAddProyProperties locator=new LocalizadorAddProyProperties();
+    SelectorAddProyProperties locator=new SelectorAddProyProperties();
     By titulo = locator.getTitulo();
     By num = locator.getNum();
     By save = locator.getSave();

@@ -7,13 +7,13 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Properties;
 
-public class LocalizadorProyProperties {
+public class SelectorProyProperties {
 
     private Properties properties;
     private final String propertyFilePath = "src/test/resources/localizadores.properties";
 
 
-    public LocalizadorProyProperties (){
+    public SelectorProyProperties(){
         BufferedReader reader;
         try {
             reader = new BufferedReader( new FileReader( propertyFilePath ) );

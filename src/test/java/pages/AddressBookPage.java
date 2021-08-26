@@ -8,7 +8,7 @@ import java.util.List;
 
 public class AddressBookPage extends BasePage {
 
-    LocalizadorAddressBookProperties locator = new LocalizadorAddressBookProperties();
+    SelectorAddressBookProperties locator = new SelectorAddressBookProperties();
     By agenda = locator.getAgenda();
     By add = locator.getAddAg();
     By cerrarAgenda = locator.getCerrarAgenda();

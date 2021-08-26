@@ -15,6 +15,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class TestProject {
 
     InicioPage login = new InicioPage();
@@ -59,6 +60,7 @@ public class TestProject {
     @Test
     @Tag("Para_Suite_AmbienteTest")
     @DisplayName("Test crear proyecto")
+    @Order(1)
     public void testCrearProyecto (){
         String tituloPagina = projectManager.getNombreVentanaProyecto();
         assertEquals( "EGroupware [Project Manager - Add project]" , tituloPagina );
@@ -89,6 +91,7 @@ public class TestProject {
     @Test
     @Tag("Para_Suite_AmbienteTest")
     @DisplayName("Test consulta de un proyecto creado")
+    @Order(2)
     public void testConsultarProyecto (){
 
         projectManager.abrirTabProyecto();
@@ -115,7 +118,9 @@ public class TestProject {
     @Test
     @Tag("Para_Suite_AmbienteTest")
     @DisplayName("Test agrega recursos a un proyecto")
+    @Order(3)
     public void testAgregarRecursoMiembro (){
+        projectManager.abrirTabProyecto();
         projectManager.abrirVentanaProyecto();
         id = addProjectPage.generarIdProyecto();
         addProjectPage.escribirProyecto( id , tituloProyecto );

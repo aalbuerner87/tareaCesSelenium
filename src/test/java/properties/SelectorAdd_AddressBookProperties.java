@@ -8,12 +8,12 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Properties;
 
-public class LocalizadorAdd_AddressBookProperties {
+public class SelectorAdd_AddressBookProperties {
     private Properties properties;
     private final String propertyFilePath = "src/test/resources/localizadores.properties";
 
 
-    public LocalizadorAdd_AddressBookProperties (){
+    public SelectorAdd_AddressBookProperties(){
         BufferedReader reader;
         try {
             reader = new BufferedReader( new FileReader( propertyFilePath ) );

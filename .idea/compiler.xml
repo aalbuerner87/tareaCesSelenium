@@ -6,8 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="CesAutomation" />
+        <module name="Tarea 5" />
         <module name="Tarea 4" />
+        <module name="CesAutomation" />
       </profile>
     </annotationProcessing>
   </component>

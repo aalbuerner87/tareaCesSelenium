@@ -1,9 +1,6 @@
 package pages;
 
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -15,7 +12,6 @@ import org.openqa.selenium.support.ui.Select;
 
 import java.util.Set;
 
-import org.openqa.selenium.Keys;
 import properties.*;
 
 
@@ -125,10 +121,24 @@ public class BasePage {
 
     }
 
-    public boolean elementIsDisplayed ( By locator ){
+    public boolean elementIsDisplayed   ( By locator ){
 
+        boolean dis=false;
+        try {
 
-        return find( locator ).isDisplayed();
+         if( wait.until( ExpectedConditions.visibilityOfElementLocated( locator ) ).isDisplayed());
+            dis=true;
+            System.out.println("dis = " + dis);
+          return dis ;
+        }
+        catch (Exception e){
+
+            System.out.println("e = " + e);
+            dis=false;
+            System.out.println("dis catch = " + dis);
+
+            return dis;
+        }
 
 
     }

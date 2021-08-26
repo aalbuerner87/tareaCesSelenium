@@ -5,7 +5,7 @@ import properties.*;
 
 
 public class Add_AddressBookPage extends BasePage {
-    LocalizadorAdd_AddressBookProperties locator = new LocalizadorAdd_AddressBookProperties();
+    SelectorAdd_AddressBookProperties locator = new SelectorAdd_AddressBookProperties();
     By organization = locator.getOrganizationa();
     By name = locator.getName();
     By prefix = locator.getPrefix();
